@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, CheckCircle, Mail, MapPin, LogIn } from 'lucide-react';
 // ============================================================================
 // 🛠️ DATA ARCHITECTURE 
@@ -9,25 +8,44 @@ const SITE_DATA = {
     name: "ValoraEX",
     logoText: "VEX"
   },
-  nav: ["Features", "Testimonials", "Contact"],
+  nav: ["Product", "Testimonials", "Contact"],
   hero: {
-    headline: "Automate your client outreach and administrative workflow.",
-    subhead: "Built for modern logistics and warehousing professionals to scale cold calling without the operational busywork.",
-    ctaPrimary: "Request Access",
+    headline: "Extend Value Beyond Exit.",
+    subhead: "Strategic corporate exit solutions and ESG governance powered by our proprietary 5R methodology. Optimize asset recovery and minimize waste through ValoraEX ONE and 5R Governance Plans.",
+    ctaPrimary: "Book a Discussion",
     ctaLogin: "Login"
   },
   pitch: {
-    problem: "Managing cold call lists and organizational admin manually drains hours from your week.",
-    solution: "Our platform automates the administrative overhead so you can focus on building relationships.",
+    problem: "Traditional corporate exits, office moves, and footprint reductions often result in unrealized asset value, unnecessary waste, and missed ESG targets.",
+    solution: "We provide a strategic, commercially grounded approach to corporate exits that maximizes asset recovery while aligning with rigorous corporate ESG reporting standards.",
     features: [
-      { title: "Smart Organization", desc: "Prioritize your daily outreach lists automatically." },
-      { title: "Workflow Automation", desc: "Trigger follow-up sequences based on call outcomes." },
-      { title: "Centralized Records", desc: "Keep all client and talent management data in one secure location." }
+      { 
+        title: "5R Exit Solutions", 
+        desc: "Targeted solutions for office moves, liquidations, and footprint reductions, featuring a structured methodology workflow and measurable outcomes." 
+      },
+      { 
+        title: "5R Governance Plans", 
+        desc: "Ongoing governance solutions providing compliance, seamless ESG integration, and detailed reporting to support long-term enterprise value." 
+      },
+      { 
+        title: "Proprietary Route Intelligence", 
+        desc: "Leveraging our 5R framework—Reuse, Resell, Recycle—to optimize asset recovery and systematically minimize corporate waste." 
+      }
     ]
   },
   testimonials: [
-    { quote: "This eliminated our administrative bottleneck overnight.", author: "Sarah J., VP of Distribution" },
-    { quote: "The cleanest workflow tool we've implemented this year.", author: "David L., HR Director" }
+    { 
+      quote: "ValoraEX transformed our recent corporate footprint reduction. Their 5R methodology allowed us to recover significant asset value while drastically minimizing landfill waste.", 
+      author: "COO, Regional Financial Institution" 
+    },
+    { 
+      quote: "The ongoing 5R Governance Plan provided us with the exact, quantifiable metrics required for our corporate sustainability reporting. A truly strategic and commercially grounded partner.", 
+      author: "Head of ESG & Compliance, Global Enterprise" 
+    },
+    { 
+      quote: "They did not just clear out our excess footprint; their route intelligence maximized our return and handled the entire exit process with premium B2B professionalism.", 
+      author: "VP of Operations, Technology Sector" 
+    }
   ],
   contact: {
     title: "Ready to streamline your process?",
