@@ -8,7 +8,7 @@ const SITE_DATA = {
     name: "ValoraEX",
     logoText: "VEX"
   },
-  nav: ["Product", "Testimonials", "Contact"],
+  nav: ["Features", "Testimonials", "Contact"],
   hero: {
     headline: "Extend Value Beyond Exit.",
     subhead: "Strategic corporate exit solutions and ESG governance powered by our proprietary 5R methodology. Optimize asset recovery and minimize waste through ValoraEX ONE and 5R Governance Plans.",
