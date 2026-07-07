@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  /* Layout & Wrappers */
+  .layout-wrapper {
+    @apply min-h-screen bg-[#F8FAF5] text-[#414141] font-sans;
   }
-}
+  .section-container {
+    @apply max-w-5xl mx-auto;
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Header */
+  .site-header {
+    @apply flex items-center justify-between px-8 py-4 bg-[#F8FAF5] border-b border-[#91968F] sticky top-0 z-50;
+  }
+  .brand-container {
+    @apply flex items-center space-x-2;
+  }
+  .brand-logo {
+    @apply w-8 h-8 bg-[#456963] text-[#F8FAF5] flex items-center justify-center font-bold rounded;
+  }
+  .brand-text {
+    @apply font-bold text-xl text-[#414141];
+  }
+  .nav-menu {
+    @apply hidden md:flex space-x-6;
+  }
+  .nav-link {
+    @apply text-sm font-medium text-[#414141] hover:text-[#AF9066] transition-colors;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply mx-auto w-fit bg-[#456963] text-[#F8FAF5] px-8 py-3 rounded-lg font-medium hover:bg-[#414141] transition flex items-center justify-center space-x-2;
+  }
+  .btn-secondary {
+    @apply flex items-center space-x-2 text-sm font-medium bg-[#91968F] text-[#F8FAF5] hover:bg-[#414141] px-4 py-2 rounded-md transition;
+  }
+  .btn-submit {
+    @apply w-full bg-[#456963] text-[#F8FAF5] font-medium py-3 rounded-lg hover:bg-[#414141] transition;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    @apply px-8 py-24 max-w-5xl mx-auto text-center;
+  }
+  .hero-title {
+    @apply text-5xl font-extrabold tracking-tight mb-6 text-[#414141];
+  }
+  .hero-subtitle {
+    @apply text-xl text-[#91968F] mb-10 max-w-2xl mx-auto;
+  }
+
+  /* Features Section */
+  .features-section {
+    @apply px-8 py-20 bg-[#F8FAF5];
+  }
+  .section-header {
+    @apply text-center mb-16;
+  }
+  .section-title {
+    @apply text-3xl font-bold mb-4 text-[#414141];
+  }
+  .section-subtitle {
+    @apply text-lg text-[#456963] font-medium;
+  }
+  .features-grid {
+    @apply grid md:grid-cols-3 gap-8;
+  }
+  .feature-card {
+    @apply p-6 border border-[#91968F] rounded-xl bg-white shadow-sm;
+  }
+  .feature-icon {
+    @apply text-[#AF9066] mb-4;
+  }
+  .feature-title {
+    @apply text-xl font-bold mb-2 text-[#414141];
+  }
+  .feature-desc {
+    @apply text-[#91968F];
+  }
+
+  /* Testimonials Section */
+  .testimonials-section {
+    @apply px-8 py-20 bg-[#414141] text-[#F8FAF5];
+  }
+  .testimonials-grid {
+    @apply max-w-4xl mx-auto grid md:grid-cols-2 gap-12;
+  }
+  .testimonial-card {
+    @apply space-y-4;
+  }
+  .testimonial-quote {
+    @apply text-xl italic text-[#F8FAF5];
+  }
+  .testimonial-author {
+    @apply font-medium text-[#AF9066];
+  }
+
+  /* Contact Section */
+  .contact-section {
+    @apply px-8 py-24 bg-[#F8FAF5];
+  }
+  .contact-container {
+    @apply max-w-xl mx-auto text-center;
+  }
+  .contact-form {
+    @apply space-y-4 text-left;
+  }
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-[#91968F] text-[#414141] bg-white focus:outline-none focus:ring-2 focus:ring-[#456963];
+  }
+
+  /* Footer */
+  .site-footer {
+    @apply bg-[#F8FAF5] py-12 px-8 border-t border-[#91968F] text-[#414141] text-sm;
+  }
+  .footer-container {
+    @apply max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center;
+  }
+  .footer-contact {
+    @apply flex items-center space-x-6 mb-4 md:mb-0;
+  }
+  .footer-item {
+    @apply flex items-center;
+  }
+  .footer-icon {
+    @apply mr-2 text-[#456963];
+  }
+  .footer-links {
+    @apply space-x-6;
+  }
+  .footer-link {
+    @apply hover:text-[#AF9066] transition-colors;
+  }
 }
