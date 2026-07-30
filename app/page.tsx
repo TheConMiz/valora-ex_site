@@ -435,8 +435,9 @@ export default function LandingPage() {
             <p className="feature-desc mb-8">
               Discuss your FF&E project, Governance needs or ecosystem capability with ValoraEX.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link href="/contact?type=demo" className="btn-primary m-0">
+            {/* FIX APPLIED HERE: Replaced space-y/space-x with gap-4 and used !mx-0 to override the global class safely */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href="/contact?type=demo" className="btn-primary !mx-0">
                 <span>Request a Demonstration</span>
               </Link>
               <Link href="/contact" className="px-8 py-3 text-sm font-medium text-[#414141] bg-white border border-[#91968F] rounded-lg hover:bg-[#F8FAF5] hover:text-[#AF9066] transition">
