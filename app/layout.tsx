@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "ValoraEX | Asset Transition Workflow, Evidence and Governance",
-  description: "ValoraEX is a workflow, Governance and ecosystem-coordination platform that helps organisations manage asset transition.",
+export const metadata = {
+  title: 'ValoraEX | Asset Transition Workflow, Evidence and Governance',
+  description: 'Make every asset transition more visible, traceable and better prepared.',
+  icons: { icon: '/favicon.ico' },
   openGraph: {
-    title: "ValoraEX | Asset Transition Workflow, Evidence and Governance",
-    description: "ValoraEX is a workflow, Governance and ecosystem-coordination platform that helps organisations manage asset transition.",
-    url: "https://valoraex.com",
-    siteName: "ValoraEX",
-    locale: "en_HK",
-    type: "website",
-  },
-  icons: {
-    icon: "/favicon.ico",
-  },
+    title: 'ValoraEX | Asset Transition Workflow',
+    description: 'Visible assets. Transparent information. Structured evidence.'
+  }
 };
 
 export default function RootLayout({
