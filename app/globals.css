@@ -2,26 +2,25 @@
 
 @layer base {
   :root {
-    /* Base Aesthetic: Warm White / Porcelain & Gunmetal text */
-    --background: #F9F9F8; /* Porcelain */
-    --foreground: #2C3539; /* Gunmetal */
+    /* Updated Colour Palette */
+    --background: #FDFCF0; /* Warm, off-white for a premium feel */
+    --foreground: #333333; /* Charcoal for main text */
     
-    /* Brand Accent Colors */
-    --brand-teal: #004D40;  /* Deep Teal */
-    --brand-camel: #C19A6B; /* Camel */
-    --brand-olive: #5B6356; /* Grey Olive */
+    /* Brand Accent & Theme Colors */
+    --brand-teal: #0E646A;  /* Primary Teal for emphasis */
+    --brand-sage: #7FA986;  /* Secondary Sage (Subtle and professional) */
+    --brand-gold: #BD9A61;  /* Accent Gold for 'EX' and high-priority CTAs */
   }
 
   body {
-    background-color: var(--background);
+    background-color: #ffffff; /* Default base for outer body */
     color: var(--foreground);
-    /* Strict adherence to Arial per WEB-03 requirements */
     font-family: Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Typography Scale Overrides for clean, consulting-style reading */
+  /* Typography Scale Overrides */
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     letter-spacing: -0.02em;
@@ -30,30 +29,513 @@
 }
 
 @layer components {
-  /* Buttons */
-  .btn-primary {
-    @apply inline-flex justify-center items-center px-6 py-3 border-2 border-[var(--foreground)] bg-[var(--foreground)] text-[var(--background)] text-base font-bold hover:bg-transparent hover:text-[var(--foreground)] transition-all;
+  /* =========================================
+     LAYOUT & CONTAINERS
+     ========================================= */
+  .page-wrapper {
+    @apply font-[Arial,Helvetica,sans-serif];
   }
-  
-  .btn-secondary {
-    @apply inline-flex justify-center items-center px-6 py-3 border-2 border-gray-300 text-[var(--foreground)] text-base font-bold hover:border-[var(--brand-camel)] hover:text-[var(--brand-camel)] transition-all;
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .center-content-narrow {
+    @apply max-w-3xl mx-auto text-center mb-16;
+  }
+  .grid-2 {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-16;
+  }
+  .grid-2-inner {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-6;
+  }
+  .grid-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+  .grid-4 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+  }
+  .grid-5 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4;
   }
 
-  /* Workflow Timeline Graphic */
-  .workflow-container {
-    @apply space-y-6 relative before:absolute before:inset-0 before:ml-4 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-[var(--brand-camel)] before:to-gray-200;
+  /* =========================================
+     SECTIONS
+     ========================================= */
+  .section-warm {
+    @apply bg-[var(--background)] py-20 lg:py-24;
   }
-  
-  /* REMOVED 'group' from the end of this apply string */
+  .section-light {
+    @apply bg-white py-20 lg:py-24;
+  }
+  .section-dark {
+    @apply bg-[var(--foreground)] py-20 lg:py-24;
+  }
+  .section-gray {
+    @apply bg-gray-100 py-20 lg:py-24;
+  }
+  .border-top {
+    @apply border-t border-gray-200;
+  }
+  .border-bottom {
+    @apply border-b border-gray-200;
+  }
+
+  /* =========================================
+     TYPOGRAPHY
+     ========================================= */
+  .heading-1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--foreground)] leading-tight;
+  }
+  .heading-2 {
+    @apply text-3xl lg:text-4xl font-bold text-[var(--foreground)];
+  }
+  .heading-3 {
+    @apply text-2xl font-bold text-[var(--foreground)];
+  }
+  .heading-4 {
+    @apply text-lg font-bold text-[var(--foreground)];
+  }
+  .text-body {
+    @apply text-lg text-gray-600 mb-6;
+  }
+  .text-body-large {
+    @apply text-lg text-gray-600 mb-8 leading-relaxed;
+  }
+  .text-label {
+    @apply text-xs font-bold tracking-widest text-[var(--brand-teal)] uppercase mb-4 block;
+  }
+  .text-label-dark {
+    @apply text-sm font-bold text-gray-700 uppercase tracking-wider block;
+  }
+  .text-proof {
+    @apply text-sm font-bold text-[var(--foreground)] mt-10;
+  }
+
+  /* =========================================
+     BUTTONS & LINKS
+     ========================================= */
+  .button-group {
+    @apply flex flex-col sm:flex-row gap-4;
+  }
+  .btn-dark {
+    @apply bg-[var(--brand-teal)] text-white px-6 py-4 text-sm font-medium hover:bg-[#0b5156] transition-colors text-center inline-flex items-center justify-center;
+  }
+  .btn-outline {
+    @apply border-2 border-[var(--brand-teal)] text-[var(--brand-teal)] px-6 py-4 text-sm font-medium hover:bg-[var(--background)] transition-colors text-center inline-flex items-center justify-center;
+  }
+  .btn-light {
+    @apply bg-[var(--brand-gold)] text-white px-8 py-4 text-sm font-medium hover:bg-[#a88655] transition-colors inline-flex items-center justify-center;
+  }
+  .btn-outline-light {
+    @apply border-2 border-white text-white px-8 py-4 text-sm font-medium hover:bg-white/10 transition-colors inline-flex items-center justify-center;
+  }
+  .btn-text {
+    @apply text-[var(--brand-teal)] font-bold hover:underline inline-flex items-center;
+  }
+  .btn-back {
+    @apply inline-flex items-center text-sm font-medium text-gray-500 hover:text-[var(--brand-teal)] transition-colors;
+  }
+  .icon-inline {
+    @apply inline ml-2;
+  }
+
+  /* =========================================
+     HEADER & NAV
+     ========================================= */
+  .header-base {
+    @apply sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm font-[Arial,Helvetica,sans-serif];
+  }
+  .header-content {
+    @apply flex justify-between items-center h-20;
+  }
+  .header-logo {
+    @apply flex-shrink-0 flex items-center cursor-pointer font-bold text-2xl tracking-tight text-[var(--foreground)];
+  }
+  .header-logo span {
+    /* Style 'EX' in Accent Gold */
+    /* Handled dynamically or via layout, standard text applied here */
+  }
+  .desktop-nav {
+    @apply hidden md:flex space-x-8;
+  }
+  .nav-link {
+    @apply text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--brand-teal)];
+  }
+  .nav-link-active {
+    @apply text-[var(--brand-teal)] border-b-2 border-[var(--brand-teal)];
+  }
+  .nav-link-inactive {
+    @apply text-gray-600 hover:text-[var(--brand-teal)];
+  }
+  .desktop-actions {
+    @apply hidden md:flex items-center space-x-4;
+  }
+  .btn-text-nav {
+    @apply text-sm font-medium text-[var(--foreground)] hover:text-[var(--brand-teal)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--brand-teal)];
+  }
+  .btn-dark-small {
+    @apply bg-[var(--brand-gold)] text-white px-5 py-2.5 text-sm font-medium hover:bg-[#a88655] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--brand-gold)];
+  }
+  .mobile-menu-btn {
+    @apply flex md:hidden items-center;
+  }
+  .btn-icon {
+    @apply text-gray-600 hover:text-[var(--brand-teal)] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--brand-teal)] p-2;
+  }
+  .mobile-drawer {
+    @apply md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full;
+  }
+  .mobile-drawer-links {
+    @apply px-4 pt-2 pb-6 space-y-1 sm:px-3;
+  }
+  .mobile-nav-link {
+    @apply block w-full text-left px-3 py-4 text-base font-medium border-b border-gray-50 focus:outline-none focus:bg-gray-50;
+  }
+  .mobile-nav-active {
+    @apply text-[var(--brand-teal)] font-bold;
+  }
+  .mobile-nav-inactive {
+    @apply text-gray-600 hover:text-[var(--brand-teal)] hover:bg-gray-50;
+  }
+  .mobile-drawer-actions {
+    @apply mt-6 space-y-4 px-3;
+  }
+  .btn-dark-full {
+    @apply w-full bg-[var(--brand-teal)] text-white px-5 py-3 text-base font-medium hover:bg-[#0b5156] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--brand-teal)];
+  }
+  .btn-outline-full {
+    @apply w-full border border-gray-300 bg-white text-[var(--foreground)] px-5 py-3 text-base font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--brand-teal)];
+  }
+
+  /* =========================================
+     FOOTER
+     ========================================= */
+  .footer-base {
+    @apply bg-[var(--background)] border-t border-gray-200 pt-16 pb-8 font-[Arial,Helvetica,sans-serif];
+  }
+  .footer-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12;
+  }
+  .footer-title {
+    @apply text-lg font-bold text-[var(--foreground)] mb-4;
+  }
+  .footer-heading {
+    @apply text-sm font-bold text-[var(--foreground)] mb-4 uppercase tracking-wider;
+  }
+  .footer-text {
+    @apply text-sm text-gray-600 mb-2 leading-relaxed;
+  }
+  .footer-links {
+    @apply space-y-2;
+  }
+  .footer-link {
+    @apply text-sm text-gray-600 hover:text-[var(--brand-teal)];
+  }
+  .footer-bottom {
+    @apply border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center;
+  }
+  .footer-copyright {
+    @apply text-xs text-gray-500 mb-4 md:mb-0;
+  }
+  .footer-legal {
+    @apply flex space-x-6 text-xs text-gray-500;
+  }
+
+  /* =========================================
+     CARDS & BOXES
+     ========================================= */
+  .card-warm {
+    @apply bg-[var(--background)] p-8;
+  }
+  .card-light {
+    @apply bg-white p-8 border border-gray-200 shadow-sm;
+  }
+  .card-dark {
+    @apply bg-[var(--foreground)] p-8 border-t-4 border-[var(--brand-gold)];
+  }
+  .card-gray {
+    @apply bg-gray-100 p-8 border border-gray-200 shadow-sm;
+  }
+  .card-highlight {
+    @apply bg-white p-8 border-2 border-[var(--brand-teal)] shadow-sm;
+  }
+  .card-highlight-dark {
+    @apply bg-white p-8 border-2 border-[var(--brand-teal)];
+  }
+  .border-standard {
+    @apply border border-gray-200;
+  }
+  .card-title {
+    @apply font-bold text-[var(--foreground)] mb-3;
+  }
+  .card-title-bordered {
+    @apply font-bold text-[var(--foreground)] mb-4 uppercase tracking-wider text-sm border-b border-gray-200 pb-2;
+  }
+  .card-subtitle-bordered {
+    @apply text-sm font-medium text-gray-500 uppercase tracking-wider mb-6 pb-4 border-b border-gray-200;
+  }
+  .card-desc {
+    @apply text-gray-600 text-sm leading-relaxed;
+  }
+  .card-body {
+    @apply text-gray-700 leading-relaxed;
+  }
+  .card-number {
+    @apply text-[var(--brand-sage)] text-sm font-bold mb-4;
+  }
+  .card-dark-label {
+    @apply text-[var(--brand-gold)] text-xs font-bold uppercase tracking-wider block mb-2;
+  }
+  .card-dark-desc {
+    @apply text-white text-sm leading-relaxed;
+  }
+  .card-inner-box {
+    @apply bg-[var(--background)] p-6 border border-gray-200 mt-6;
+  }
+  .card-inner-title {
+    @apply text-xs font-bold text-[var(--foreground)] uppercase block mb-3;
+  }
+  .card-inner-list {
+    @apply text-sm text-gray-600 space-y-2;
+  }
+
+  /* =========================================
+     STATEMENTS & DISCLAIMERS
+     ========================================= */
+  .statement-box {
+    @apply bg-[var(--background)] p-8 text-center border-l-4 border-[var(--brand-teal)];
+  }
+  .statement-text {
+    @apply text-xl font-medium text-[var(--foreground)];
+  }
+  .statement-box-dark {
+    @apply bg-[var(--brand-teal)] p-6 text-white;
+  }
+  .statement-text-dark {
+    @apply text-lg font-medium text-white;
+  }
+  .statement-text-white {
+    @apply text-white text-lg font-medium;
+  }
+  .statement-text-gray {
+    @apply text-gray-200 text-lg font-medium;
+  }
+  .statement-text-darker {
+    @apply text-gray-300 text-lg font-medium;
+  }
+  .statement-box-small {
+    @apply text-gray-700 font-bold bg-[var(--background)] p-4 border-l-4 border-[var(--brand-teal)];
+  }
+  .disclaimer-box {
+    @apply p-6 bg-[var(--background)] border-l-4 border-[var(--brand-sage)] mt-12;
+  }
+  .disclaimer-text {
+    @apply text-xs text-gray-500 italic border-l-2 border-gray-300 pl-4;
+  }
+  .disclaimer-text-inline {
+    @apply text-xs text-gray-500 italic;
+  }
+
+  /* =========================================
+     LISTS
+     ========================================= */
+  .list-spaced {
+    @apply space-y-6;
+  }
+  .list-item-bordered {
+    @apply border-b border-gray-200 pb-4;
+  }
+  .list-item-title {
+    @apply font-bold text-[var(--foreground)] mb-2;
+  }
+  .list-item-desc {
+    @apply text-gray-600 text-sm leading-relaxed;
+  }
+  .bullet-list {
+    @apply space-y-3 text-gray-600;
+  }
+  .bullet-list li {
+    @apply flex items-start;
+  }
+  .text-red {
+    @apply text-red-500 mr-2 font-bold;
+  }
+  .text-green {
+    @apply text-[var(--brand-sage)] mr-2 font-bold;
+  }
+  .list-item-pill {
+    @apply bg-[var(--background)] p-4 border border-gray-200 text-sm text-gray-700 font-medium flex items-center;
+  }
+  .list-item-dot {
+    @apply w-1.5 h-1.5 bg-[var(--brand-teal)] rounded-full mr-3 shrink-0;
+  }
+
+  /* =========================================
+     VISUAL DIAGRAMS (Hero, Maps, Timelines)
+     ========================================= */
+  .hero-illustration {
+    @apply bg-white p-8 border border-gray-200 shadow-sm;
+  }
+  .workflow-diagram {
+    @apply flex flex-col space-y-4 relative;
+  }
+  .workflow-line {
+    @apply absolute left-6 top-6 bottom-6 w-0.5 bg-[var(--brand-sage)] z-0;
+  }
+  .workflow-diagram-step {
+    @apply flex items-center relative z-10;
+  }
+  .workflow-diagram-node {
+    @apply w-12 h-12 rounded-full bg-[var(--brand-teal)] text-white flex items-center justify-center font-bold text-sm shrink-0;
+  }
+  .workflow-diagram-card {
+    @apply ml-6 p-4 bg-[var(--background)] border border-gray-100 w-full font-medium text-gray-800;
+  }
+
+  /* Ecosystem Map */
+  .ecosystem-map {
+    @apply relative max-w-4xl mx-auto bg-white p-8 md:p-16 border border-gray-200 mb-12;
+  }
+  .ecosystem-node {
+    @apply p-4 bg-[var(--background)] border border-gray-200 text-center text-sm font-medium text-gray-600;
+  }
+  .ecosystem-center {
+    @apply mx-auto w-full max-w-md bg-[var(--brand-teal)] text-white p-6 shadow-md border border-[var(--brand-teal)];
+  }
+  .ecosystem-title {
+    @apply font-bold text-xl mb-2;
+  }
+  .ecosystem-subtitle {
+    @apply text-xs uppercase tracking-widest text-[var(--brand-gold)];
+  }
+
+  /* How It Works Timeline */
+  .workflow-container {
+    @apply space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-[var(--brand-sage)];
+  }
   .workflow-step-wrapper {
     @apply relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse;
   }
-  
   .workflow-node {
-    @apply flex items-center justify-center w-8 h-8 rounded-full border-2 border-[var(--brand-camel)] bg-[var(--background)] text-[var(--brand-camel)] font-bold text-sm z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm;
+    @apply flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[var(--brand-teal)] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold text-sm;
   }
-  
   .workflow-card {
-    @apply w-[calc(100%-3rem)] md:w-[calc(50%-2rem)] p-4 rounded border border-gray-200 bg-white shadow-sm text-[var(--foreground)] font-bold text-center;
+    @apply w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-[var(--background)] p-6 border border-gray-200 shadow-sm;
+  }
+
+  /* Financial Year Timeline */
+  .timeline-container {
+    @apply bg-white p-8 border border-gray-200 mb-12 max-w-4xl mx-auto shadow-sm;
+  }
+  .timeline-wrapper {
+    @apply flex flex-col md:flex-row justify-between items-center text-sm font-bold text-gray-700 space-y-4 md:space-y-0 relative;
+  }
+  .timeline-line {
+    @apply hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-[var(--brand-sage)] -z-10 -translate-y-1/2;
+  }
+  .timeline-node {
+    @apply bg-[var(--background)] px-4 py-2 border border-gray-300 rounded shadow-sm z-10 w-full md:w-auto text-[var(--brand-teal)];
+  }
+
+  /* Roadmap Grid */
+  .roadmap-column {
+    @apply pl-6 border-l-2;
+  }
+  .roadmap-now {
+    @apply border-[var(--brand-teal)];
+  }
+  .roadmap-next {
+    @apply border-[var(--brand-sage)] opacity-90;
+  }
+  .roadmap-future {
+    @apply border-gray-300 opacity-60;
+  }
+  .roadmap-label {
+    @apply text-xs font-bold text-[var(--brand-teal)] uppercase tracking-widest block mb-2;
+  }
+  .roadmap-title {
+    @apply font-bold text-[var(--foreground)] mb-3 text-lg;
+  }
+  .roadmap-desc {
+    @apply text-gray-600 text-sm leading-relaxed;
+  }
+
+  /* =========================================
+     ACCORDION / FAQ (With Transition Effects)
+     ========================================= */
+  .accordion-container {
+    @apply mb-10;
+  }
+  .accordion-item {
+    @apply border-b border-gray-200 transition-colors duration-200;
+  }
+  .accordion-button {
+    @apply w-full text-left py-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--brand-teal)] cursor-pointer;
+  }
+  .accordion-question {
+    @apply text-lg font-medium text-[var(--foreground)] transition-colors duration-200;
+  }
+  .accordion-button:hover .accordion-question {
+    @apply text-[var(--brand-teal)];
+  }
+  .accordion-icon {
+    @apply ml-6 flex-shrink-0 text-gray-400 transition-transform duration-300 ease-in-out;
+  }
+  .accordion-icon-rotated {
+    @apply transform rotate-180 text-[var(--brand-teal)];
+  }
+  .accordion-answer {
+    @apply pb-6 pr-12 transition-all duration-300 ease-in-out opacity-100;
+  }
+
+  /* =========================================
+     FORMS & CONTACT
+     ========================================= */
+  .contact-address {
+    @apply not-italic text-gray-600 leading-relaxed border-l-2 border-[var(--brand-sage)] pl-4;
+  }
+  .form-container {
+    @apply space-y-6;
+  }
+  .form-success {
+    @apply h-full flex items-center justify-center text-center p-8;
+  }
+  .form-success-icon {
+    @apply w-16 h-16 bg-[var(--brand-sage)] text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl;
+  }
+  .form-success-text {
+    @apply text-lg font-medium text-[var(--foreground)];
+  }
+  .form-error {
+    @apply bg-red-50 text-red-700 p-4 border border-red-200 text-sm;
+  }
+  .form-label {
+    @apply block text-sm font-bold text-[var(--foreground)] mb-2;
+  }
+  .form-label-small {
+    @apply block text-xs font-bold text-[var(--foreground)] mb-2;
+  }
+  .form-input {
+    @apply w-full border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-teal)];
+  }
+  .form-input-small {
+    @apply w-full border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-teal)];
+  }
+  .form-select {
+    @apply w-full border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-teal)];
+  }
+  .form-textarea {
+    @apply w-full border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-teal)];
+  }
+  .form-optional-section {
+    @apply grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-gray-200 pt-6;
+  }
+  .form-consent {
+    @apply text-xs text-gray-500 mb-6;
+  }
+  .btn-submit {
+    @apply w-full bg-[var(--brand-teal)] text-white px-6 py-4 text-sm font-bold uppercase tracking-wider hover:bg-[#0b5156] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--brand-teal)] disabled:opacity-70 disabled:cursor-not-allowed;
   }
 }
