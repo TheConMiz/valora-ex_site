@@ -34,8 +34,7 @@ export default function Contact() {
               <div className="flex flex-col gap-4 text-sm text-[var(--text-muted)]">
                 <div>
                   <strong className="block text-[var(--foreground)] mb-1 label-priority">Legal Entities</strong>
-                  <span>ValoraEX Limited</span><br />
-                  <span>延昇智能生態有限公司</span>
+                  <span>ValoraEX Intelligence Ecosystem Limited</span><br />
                 </div>
                 
                 <div>
