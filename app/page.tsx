@@ -1,76 +1,121 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
-      
-      {/* 1. HERO SECTION */}
-      <section id="hero" className="content-section pt-12 md:pt-20 lg:pt-28 border-b border-gray-200">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[var(--foreground)] leading-tight mb-6">
-            Make every asset transition more visible, traceable and better prepared.
-          </h1>
-          <p className="text-xl text-[var(--text-muted)] mb-4">
-            Visible assets. Transparent information. Structured evidence.
-          </p>
-          <p className="text-lg font-medium text-[var(--accent-teal)] mb-10">
-            From asset transition to governance-ready evidence.
-          </p>
-          <Link href="/contact" className="btn-primary">
-            Request a Demonstration
-          </Link>
+      {/* 1. Hero Section (Picture 1 - FF&E Workflow) */}
+      <section className="relative w-full min-h-[80vh] md:min-h-[85vh] flex items-center bg-gray-100 border-b border-gray-200 overflow-hidden">
+        
+        {/* Background Image (Picture 1) */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <Image
+            src="/valoraex-hero-ffe-workflow.webp"
+            alt="Premium commercial FF&E setting with subtle workflow and data overlays"
+            fill
+            className="object-cover object-[70%_center] md:object-center" 
+            priority
+          />
+          {/* Subtle gradient overlay to protect text legibility on the left negative space */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--background)] via-[var(--background)]/80 to-transparent md:w-2/3"></div>
         </div>
 
-        {/* Connected Flow Graphic (Replacing separate boxes) */}
-        <div className="mt-16 md:mt-24 p-6 md:p-10 bg-white border border-gray-200 rounded-lg overflow-x-auto">
-          <div className="min-w-[700px] flex items-center justify-between relative">
-            {/* Connecting Line */}
-            <div className="absolute top-1/2 left-0 w-full h-[2px] bg-gray-200 -z-10 -translate-y-1/2"></div>
-            
-            {[
-              "Asset Visibility",
-              "Readiness",
-              "Route Consideration",
-              "Execution Evidence",
-              "Close-Out"
-            ].map((step, idx) => (
-              <div key={idx} className="flex flex-col items-center gap-4 bg-white px-2">
-                <div className="w-4 h-4 rounded-full bg-[var(--accent-teal)] outline outline-4 outline-white"></div>
-                <span className="text-sm font-medium text-[var(--foreground)] text-center w-24">
-                  {step}
-                </span>
-              </div>
-            ))}
+        {/* Hero Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="max-w-2xl pt-12 md:pt-0">
+            {/* Reusing the cautious, platform-neutral positioning */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[var(--foreground)] mb-6 leading-tight">
+              Calm, intelligent FF&E lifecycle governance.
+            </h1>
+            <p className="text-lg md:text-xl text-[var(--text-muted)] mb-10 max-w-xl leading-relaxed">
+              We provide the workflow and governance coordination layer for structured commercial environments. Independent execution, unified oversight.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link 
+                href="/contact" 
+                className="inline-flex justify-center items-center px-8 py-3.5 text-sm font-medium rounded-sm text-white bg-[var(--accent-teal)] hover:bg-teal-700 transition-colors shadow-sm"
+              >
+                Request a Demo
+              </Link>
+              <Link 
+                href="#one" 
+                className="inline-flex justify-center items-center px-8 py-3.5 text-sm font-medium rounded-sm text-[var(--foreground)] bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
+              >
+                Explore Platform
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* 2. PHASE 1 FF&E & USE CASES */}
-      <section id="ffe-use-cases" className="content-section">
-        <div className="mb-12">
-          <h2 className="text-3xl font-medium mb-4">Phase 1 Capability: FF&E</h2>
-          <p className="text-[var(--text-muted)] max-w-2xl">
-            ValoraEX is currently focused on Furniture, Fixtures, and Equipment (FF&E).
-          </p>
-        </div>
-        
-        <div className="content-grid">
-          {[
-            { title: "Office Clearances", desc: "Structured extraction of large-scale corporate environments." },
-            { title: "Relocation & Restriping", desc: "Managing assets transitioning between ongoing operational spaces." },
-            { title: "Consolidation", desc: "Combining multiple floors or sites into a smaller footprint." },
-            { title: "Asset Refresh", desc: "Rolling updates of task seating, workstations, or IT peripheral bases." }
-          ].map((useCase, idx) => (
-            <div key={idx} className="flex flex-col border border-gray-200 bg-white p-8 h-full rounded-sm">
-              <div className="w-8 h-8 mb-6 text-[var(--accent-teal)]">
-                {/* Minimalist abstract icon replacing furniture photos */}
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
-              </div>
-              <h3 className="text-lg font-medium label-priority mb-2">{useCase.title}</h3>
-              <p className="text-sm text-[var(--text-muted)] mt-auto">{useCase.desc}</p>
+      {/* 2. ValoraEX ONE Workflow Section (Picture 2) */}
+      <section id="one" className="py-20 md:py-28 bg-[var(--background)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Section Header */}
+          <div className="mb-12 max-w-3xl">
+            <h2 className="text-sm font-bold text-[var(--accent-teal)] tracking-widest uppercase mb-3">
+              ValoraEX ONE
+            </h2>
+            <h3 className="text-3xl md:text-4xl font-semibold text-[var(--foreground)] mb-6">
+              The core workflow.
+            </h3>
+            <p className="text-lg text-[var(--text-muted)] leading-relaxed">
+              A single, controlled sequence from initial asset visibility to final governance reporting. We standardize the data; our ecosystem partners handle the physical execution.
+            </p>
+          </div>
+
+          {/* Visual Base & HTML Overlay */}
+          <div className="relative w-full rounded-sm overflow-hidden bg-gray-100 shadow-sm group">
+            
+            {/* Background Image (Picture 2) */}
+            <div className="relative w-full h-[60vh] md:h-[70vh]">
+              <Image
+                src="/valoraex-one-workflow.webp"
+                alt="ValoraEX ONE 7-stage workflow visualization"
+                fill
+                className="object-cover object-center"
+              />
+              
+              {/* Protective gradient for HTML text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent md:h-full h-full"></div>
             </div>
-          ))}
+
+            {/* HTML Overlay: 7-Stage Sequence */}
+            {/* Mobile: Horizontally scrollable | Desktop: CSS Grid */}
+            <div className="absolute bottom-0 left-0 w-full p-6 md:p-10 overflow-x-auto pb-8">
+              <div className="flex md:grid md:grid-cols-7 gap-6 md:gap-4 min-w-max md:min-w-0">
+                {[
+                  "Asset Visibility",
+                  "Stocktake",
+                  "Condition and Readiness Assessment",
+                  "Route Readiness",
+                  "Route Assignment",
+                  "Execution and Evidence Capture",
+                  "Governance Close-out and Reporting"
+                ].map((stage, idx) => (
+                  <div key={idx} className="w-40 md:w-auto flex flex-col gap-3">
+                    {/* Minimalist left-to-right connecting line */}
+                    <div className="h-px w-full bg-white/20 relative">
+                      <div className="absolute top-0 left-0 h-full bg-[var(--accent-teal)] w-8"></div>
+                    </div>
+                    
+                    <div>
+                      <span className="text-[10px] md:text-xs font-bold text-[var(--accent-teal)] tracking-widest uppercase block mb-1">
+                        Stage {idx + 1}
+                      </span>
+                      <p className="text-sm md:text-[15px] font-medium text-white leading-snug drop-shadow-md">
+                        {stage}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
