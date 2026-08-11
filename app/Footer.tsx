@@ -32,10 +32,10 @@ export default function Footer() {
               +852 4628 5775
             </a>
             <a 
-              href="mailto:office@valoraex.com" 
+              href="mailto:hello@valoraex.com" 
               className="text-sm text-[var(--text-muted)] hover:text-[var(--foreground)] transition-colors"
             >
-              office@valoraex.com
+              hello@valoraex.com
             </a>
             <div className="text-sm text-[var(--text-muted)] mt-2 leading-relaxed">
               <p>Flat B, 17/F, Yuen Long Hi Tech Centre</p>

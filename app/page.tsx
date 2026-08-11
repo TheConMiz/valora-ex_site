@@ -12,7 +12,7 @@ export default function Home() {
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
             src="/valoraex-hero-ffe-workflow.webp"
-            alt="Premium commercial FF&E setting with subtle workflow and data overlays"
+            alt=""
             fill
             className="object-cover object-[70%_center] md:object-center" 
             priority

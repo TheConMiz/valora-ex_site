@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface NavigationProps {
   isOpen: boolean;
@@ -9,7 +10,9 @@ interface NavigationProps {
 }
 
 export default function Navigation({ isOpen, onClose }: NavigationProps) {
-  // Prevent body scroll when the mobile navigation is open
+  const pathname = usePathname();
+
+  // Prevent body scroll when mobile drawer is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -23,11 +26,22 @@ export default function Navigation({ isOpen, onClose }: NavigationProps) {
 
   if (!isOpen) return null;
 
+  const navLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'ValoraEX ONE', href: '/one' },
+    { name: 'Governance', href: '/governance' },
+    { name: 'Ecosystem', href: '/ecosystem' },
+    { name: 'Use Cases', href: '/use-cases' },
+    { name: 'Leadership', href: '/leadership' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
   return (
     <div className="fixed inset-0 z-[60] flex justify-end">
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black/20 backdrop-blur-sm transition-opacity fade-enter-active"
+        className="fixed inset-0 bg-black/20 backdrop-blur-sm transition-opacity"
         onClick={onClose}
         aria-hidden="true"
       />
@@ -52,23 +66,27 @@ export default function Navigation({ isOpen, onClose }: NavigationProps) {
           </button>
         </div>
 
-        <div className="flex flex-col p-6 gap-6 overflow-y-auto">
-          {/* Navigation Links */}
-          <Link href="/#one" onClick={onClose} className="text-lg text-[var(--text-muted)] hover:text-[var(--foreground)] transition-colors">
-            ValoraEX ONE
-          </Link>
-          <Link href="/#governance" onClick={onClose} className="text-lg text-[var(--text-muted)] hover:text-[var(--foreground)] transition-colors">
-            Governance
-          </Link>
-          <Link href="/#neutrality" onClick={onClose} className="text-lg text-[var(--text-muted)] hover:text-[var(--foreground)] transition-colors">
-            Ecosystem
-          </Link>
-          <Link href="/about" onClick={onClose} className="text-lg text-[var(--text-muted)] hover:text-[var(--foreground)] transition-colors border-t border-gray-100 pt-6">
-            About Us
-          </Link>
+        <div className="flex flex-col p-6 gap-5 overflow-y-auto">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link 
+                key={link.href}
+                href={link.href} 
+                onClick={onClose} 
+                className={`text-base transition-colors ${
+                  isActive 
+                    ? 'text-[var(--accent-teal)] font-medium' 
+                    : 'text-[var(--text-muted)] hover:text-[var(--foreground)]'
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
 
           {/* Full Primary CTA */}
-          <div className="mt-8">
+          <div className="mt-6 pt-6 border-t border-gray-200">
             <Link 
               href="/contact" 
               onClick={onClose} 

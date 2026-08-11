@@ -46,8 +46,8 @@ export default function Contact() {
 
                 <div>
                   <strong className="block text-[var(--foreground)] mb-1 label-priority">General Enquiries</strong>
-                  <a href="mailto:office@valoraex.com" className="hover:text-[var(--accent-teal)] transition-colors">
-                    office@valoraex.com
+                  <a href="mailto:hello@valoraex.com" className="hover:text-[var(--accent-teal)] transition-colors">
+                    hello@valoraex.com
                   </a>
                 </div>
               </div>
