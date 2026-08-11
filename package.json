@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "start": "node .next/standalone/server.js"
   },
   "dependencies": {
     "lucide-react": "^1.23.0",
