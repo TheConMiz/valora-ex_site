@@ -28,11 +28,11 @@ export default function Header() {
             {/* Official Logo Integration */}
             <Link href="/" className="flex-shrink-0 flex items-center group">
               <Image 
-                src="/valoraex-logo.png" 
+                src="/android-chrome-192x192.png" 
                 alt="ValoraEX Official Logo"
-                width={160} 
-                height={40} 
-                className="w-auto h-7 md:h-8 object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                width={44} 
+                height={44} 
+                className="w-auto h-9 md:h-11 object-contain transition-transform duration-300 group-hover:scale-105"
                 priority
               />
             </Link>

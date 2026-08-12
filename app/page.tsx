@@ -65,58 +65,18 @@ export default function Home() {
 							The core workflow.
 						</h3>
 						<p className="text-lg text-[var(--text-muted)] leading-relaxed">
-							A single, controlled sequence from initial asset visibility to final governance reporting. We standardize the data; our ecosystem partners handle the physical execution.
+							A single, controlled sequence from initial asset visibility to final governance reporting. We
+							standardize the data; our ecosystem partners handle the physical execution.
 						</p>
 					</div>
 
-					{/* Visual Base & HTML Overlay */}
-					<div className="relative w-full rounded-sm overflow-hidden bg-gray-100 shadow-sm group">
-
-						{/* Background Image (Picture 2) */}
-						<div className="relative w-full h-[60vh] md:h-[70vh]">
-							<Image
-								src="/valoraex-one-workflow.webp"
-								alt="ValoraEX ONE 7-stage workflow visualization"
-								fill
-								className="object-cover object-center"
-							/>
-
-							{/* Protective gradient for HTML text readability */}
-							<div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent md:h-full h-full"></div>
+					{/* Visual Base & Image - Now Scrollable on Mobile */}
+					<div className="w-full rounded-sm overflow-x-auto overflow-y-hidden bg-gray-100 shadow-sm">
+						{/* Minimum width forces the image to stay large on mobile, enabling horizontal scroll */}
+						<div className="relative min-w-[800px] md:min-w-full w-full h-[50vh] md:h-[70vh]">
+							<Image src="/images/7-stage-workflow.jpg" alt="ValoraEX ONE 7-stage workflow visualization" fill
+								className="object-cover object-left md:object-center" />
 						</div>
-
-						{/* HTML Overlay: 7-Stage Sequence */}
-						{/* Mobile: Horizontally scrollable | Desktop: CSS Grid */}
-						<div className="absolute bottom-0 left-0 w-full p-6 md:p-10 overflow-x-auto pb-8">
-							<div className="flex md:grid md:grid-cols-7 gap-6 md:gap-4 min-w-max md:min-w-0">
-								{[
-									"Asset Visibility",
-									"Stocktake",
-									"Condition and Readiness Assessment",
-									"Route Readiness",
-									"Route Assignment",
-									"Execution and Evidence Capture",
-									"Governance Close-out and Reporting"
-								].map((stage, idx) => (
-									<div key={idx} className="w-40 md:w-auto flex flex-col gap-3">
-										{/* Minimalist left-to-right connecting line */}
-										<div className="h-px w-full bg-white/20 relative">
-											<div className="absolute top-0 left-0 h-full bg-[var(--accent-teal)] w-8"></div>
-										</div>
-
-										<div>
-											<span className="text-[10px] md:text-xs font-bold text-[var(--accent-teal)] tracking-widest uppercase block mb-1">
-												Stage {idx + 1}
-											</span>
-											<p className="text-sm md:text-[15px] font-medium text-white leading-snug drop-shadow-md">
-												{stage}
-											</p>
-										</div>
-									</div>
-								))}
-							</div>
-						</div>
-
 					</div>
 				</div>
 			</section>
@@ -449,11 +409,11 @@ export default function Home() {
 			{/* 13. Leadership */}
 			<section className="w-full max-w-6xl mx-auto px-6 py-16">
 				<h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Meet Our Leadership</h2>
-				
+
 				{/* Render the paginated carousel */}
 				<LeadershipCarousel />
-				
-			</section>			
+
+			</section>
 
 		</div>
 	);
