@@ -372,8 +372,13 @@ export default function Home() {
 					Roadmap disclaimer: Future capabilities are indicative, subject to change, and conditional on technical feasibility and market requirements.
 				</small>
 			</section>
-
-			{/* 12. FAQ */}
+			{/* 12. Leadership */}
+			<section className="w-full max-w-6xl mx-auto px-6 py-16">
+				<h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Meet Our Leadership</h2>
+				{/* Render the paginated carousel */}
+				<LeadershipCarousel />
+			</section>
+			{/* 13. FAQ */}
 			<section id="faq" className="content-section pb-24">
 				<div className="mb-12">
 					<h2 className="text-3xl font-medium mb-4">Frequently Asked Questions</h2>
@@ -400,20 +405,13 @@ export default function Home() {
 					))}
 				</div>
 
-				<div className="mt-8">
+				{/* <div className="mt-8">
 					<Link href="/faq" className="btn-secondary">
 						View all FAQs
 					</Link>
-				</div>
+				</div> */}
 			</section>
-			{/* 13. Leadership */}
-			<section className="w-full max-w-6xl mx-auto px-6 py-16">
-				<h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Meet Our Leadership</h2>
 
-				{/* Render the paginated carousel */}
-				<LeadershipCarousel />
-
-			</section>
 
 		</div>
 	);

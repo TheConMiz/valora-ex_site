@@ -11,12 +11,12 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { name: 'ONE', href: '/one' },
-    { name: 'Governance', href: '/governance' },
-    { name: 'Ecosystem', href: '/ecosystem' },
-    { name: 'Use Cases', href: '/use-cases' },
-    { name: 'Leadership', href: '/leadership' },
-    { name: 'FAQ', href: '/faq' },
+    // { name: 'ONE', href: '/one' },
+    // { name: 'Governance', href: '/governance' },
+    // { name: 'Ecosystem', href: '/ecosystem' },
+    // { name: 'Use Cases', href: '/use-cases' },
+    // { name: 'FAQ', href: '/faq' },
+    { name: 'Leadership', href: '/leadership' }
   ];
 
   return (
@@ -59,9 +59,9 @@ export default function Header() {
 
             {/* CTA & Mobile Toggle */}
             <div className="flex items-center gap-4">
-              <Link href="/contact" className="btn-primary hidden sm:inline-flex py-2 px-4 text-xs">
+              {/* <Link href="/contact" className="btn-primary hidden sm:inline-flex py-2 px-4 text-xs">
                 Request a Demo
-              </Link>
+              </Link> */}
               
               {/* Mobile Menu Button */}
               <button 
