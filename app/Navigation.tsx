@@ -27,7 +27,7 @@ export default function Navigation({ isOpen, onClose }: NavigationProps) {
   if (!isOpen) return null;
 
   const navLinks = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '/'},
     { name: 'ValoraEX ONE', href: '/one' },
     { name: 'Governance', href: '/governance' },
     { name: 'Ecosystem', href: '/ecosystem' },
