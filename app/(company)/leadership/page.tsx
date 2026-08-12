@@ -90,14 +90,14 @@ export default function LeadershipPage() {
 							>
 								LinkedIn &rarr;
 							</a>
-							<a
+							{/* <a
 								href={currentLeader.xUrl}
 								target="_blank"
 								rel="noopener noreferrer"
 								className="inline-flex items-center text-sm font-semibold text-gray-600 hover:text-black transition-colors"
 							>
 								X (Twitter) &rarr;
-							</a>
+							</a> */}
 						</div>
 					</div>
 				</div>
