@@ -1,184 +1,200 @@
 @import "tailwindcss";
 
 @layer base {
-  :root {
-    /* 
+	:root {
+		/* 
      * Background: Neutral warm white to reduce the heavy cream/yellow tone of #FDFCF0
      * Foreground: Dark grey/off-black for a premium, calm consulting feel
      */
-    --background: #FCFBF8; 
-    --foreground: #1A1A1A;
+		--background: #FCFBF8;
+		--foreground: #1A1A1A;
 
-    /* 
+		/* 
      * Accents: 
      * Teal is the principal functional accent for buttons and active UI elements.
      * Gold is retained as a variable but strictly for selective accents, not defaults.
      */
-    --accent-teal: #0F766E; 
-    --accent-teal-hover: #115E59;
-    --accent-gold: #C5A059;
+		--accent-teal: #0F766E;
+		--accent-teal-hover: #115E59;
+		--accent-gold: #C5A059;
 
-    /* 
+		/* 
      * Text: Strict contrast checks for grey text 
      * Darkened to ensure disclaimers and small footer text remain accessible
      */
-    --text-muted: #525252;
-    --text-disclaimer: #404040; 
-    
-    /* Spacing & Layout for mobile-friendly scaling */
-    --section-padding-y: max(4rem, 8vh); 
-    --section-padding-x: max(1.5rem, 4vw);
-  }
+		--text-muted: #525252;
+		--text-disclaimer: #404040;
 
-  html {
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
-    overscroll-behavior-x: none; /* Prevents "bounce" effect horizontally */
-  }
+		/* Spacing & Layout for mobile-friendly scaling */
+		--section-padding-y: max(4rem, 8vh);
+		--section-padding-x: max(1.5rem, 4vw);
+	}
 
-  body {
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
-    overscroll-behavior-x: none; /* Prevents "bounce" effect horizontally */
-    background-color: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif; /* Retain Arial as primary */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
-  }
+	html {
+		width: 100%;
+		max-width: 100vw;
+		overflow-x: hidden;
+		overscroll-behavior-x: none;
+		/* Prevents "bounce" effect horizontally */
+	}
 
-  /* 
+	body {
+		width: 100%;
+		max-width: 100vw;
+		overflow-x: hidden;
+		overscroll-behavior-x: none;
+		/* Prevents "bounce" effect horizontally */
+		background-color: var(--background);
+		color: var(--foreground);
+		font-family: Arial, Helvetica, sans-serif;
+		/* Retain Arial as primary */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		line-height: 1.6;
+		overflow-x: hidden;
+		/* Prevent horizontal scroll on mobile */
+	}
+
+	/* 
    * Typography: Calm consulting style 
    * Reduced bold headings; defaulting to medium weight (500)
    */
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
-    letter-spacing: -0.01em;
-    color: var(--foreground);
-    margin-bottom: 1rem;
-  }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		color: var(--foreground);
+		margin-bottom: 1rem;
+	}
 
-  /* Retain bolding explicitly for high-priority labels */
-  .label-priority {
-    font-weight: 700;
-  }
+	/* Retain bolding explicitly for high-priority labels */
+	.label-priority {
+		font-weight: 700;
+	}
 
-  /* Disclaimers & small text with accessible contrast */
-  small, .disclaimer {
-    color: var(--text-disclaimer);
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.4;
-    display: block;
-  }
+	/* Disclaimers & small text with accessible contrast */
+	small,
+	.disclaimer {
+		color: var(--text-disclaimer);
+		font-size: 0.875rem;
+		font-weight: 400;
+		line-height: 1.4;
+		display: block;
+	}
 }
 
 @layer components {
-  /* 
+
+	/* 
    * Functional Buttons 
    * Teal handles the primary CTA functional actions.
    */
-  .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium transition-colors duration-200 ease-in-out;
-    background-color: var(--accent-teal);
-    color: #FFFFFF;
-    border: 1px solid var(--accent-teal);
-  }
+	.btn-primary {
+		@apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium transition-colors duration-200 ease-in-out;
+		background-color: var(--accent-teal);
+		color: #FFFFFF;
+		border: 1px solid var(--accent-teal);
+	}
 
-  .btn-primary:hover {
-    background-color: var(--accent-teal-hover);
-    border-color: var(--accent-teal-hover);
-  }
+	.btn-primary:hover {
+		background-color: var(--accent-teal-hover);
+		border-color: var(--accent-teal-hover);
+	}
 
-  .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium transition-colors duration-200 ease-in-out border;
-    border-color: var(--foreground);
-    color: var(--foreground);
-    background-color: transparent;
-  }
+	.btn-secondary {
+		@apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium transition-colors duration-200 ease-in-out border;
+		border-color: var(--foreground);
+		color: var(--foreground);
+		background-color: transparent;
+	}
 
-  .btn-secondary:hover {
-    background-color: rgba(26, 26, 26, 0.05);
-  }
+	.btn-secondary:hover {
+		background-color: rgba(26, 26, 26, 0.05);
+	}
 
-  /* 
+	/* 
    * Section Layouts 
    * Increasing visual variation through spacing rather than heavy box/card borders
    */
-  .content-section {
-    padding: var(--section-padding-y) var(--section-padding-x);
-    @apply max-w-7xl mx-auto w-full;
-  }
+	.content-section {
+		padding: var(--section-padding-y) var(--section-padding-x);
+		@apply max-w-7xl mx-auto w-full;
+	}
 
-  .content-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12;
-  }
+	.content-grid {
+		@apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12;
+	}
 
-  /* 
+	/* 
    * Animations 
    * Minimal and strictly functional 
    */
-  .fade-enter {
-    @apply transition-opacity duration-300 ease-in-out opacity-0;
-  }
-  
-  .fade-enter-active {
-    @apply opacity-100;
-  }
-  /* Header & Navigation component styles */
-  .site-header {
-    @apply sticky top-0 z-50 w-full border-b border-gray-200 transition-all duration-300;
-    background-color: color-mix(in srgb, var(--background) 95%, transparent);
-    backdrop-filter: blur(12px);
-  }
+	.fade-enter {
+		@apply transition-opacity duration-300 ease-in-out opacity-0;
+	}
 
-  .nav-link {
-    @apply text-sm transition-colors;
-    color: var(--text-muted);
-  }
+	.fade-enter-active {
+		@apply opacity-100;
+	}
 
-  .nav-link:hover {
-    color: var(--foreground);
-  }
+	/* Header & Navigation component styles */
+	.site-header {
+		@apply sticky top-0 z-50 w-full border-b border-gray-200 transition-all duration-300;
+		background-color: color-mix(in srgb, var(--background) 95%, transparent);
+		backdrop-filter: blur(12px);
+	}
 
-  .nav-link-active {
-    @apply text-sm font-medium transition-colors;
-    color: var(--accent-teal);
-  }
+	.nav-link {
+		@apply text-sm transition-colors;
+		color: var(--text-muted);
+	}
+
+	.nav-link:hover {
+		color: var(--foreground);
+	}
+
+	.nav-link-active {
+		@apply text-sm font-medium transition-colors;
+		color: var(--accent-teal);
+	}
 }
 
 @layer utilities {
-  /* Grid hack for smooth accordion height transition */
-  .accordion-wrapper {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-in-out;
-  }
-  
-  details[open] .accordion-wrapper {
-    grid-template-rows: 1fr;
-  }
-  
-  .accordion-inner {
-    overflow: hidden;
-  }
-  
-  /* Disable the default triangle marker on WebKit browsers */
-  details > summary::-webkit-details-marker {
-    display: none;
-  }
 
-    /* Hide scrollbar for Chrome, Safari and Opera */
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .hide-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+	/* Grid hack for smooth accordion height transition */
+	.accordion-wrapper {
+		display: grid;
+		grid-template-rows: 0fr;
+		transition: grid-template-rows 0.3s ease-in-out;
+	}
+
+	details[open] .accordion-wrapper {
+		grid-template-rows: 1fr;
+	}
+
+	.accordion-inner {
+		overflow: hidden;
+	}
+
+	/* Disable the default triangle marker on WebKit browsers */
+	details>summary::-webkit-details-marker {
+		display: none;
+	}
+
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.hide-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.hide-scrollbar {
+		-ms-overflow-style: none;
+		/* IE and Edge */
+		scrollbar-width: none;
+		/* Firefox */
+	}
 }
