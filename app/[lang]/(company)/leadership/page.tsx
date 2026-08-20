@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { leadershipTeam } from './../../lib/data';
+import { leadershipTeam } from '../../lib/data';
 
 export default function LeadershipPage() {
 	const [currentIndex, setCurrentIndex] = useState(0);

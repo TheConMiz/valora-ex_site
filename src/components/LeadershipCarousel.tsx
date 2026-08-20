@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { leadershipTeam } from './../lib/data';
+import { leadershipTeam } from '../lib/data';
 import LeadershipCard from './LeadershipCard';
 
 export default function LeadershipCarousel() {

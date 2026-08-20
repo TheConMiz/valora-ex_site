@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import LeadershipCarousel from './components/LeadershipCarousel';
-import PartnerCarousel from './components/PartnerCarousel';
+import LeadershipCarousel from '@/components/LeadershipCarousel';
+import PartnerCarousel from '@/components/PartnerCarousel';
 
 
 export default function Home() {
