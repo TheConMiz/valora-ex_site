@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import LeadershipCarousel from './components/LeadershipCarousel';
+import PartnerCarousel from './components/PartnerCarousel';
 
 
 export default function Home() {
@@ -412,6 +413,8 @@ export default function Home() {
 				</div> */}
 			</section>
 
+			{/* Render the Partner Carousel */}
+			<PartnerCarousel />
 
 		</div>
 	);

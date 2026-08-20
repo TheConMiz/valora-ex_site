@@ -161,6 +161,48 @@
 		@apply text-sm font-medium transition-colors;
 		color: var(--accent-teal);
 	}
+
+	/* Partner Carousel Section */
+	.partner-section {
+		padding: 4rem 2rem;
+		text-align: center;
+		background-color: #f9fafb;
+	}
+
+	.partner-title {
+		font-size: 1.875rem;
+		font-weight: 600;
+		margin-bottom: 2.5rem;
+		color: #111827;
+	}
+
+	/* Flexbox Carousel Track */
+	.partner-track {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
+		list-style: none;
+		padding: 0;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	/* Individual Logo Wrapper (Link-Ready) */
+	.partner-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+	}
+
+	/* Standardized Image Constraints */
+	.partner-logo {
+		max-height: 80px;
+		width: auto;
+		object-fit: contain;
+	}
 }
 
 @layer utilities {
