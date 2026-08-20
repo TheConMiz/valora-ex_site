@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import styles from './UniversalCTA.module.scss';
 
 interface UniversalCTAProps {
 	href: string;
@@ -14,8 +13,14 @@ export default function UniversalCTA({
 	variant = 'primary',
 	className = ''
 }: UniversalCTAProps) {
+	const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded transition-colors duration-300 font-semibold cursor-pointer text-center";
+	const primaryStyles = "bg-black text-white border border-black hover:bg-gray-800";
+	const secondaryStyles = "bg-transparent text-black border border-black hover:bg-gray-100";
+
+	const appliedStyles = variant === 'primary' ? primaryStyles : secondaryStyles;
+
 	return (
-		<Link href={href} className={`${styles.cta} ${styles[variant]} ${className}`}>
+		<Link href={href} className={`${baseStyles} ${appliedStyles} ${className}`}>
 			{text}
 		</Link>
 	);

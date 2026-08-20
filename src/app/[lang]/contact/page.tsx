@@ -1,201 +1,58 @@
-'use client';
+import ContentBlock from '@/components/ContentBlock';
 
-import React, { useState } from 'react';
-
-export default function Contact() {
-  const [enquiryType, setEnquiryType] = useState('');
-
-  // Determine if project-specific fields should be shown
-  const isProjectEnquiry = enquiryType === 'Discuss an FF&E Project';
-
+export default function ContactPage() {
   return (
-    <div className="flex flex-col w-full">
-      
-      {/* Page Header */}
-      <section className="bg-[var(--accent-teal)] text-white pt-12 md:pt-20 pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-medium tracking-tight mb-4 text-white">
-            Talk to Us
-          </h1>
-          <p className="text-lg opacity-90 max-w-2xl">
-            Whether you are planning an asset transition, exploring governance readiness, or looking to collaborate within the ValoraEX ecosystem.
-          </p>
-        </div>
-      </section>
+    <main>
+      <ContentBlock title="Contact ValoraEX">
+        <p className="text-xl mb-8">Tell us about the asset transition, governance requirement or ecosystem capability you would like to discuss.</p>
 
-      {/* Main Content Grid */}
-      <section className="content-section py-12 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-16">
-          
-          {/* Contact Information */}
-          <div className="lg:col-span-1 flex flex-col gap-8">
-            <div>
-              <h2 className="text-xl font-medium mb-6">Company Information</h2>
-              <div className="flex flex-col gap-4 text-sm text-[var(--text-muted)]">
-                <div>
-                  <strong className="block text-[var(--foreground)] mb-1 label-priority">Legal Entities</strong>
-                  <span>ValoraEX Intelligence Ecosystem Limited</span><br />
-                </div>
-                
-                <div>
-                  <strong className="block text-[var(--foreground)] mb-1 label-priority">Telephone</strong>
-                  <a href="tel:+85246285775" className="hover:text-[var(--accent-teal)] transition-colors">
-                    +852 4628 5775
-                  </a>
-                </div>
-
-                <div>
-                  <strong className="block text-[var(--foreground)] mb-1 label-priority">General Enquiries</strong>
-                  <a href="mailto:hello@valoraex.com" className="hover:text-[var(--accent-teal)] transition-colors">
-                    hello@valoraex.com
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gray-50 p-6 border border-gray-200 rounded-sm">
-              <h3 className="font-bold text-sm mb-2">Headquarters</h3>
-              <p className="text-sm text-[var(--text-muted)]">
-                Hong Kong SAR
-              </p>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Full Name (Required) */}
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="fullName" className="text-sm font-bold text-[var(--foreground)] label-priority">
-                    Full Name *
-                  </label>
-                  <input 
-                    type="text" 
-                    id="fullName" 
-                    required
-                    className="p-3 border border-gray-300 rounded-sm focus:outline-none focus:border-[var(--accent-teal)] focus:ring-1 focus:ring-[var(--accent-teal)] transition-all bg-white"
-                  />
-                </div>
-
-                {/* Work Email (Required) */}
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="workEmail" className="text-sm font-bold text-[var(--foreground)] label-priority">
-                    Work Email *
-                  </label>
-                  <input 
-                    type="email" 
-                    id="workEmail" 
-                    required
-                    className="p-3 border border-gray-300 rounded-sm focus:outline-none focus:border-[var(--accent-teal)] focus:ring-1 focus:ring-[var(--accent-teal)] transition-all bg-white"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Company or Organisation (Required) */}
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="company" className="text-sm font-bold text-[var(--foreground)] label-priority">
-                    Company or Organisation *
-                  </label>
-                  <input 
-                    type="text" 
-                    id="company" 
-                    required
-                    className="p-3 border border-gray-300 rounded-sm focus:outline-none focus:border-[var(--accent-teal)] focus:ring-1 focus:ring-[var(--accent-teal)] transition-all bg-white"
-                  />
-                </div>
-
-                {/* Job Title (Optional) */}
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="jobTitle" className="text-sm font-medium text-[var(--foreground)]">
-                    Job Title <span className="text-[var(--text-muted)] font-normal">(Optional)</span>
-                  </label>
-                  <input 
-                    type="text" 
-                    id="jobTitle" 
-                    className="p-3 border border-gray-300 rounded-sm focus:outline-none focus:border-[var(--accent-teal)] focus:ring-1 focus:ring-[var(--accent-teal)] transition-all bg-white"
-                  />
-                </div>
-              </div>
-
-              {/* Enquiry Type (Required) */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="enquiryType" className="text-sm font-bold text-[var(--foreground)] label-priority">
-                  Enquiry Type *
-                </label>
-                <select 
-                  id="enquiryType" 
-                  required
-                  value={enquiryType}
-                  onChange={(e) => setEnquiryType(e.target.value)}
-                  className="p-3 border border-gray-300 rounded-sm focus:outline-none focus:border-[var(--accent-teal)] focus:ring-1 focus:ring-[var(--accent-teal)] transition-all bg-white appearance-none"
-                >
-                  <option value="" disabled>Select an option...</option>
-                  <option value="Discuss an FF&E Project">Discuss an FF&E Project</option>
-                  <option value="Discuss Governance Readiness">Discuss Governance Readiness</option>
-                  <option value="Explore Ecosystem Collaboration">Explore Ecosystem Collaboration</option>
-                  <option value="Institutional or University Cooperation">Institutional or University Cooperation</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-
-              {/* Conditional Fields: Project Location & Timing (Optional) */}
-              {isProjectEnquiry && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-gray-50 border border-gray-200 rounded-sm fade-enter-active">
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="projectLocation" className="text-sm font-medium text-[var(--foreground)]">
-                      Project Location <span className="text-[var(--text-muted)] font-normal">(Optional)</span>
-                    </label>
-                    <input 
-                      type="text" 
-                      id="projectLocation" 
-                      className="p-3 border border-gray-300 rounded-sm focus:outline-none focus:border-[var(--accent-teal)] focus:ring-1 focus:ring-[var(--accent-teal)] transition-all bg-white"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="expectedTiming" className="text-sm font-medium text-[var(--foreground)]">
-                      Expected Timing <span className="text-[var(--text-muted)] font-normal">(Optional)</span>
-                    </label>
-                    <input 
-                      type="text" 
-                      id="expectedTiming" 
-                      placeholder="e.g., Q3 2024"
-                      className="p-3 border border-gray-300 rounded-sm focus:outline-none focus:border-[var(--accent-teal)] focus:ring-1 focus:ring-[var(--accent-teal)] transition-all bg-white"
-                    />
-                  </div>
-                </div>
-              )}
-
-              {/* Brief Description (Required) */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="description" className="text-sm font-bold text-[var(--foreground)] label-priority">
-                  Brief Description *
-                </label>
-                <textarea 
-                  id="description" 
-                  rows={4}
-                  required
-                  className="p-3 border border-gray-300 rounded-sm focus:outline-none focus:border-[var(--accent-teal)] focus:ring-1 focus:ring-[var(--accent-teal)] transition-all bg-white resize-y"
-                ></textarea>
-              </div>
-
-              <div className="pt-4">
-                <button type="submit" className="btn-primary w-full sm:w-auto">
-                  Submit Enquiry
-                </button>
-              </div>
-              
-              <small className="disclaimer mt-2">
-                By submitting this form, you agree to our Privacy Policy regarding the processing of your personal data.
-              </small>
-
+        <div className="flex flex-col md:flex-row gap-16">
+          {/* Form Section */}
+          <div className="flex-1">
+            <form className="flex flex-col gap-5">
+              <input type="text" placeholder="Name" className="border border-gray-300 p-3 rounded" required />
+              <input type="text" placeholder="Company / Organisation" className="border border-gray-300 p-3 rounded" required />
+              <input type="email" placeholder="Email" className="border border-gray-300 p-3 rounded" required />
+              <input type="tel" placeholder="Telephone (optional)" className="border border-gray-300 p-3 rounded" />
+              <select className="border border-gray-300 p-3 rounded" required>
+                <option value="">Select Enquiry Type...</option>
+                <option value="corporate">Corporate / Project Enquiry</option>
+                <option value="v-one">V-ONE</option>
+                <option value="v-governance">V-Governance</option>
+                <option value="execution">Execution & Coordination Services</option>
+                <option value="partnership">Ecosystem Partnership</option>
+                <option value="general">General Enquiry</option>
+              </select>
+              <textarea placeholder="Message" rows={5} className="border border-gray-300 p-3 rounded" required></textarea>
+              <button type="submit" className="bg-black text-white px-6 py-3 rounded font-semibold w-max hover:bg-gray-800 transition-colors">
+                Submit Enquiry
+              </button>
             </form>
           </div>
 
+          {/* Contact Details & Legal Section */}
+          <div className="flex-1 space-y-8">
+            <div>
+              <h3 className="font-bold text-lg text-gray-900 mb-1">ValoraEX Intelligence Ecosystem Limited</h3>
+              <p className="text-gray-700">延昇智能生態有限公司</p>
+              <p className="mt-4 text-gray-700"><strong>Email:</strong> hello@valoraex.com</p>
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Address:</p>
+              <p className="text-gray-700 leading-relaxed">
+                Flat B, 17/F, Yuen Long Hi Tech Centre<br />
+                11 Wang Yip Street West<br />
+                Yuen Long, New Territories<br />
+                Hong Kong
+              </p>
+            </div>
+            <div className="text-sm text-gray-500 bg-gray-50 p-4 rounded border border-gray-100">
+              <p className="font-bold mb-2 text-gray-700">Personal Information Collection Statement</p>
+              <p>Information submitted through this form will be used by ValoraEX Intelligence Ecosystem Limited for responding to your enquiry, communicating with you and administering any related business discussion. Provision of the information is voluntary; however, we may be unable to respond fully if necessary information is not provided...</p>
+            </div>
+          </div>
         </div>
-      </section>
-    </div>
+      </ContentBlock>
+    </main>
   );
 }

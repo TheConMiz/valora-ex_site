@@ -1,86 +1,73 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import Navigation from './Navigation';
+import MobileMenu from './MobileMenu';
 
-export default function Header() {
+export default function Header({ lang }: { lang: string }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
 
+  // Core desktop links
   const navLinks = [
-    // { name: 'ONE', href: '/one' },
-    // { name: 'Governance', href: '/governance' },
-    // { name: 'Ecosystem', href: '/ecosystem' },
-    // { name: 'Use Cases', href: '/use-cases' },
-    // { name: 'FAQ', href: '/faq' },
-    { name: 'Leadership', href: '/leadership' }
+    { href: `/${lang}/why-valoraex`, label: 'Why ValoraEX' },
+    { href: `/${lang}/what-we-do`, label: 'What We Do' },
+    { href: `/${lang}/insights`, label: 'Insights' },
+    { href: `/${lang}/about`, label: 'About' },
+    { href: `/${lang}/faq`, label: 'FAQ' },
+    { href: `/${lang}/contact`, label: 'Contact' },
   ];
 
   return (
-    <>
-      <header className="sticky top-0 z-50 w-full bg-[var(--background)]/95 backdrop-blur-md border-b border-gray-200 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 md:h-20">
-            
-            {/* Official Logo Integration */}
-            <Link href="/" className="flex-shrink-0 flex items-center group">
-              <Image 
-                src="/android-chrome-192x192.png" 
-                alt="ValoraEX Official Logo"
-                width={44} 
-                height={44} 
-                className="w-auto h-9 md:h-11 object-contain transition-transform duration-300 group-hover:scale-105"
-                priority
-              />
+    <header className="sticky top-0 z-40 w-full bg-white border-b border-gray-200 shadow-sm">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        {/* Logo / Home Link */}
+        <Link href={`/${lang}`} className="font-bold text-2xl tracking-tight text-gray-900">
+          ValoraEX
+        </Link>
+
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex gap-8 items-center">
+          {navLinks.slice(0, 2).map((link) => (
+            <Link key={link.href} href={link.href} className="text-sm font-medium text-gray-700 hover:text-black transition-colors">
+              {link.label}
             </Link>
+          ))}
 
-            {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => {
-                const isActive = pathname === link.href;
-                return (
-                  <Link 
-                    key={link.href} 
-                    href={link.href}
-                    className={`text-sm transition-colors ${
-                      isActive 
-                        ? 'text-[var(--accent-teal)] font-medium' 
-                        : 'text-[var(--text-muted)] hover:text-[var(--foreground)]'
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                );
-              })}
-            </nav>
-
-            {/* CTA & Mobile Toggle */}
-            <div className="flex items-center gap-4">
-              {/* <Link href="/contact" className="btn-primary hidden sm:inline-flex py-2 px-4 text-xs">
-                Request a Demo
-              </Link> */}
-              
-              {/* Mobile Menu Button */}
-              <button 
-                className="lg:hidden p-2 text-[var(--foreground)] hover:text-[var(--text-muted)] transition-colors"
-                onClick={() => setIsMobileMenuOpen(true)}
-                aria-label="Open mobile menu"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
+          {/* Solutions Dropdown */}
+          <div className="relative group py-8">
+            <span className="text-sm font-medium text-gray-700 hover:text-black transition-colors cursor-pointer flex items-center gap-1">
+              Solutions ▾
+            </span>
+            <div className="absolute top-[70px] left-0 w-64 bg-white border border-gray-200 shadow-lg rounded-md p-2 hidden group-hover:flex flex-col gap-1">
+              <Link href={`/${lang}/solutions/valoraex-one`} className="text-sm text-gray-700 hover:text-black p-3 hover:bg-gray-50 rounded-md transition-colors">ValoraEX ONE</Link>
+              <Link href={`/${lang}/solutions/valoraex-governance`} className="text-sm text-gray-700 hover:text-black p-3 hover:bg-gray-50 rounded-md transition-colors">ValoraEX Governance</Link>
+              <Link href={`/${lang}/solutions/execution-coordination`} className="text-sm text-gray-700 hover:text-black p-3 hover:bg-gray-50 rounded-md transition-colors">Execution & Coordination</Link>
             </div>
-
           </div>
-        </div>
-      </header>
 
-      {/* Mobile Navigation Drawer (Props supplied correctly here) */}
-      <Navigation isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
-    </>
+          {navLinks.slice(2).map((link) => (
+            <Link key={link.href} href={link.href} className="text-sm font-medium text-gray-700 hover:text-black transition-colors">
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Mobile Hamburger Toggle */}
+        <button
+          className="lg:hidden p-2 text-gray-700 text-2xl"
+          onClick={() => setIsMobileMenuOpen(true)}
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+      </div>
+
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+        lang={lang}
+        navLinks={navLinks}
+      />
+    </header>
   );
 }

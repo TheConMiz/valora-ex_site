@@ -1,11 +1,17 @@
 import ContentBlock from '@/components/ContentBlock';
 
-// 1. Tell Next.js which languages are valid to prevent 404s
 export function generateStaticParams() {
 	return [{ lang: 'en' }, { lang: 'zh-hk' }, { lang: 'zh-cn' }];
 }
 
-export default function HomePage({ params }: { params: { lang: string } }) {
+export default async function HomePage({
+	params
+}: {
+	params: Promise<{ lang: string }>
+}) {
+	// Unwrap the Promise
+	const { lang } = await params;
+
 	return (
 		<main>
 			{/* 01 — Hero */}
@@ -14,8 +20,8 @@ export default function HomePage({ params }: { params: { lang: string } }) {
 				subtitle="A Practical 5R Intelligence Ecosystem for Asset Transition"
 				graphicRef="MKT-WEB-G01"
 				ctas={[
-					{ href: `/${params.lang}/solutions/valoraex-one`, text: 'Explore ValoraEX', variant: 'primary' },
-					{ href: `/${params.lang}/contact`, text: 'Talk to Us', variant: 'secondary' }
+					{ href: `/${lang}/solutions/valoraex-one`, text: 'Explore ValoraEX', variant: 'primary' },
+					{ href: `/${lang}/contact`, text: 'Talk to Us', variant: 'secondary' }
 				]}
 			>
 				<p>ValoraEX connects asset visibility, route decisions, ecosystem coordination, evidence and governance through a structured 5R approach to asset transition.</p>
@@ -27,7 +33,7 @@ export default function HomePage({ params }: { params: { lang: string } }) {
 				title="Better Outcomes Start Earlier"
 				graphicRef="MKT-WEB-G03"
 				reverseLayout
-				ctas={[{ href: `/${params.lang}/why-valoraex`, text: 'Why ValoraEX', variant: 'primary' }]}
+				ctas={[{ href: `/${lang}/why-valoraex`, text: 'Why ValoraEX', variant: 'primary' }]}
 			>
 				<p>Better circular-economy outcomes depend on more than finding a downstream provider.</p>
 				<p>Timing, information, preparation and coordination can determine which asset-transition routes are actually possible.</p>
