@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { leadershipTeam } from '../lib/data';
+import { managementData } from '../lib/data';
 import LeadershipCard from './LeadershipCard';
 
 export default function LeadershipCarousel() {
@@ -23,12 +23,12 @@ export default function LeadershipCarousel() {
   };
 
   const handleNext = () => {
-    const newIndex = currentIndex === leadershipTeam.length - 1 ? 0 : currentIndex + 1;
+    const newIndex = currentIndex === managementData.length - 1 ? 0 : currentIndex + 1;
     changeProfile(newIndex);
   };
 
   const handlePrev = () => {
-    const newIndex = currentIndex === 0 ? leadershipTeam.length - 1 : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? managementData.length - 1 : currentIndex - 1;
     changeProfile(newIndex);
   };
 
@@ -43,7 +43,7 @@ export default function LeadershipCarousel() {
             : 'opacity-100 scale-100 translate-y-0' // Normal resting state
         }`}
       >
-        <LeadershipCard leader={leadershipTeam[currentIndex]} />
+        {/* <LeadershipCard leader={managementData[currentIndex]} /> */}
       </div>
 
       {/* Navigation Buttons */}
@@ -71,7 +71,7 @@ export default function LeadershipCarousel() {
       
       {/* Pagination Dots */}
       <div className="flex justify-center gap-2 mt-6">
-        {leadershipTeam.map((_, index) => (
+        {managementData.map((_, index) => (
           <button
             key={index}
             onClick={() => changeProfile(index)}
