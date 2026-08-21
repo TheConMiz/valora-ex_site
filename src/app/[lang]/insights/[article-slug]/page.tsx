@@ -1,15 +1,16 @@
 import ContentBlock from '@/components/ContentBlock';
 
-// When you connect a CMS or add articles to data.ts, map over their slugs here
 export function generateStaticParams() {
     return [];
 }
 
-export default function ArticleTemplatePage({
+export default async function ArticleTemplatePage({
     params
 }: {
-    params: { lang: string, 'article-slug': string }
+    params: Promise<{ lang: string, 'article-slug': string }>
 }) {
+    const { lang } = await params;
+
     return (
         <main>
             <ContentBlock
@@ -17,8 +18,8 @@ export default function ArticleTemplatePage({
                 subtitle="Category: [Published Category] | Publication Date: [Date]"
                 graphicRef="MKT-WEB-G18"
                 ctas={[
-                    { href: `/${params.lang}/insights`, text: 'Explore More Insights', variant: 'secondary' },
-                    { href: `/${params.lang}/contact`, text: 'Talk to ValoraEX', variant: 'primary' }
+                    { href: `/${lang}/insights`, text: 'Explore More Insights', variant: 'secondary' },
+                    { href: `/${lang}/contact`, text: 'Talk to ValoraEX', variant: 'primary' }
                 ]}
             >
                 <h3>Introduction</h3>

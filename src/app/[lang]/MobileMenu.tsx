@@ -32,19 +32,19 @@ export default function MobileMenu({ isOpen, setIsOpen, navLinks }: MobileMenuPr
 
 	return (
 		<div
-			className="md:hidden border-b border-gray-200 bg-[var(--background)] absolute w-full z-40"
+			className="md:hidden border-b border-gray-200 bg-white absolute w-full z-40 shadow-xl"
 			id="mobile-menu"
 			ref={menuRef}
 			role="dialog"
 			aria-modal="true"
 			aria-label="Main mobile navigation"
 		>
-			<div className="px-6 pt-2 pb-6 space-y-1 shadow-lg bg-[var(--background)]">
+			<div className="px-6 pt-2 pb-6 space-y-1 bg-white">
 				{navLinks.map((link) => (
 					<Link
 						key={link.name}
 						href={link.href}
-						className="block px-3 py-4 text-base font-normal text-[var(--foreground)] hover:text-[var(--brand-camel)] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--brand-camel)] transition-colors border-b border-gray-100 last:border-none"
+						className="block px-3 py-4 text-base font-medium text-gray-900 hover:text-[var(--accent-teal)] focus:outline-none transition-colors border-b border-gray-100 last:border-none"
 						onClick={() => setIsOpen(false)}
 					>
 						{link.name}
@@ -54,8 +54,8 @@ export default function MobileMenu({ isOpen, setIsOpen, navLinks }: MobileMenuPr
 				{/* Mobile CTA */}
 				<div className="pt-6 pb-2">
 					<Link
-						href="/contact"
-						className="block w-full text-center text-base font-bold border-2 border-[var(--foreground)] text-[var(--foreground)] px-5 py-3 hover:bg-[var(--foreground)] hover:text-[var(--background)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--foreground)] transition-all"
+						href="/en/contact"
+						className="block w-full text-center text-base font-bold rounded-sm border-2 border-[var(--accent-teal)] bg-[var(--accent-teal)] text-white px-5 py-3 hover:bg-[var(--accent-teal-hover)] hover:border-[var(--accent-teal-hover)] transition-all"
 						onClick={() => setIsOpen(false)}
 					>
 						Talk to Us

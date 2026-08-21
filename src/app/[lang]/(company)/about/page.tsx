@@ -1,73 +1,100 @@
-import React from 'react';
-import Link from 'next/link';
+import ContentBlock from '@/components/ContentBlock';
+import LeadershipCarousel from '@/components/LeadershipCarousel';
 
-export default function About() {
+export default async function AboutPage({
+  params
+}: {
+  params: Promise<{ lang: string }>
+}) {
+  // Unwrap the Promise for Next.js 15 compatibility
+  const { lang } = await params;
+
   return (
-    <div className="flex flex-col w-full">
-      
-      {/* Page Header */}
-      <section className="content-section pt-12 md:pt-20 pb-12 border-b border-gray-200">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-medium tracking-tight mb-6 text-[var(--foreground)]">
-            Bridging the gap between asset transition and governance.
-          </h1>
-          <p className="text-xl text-[var(--text-muted)] leading-relaxed">
-            ValoraEX was established to coordinate complex physical asset transitions through structured workflow, ensuring operational execution produces reliable, governance-ready evidence.
-          </p>
-        </div>
-      </section>
+    <main>
+      {/* Intro: Who We Are & How it Started */}
+      <ContentBlock
+        title="About ValoraEX"
+        subtitle="Building a Practical Circular-Economy Ecosystem, Starting with Asset Transition"
+      >
+        <h3 className="mt-8">Who We Are</h3>
+        <p>ValoraEX Intelligence Ecosystem Limited is a Hong Kong-based company developing workflow, governance, evidence and ecosystem-coordination capabilities for asset transition.</p>
+        <p>We begin with FF&E as our Phase 1 proof category while developing a model designed to support broader asset categories over time.</p>
 
-      {/* Mission & Vision Grid */}
-      <section className="content-section py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
-          
-          {/* Current Purpose (Dominant) */}
-          <div className="flex flex-col gap-4">
-            <h2 className="text-2xl font-medium mb-2">Our Mission</h2>
-            <p className="text-[var(--text-muted)]">
-              We bring visibility to end-of-use asset cycles. By connecting baseline inventory data with downstream execution, ValoraEX replaces fragmented spreadsheets and undocumented disposals with a transparent, unified workflow.
-            </p>
-            <p className="text-[var(--text-muted)]">
-              Our starting point is Hong Kong, addressing the immediate challenges of high-density commercial real estate cycles, office clearances, and corporate restriping. By structuring these workflows early, we enable organizations to maximize second-life pathways across the local ecosystem.
-            </p>
+        <h3 className="mt-8">How ValoraEX Started</h3>
+        <p>ValoraEX grew from practical experience with increasing demand for:</p>
+        <ul>
+          <li>practical ESG solutions;</li>
+          <li>greener logistics;</li>
+          <li>stronger reuse and recycling practices;</li>
+          <li>better information for ESG and sustainability reporting.</li>
+        </ul>
+        <p>Real projects repeatedly showed that better outcomes depend on more than having a downstream provider.</p>
+        <p>Timing, asset visibility, preparation, handling, coordination and evidence can determine whether a potential route is actually achievable.</p>
+        <p>A group of professionals therefore came together to develop a more structured, platform-neutral approach linking workflow, technology, ecosystem capability and governance.</p>
+      </ContentBlock>
+
+      {/* Mission & Vision */}
+      <ContentBlock
+        title="Our Mission & Vision"
+        reverseLayout
+      >
+        <h3>Our Mission</h3>
+        <blockquote>To build a practical circular-economy ecosystem that connects better information, smarter asset-transition decisions, responsible execution and credible evidence — creating shared commercial, environmental and social value while advancing practical ESG governance.</blockquote>
+
+        <h3 className="mt-8">Our Vision</h3>
+        <blockquote>To build a trusted intelligence and governance ecosystem for circular asset transition — connecting organisations, professionals and ecosystem partners to extend value, create practical impact and strengthen the wider ESG community.</blockquote>
+      </ContentBlock>
+
+      {/* Name, Logo & Values */}
+      <ContentBlock
+        title="Our Identity & Values"
+        graphicRef="MKT-WEB-G15"
+      >
+        <h3>Our Name</h3>
+        <p>
+          <strong>Val</strong> — Value<br />
+          <strong>ora</strong> — Aura<br />
+          <strong>EX</strong> — Exit · Extension · Ecosystem Exchange
+        </p>
+        <blockquote>Extending asset value beyond exit through intelligent ecosystem coordination.</blockquote>
+
+        <h3 className="mt-8">Our Logo</h3>
+        <p>The ValoraEX logo uses an infinity-inspired form to represent continuity, value extension, route flow and ecosystem connection.</p>
+
+        <h3 className="mt-8">Our Values — PARTS</h3>
+        <blockquote>Different parts. Shared direction. Greater value.</blockquote>
+        <p><strong>P — Practical Impact:</strong> We focus on solutions that can operate in real business environments and create meaningful practical outcomes.</p>
+        <p><strong>A — Awareness & Action:</strong> Better outcomes often begin with earlier visibility, awareness and timely action.</p>
+        <p><strong>R — Responsibility:</strong> Responsible outcomes begin upstream through better decisions, preparation, handling and coordination.</p>
+        <p><strong>T — Transparency:</strong> We support clearer information, evidence, decisions and accountability throughout the asset-transition process.</p>
+        <p><strong>S — Shared Value:</strong> We seek opportunities to create commercial, environmental and social value across the ecosystem.</p>
+      </ContentBlock>
+
+      {/* Development Direction */}
+      <ContentBlock
+        title="Development Direction"
+        reverseLayout
+      >
+        <p><strong>Current:</strong> Furniture, Fixtures & Equipment (FF&E)</p>
+        <p><strong>Development Direction:</strong> Selected Electronics & Technology Assets</p>
+        <p><strong>Future:</strong> Broader Asset Categories & Connected Lifecycle</p>
+
+        <small className="block mt-6 border-l-2 border-gray-300 pl-4 text-[var(--text-disclaimer)]">
+          Future directions do not constitute current service commitments.
+        </small>
+      </ContentBlock>
+
+      {/* Management Section */}
+      <section className="py-20 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-[var(--foreground)]">Management</h2>
+            <p className="text-lg text-[var(--text-muted)] max-w-2xl mx-auto">Meet the team driving our platform, strategy, and ecosystem.</p>
           </div>
-
-          {/* Future Direction (Trimmed) */}
-          <div className="flex flex-col gap-4">
-            <h2 className="text-2xl font-medium mb-2">Longer-Term Direction</h2>
-            <p className="text-[var(--text-muted)]">
-              While our immediate capability focuses strictly on commercial Furniture, Fixtures, and Equipment (FF&E), the architecture of ValoraEX is designed for broader ecosystem alignment. As reporting requirements mature globally, our coordination frameworks will continuously adapt to support additional asset classes and increasingly rigorous governance standards.
-            </p>
-          </div>
-
+          {/* Integrated from Task 12 */}
+          <LeadershipCarousel />
         </div>
       </section>
-
-      {/* Leadership / Pending Section */}
-      <section className="content-section py-16 bg-gray-50 border-y border-gray-200">
-        <div className="max-w-3xl">
-          <h2 className="text-2xl font-medium mb-6">Leadership</h2>
-          <div className="border border-dashed border-gray-300 bg-white p-8 rounded-sm text-center">
-            <p className="text-sm text-[var(--text-muted)] italic">
-              Leadership and staff profile generation is pending further instruction and is not required for this revision.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="content-section py-20 text-center">
-        <h2 className="text-2xl font-medium mb-6">Explore the Platform</h2>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/contact" className="btn-primary w-full sm:w-auto">
-            Request a Demonstration
-          </Link>
-          <Link href="/#neutrality" className="btn-secondary w-full sm:w-auto">
-            Ecosystem Overview
-          </Link>
-        </div>
-      </section>
-
-    </div>
+    </main>
   );
 }

@@ -14,8 +14,10 @@ export default function UniversalCTA({
 	className = ''
 }: UniversalCTAProps) {
 	const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded transition-colors duration-300 font-semibold cursor-pointer text-center";
-	const primaryStyles = "bg-black text-white border border-black hover:bg-gray-800";
-	const secondaryStyles = "bg-transparent text-black border border-black hover:bg-gray-100";
+
+	// Connected to the official ValoraEX CSS variables
+	const primaryStyles = "bg-[var(--accent-teal)] text-white border border-[var(--accent-teal)] hover:bg-[var(--accent-teal-hover)]";
+	const secondaryStyles = "bg-transparent text-[var(--foreground)] border border-[var(--foreground)] hover:bg-black/5";
 
 	const appliedStyles = variant === 'primary' ? primaryStyles : secondaryStyles;
 

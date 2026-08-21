@@ -2,30 +2,27 @@
 
 @layer base {
 	:root {
-		/* 
-     * Background: Neutral warm white to reduce the heavy cream/yellow tone of #FDFCF0
-     * Foreground: Dark grey/off-black for a premium, calm consulting feel
-     */
-		--background: #FCFBF8;
-		--foreground: #1A1A1A;
+		/* Official ValoraEX Palette */
+		--background: #F8FAF5;
+		/* Porcelain */
+		--foreground: #414141;
+		/* Gunmetal */
 
-		/* 
-     * Accents: 
-     * Teal is the principal functional accent for buttons and active UI elements.
-     * Gold is retained as a variable but strictly for selective accents, not defaults.
-     */
-		--accent-teal: #0F766E;
-		--accent-teal-hover: #115E59;
-		--accent-gold: #C5A059;
+		/* Accents */
+		--accent-teal: #456963;
+		/* Deep Teal */
+		--accent-teal-hover: #324D48;
+		/* Darkened Deep Teal for hover states */
+		--accent-gold: #AF9066;
+		/* Camel */
 
-		/* 
-     * Text: Strict contrast checks for grey text 
-     * Darkened to ensure disclaimers and small footer text remain accessible
-     */
-		--text-muted: #525252;
-		--text-disclaimer: #404040;
+		/* Text Variations */
+		--text-muted: #91968F;
+		/* Grey Olive */
+		--text-disclaimer: #7A7E78;
+		/* Darkened Grey Olive for accessible contrast */
 
-		/* Spacing & Layout for mobile-friendly scaling */
+		/* Spacing & Layout */
 		--section-padding-y: max(4rem, 8vh);
 		--section-padding-x: max(1.5rem, 4vw);
 	}
@@ -238,5 +235,21 @@
 		/* IE and Edge */
 		scrollbar-width: none;
 		/* Firefox */
+	}
+
+	.animate-fade-in-up {
+		animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(16px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 }
