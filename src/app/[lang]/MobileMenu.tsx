@@ -33,7 +33,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks, lang }: MobileMe
 
 	return (
 		<div
-			className="md:hidden border-b border-gray-200 bg-white absolute w-full z-40 shadow-xl"
+			className="lg:hidden border-b border-gray-200 bg-white absolute w-full z-40 shadow-xl" // <-- Changed md:hidden to lg:hidden
 			id="mobile-menu"
 			ref={menuRef}
 			role="dialog"

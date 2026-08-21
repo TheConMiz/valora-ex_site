@@ -30,26 +30,23 @@
 	html {
 		width: 100%;
 		max-width: 100vw;
-		overflow-x: hidden;
+		overflow-x: clip;
+		/* <-- Changed from hidden to clip */
 		overscroll-behavior-x: none;
-		/* Prevents "bounce" effect horizontally */
 	}
 
 	body {
 		width: 100%;
 		max-width: 100vw;
-		overflow-x: hidden;
+		overflow-x: clip;
+		/* <-- Changed from hidden to clip */
 		overscroll-behavior-x: none;
-		/* Prevents "bounce" effect horizontally */
 		background-color: var(--background);
 		color: var(--foreground);
 		font-family: Arial, Helvetica, sans-serif;
-		/* Retain Arial as primary */
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		line-height: 1.6;
-		overflow-x: hidden;
-		/* Prevent horizontal scroll on mobile */
 	}
 
 	/* 

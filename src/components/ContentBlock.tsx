@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import UniversalCTA from './UniversalCTA';
+import ImageCarousel from './ImageCarousel'; 
 
 interface CTAConfig {
 	href: string;
@@ -10,13 +11,13 @@ interface CTAConfig {
 interface ContentBlockProps {
 	title: string;
 	subtitle?: string;
-	children: React.ReactNode;
-	graphicRef?: string;
+	children?: React.ReactNode; // <-- Add the question mark right here
+	graphicRef?: string | string[]; 
 	ctas?: CTAConfig[];
 	reverseLayout?: boolean;
 }
 
-// Complete mapping of all MKT-WEB-Gxx graphic references to your public/images/ assets
+// Complete mapping of all MKT-WEB-Gxx graphic references
 const imageMap: Record<string, string> = {
 	'MKT-WEB-G01': '/images/MKT-WEB-G01_Hero-Connected Asset Governance Journey.png',
 	'MKT-WEB-G02': '/images/MKT-WEB-G02_The Practical Execution Gap.png',
@@ -32,6 +33,9 @@ const imageMap: Record<string, string> = {
 	'MKT-WEB-G12': '/images/MKT-WEB-G12_Ecosystem Network.png',
 	'MKT-WEB-G14': '/images/MKT-WEB-G14_ValoraEX Strategic Roadmap.png',
 	'MKT-WEB-G15': '/images/MKT-WEB-G15_PARTS Values.png',
+	'MKT-WEB-G16': '/images/MKT-WEB-G16_Brian.png', 
+	'MKT-WEB-G17': '/images/MKT-WEB-G16_Dennis.png', 
+	'MKT-WEB-G19': '/images/MKT-WEB-G16_Keith.png',  
 	'MKT-WEB-G21': '/images/MKT-WEB-G21_Ecosystem Services.png',
 };
 
@@ -44,7 +48,14 @@ export default function ContentBlock({
 	reverseLayout = false
 }: ContentBlockProps) {
 	
-	const resolvedImage = graphicRef ? imageMap[graphicRef] : null;
+	// Normalize the input into an array safely, without any string splitting
+	const refsArray = Array.isArray(graphicRef) ? graphicRef : (graphicRef ? [graphicRef] : []);
+	
+	// Map to the dictionary to get actual URLs and filter out undefined matches
+	const resolvedImages = refsArray.map(ref => imageMap[ref]).filter(Boolean) as string[];
+
+	// If we are passing an array but no images resolve, we want to show the array contents as text for debugging
+	const missingRefLabel = Array.isArray(graphicRef) ? graphicRef.join(', ') : graphicRef;
 
 	return (
 		<section className={`animate-fade-in-up opacity-0 flex flex-col md:flex-row gap-12 py-16 px-8 max-w-7xl mx-auto items-center ${reverseLayout ? 'md:flex-row-reverse' : ''}`}>
@@ -67,20 +78,13 @@ export default function ContentBlock({
 
 			{graphicRef && (
 				<div className="flex-1 flex justify-center items-center w-full relative min-h-[350px] md:min-h-[450px]">
-					{resolvedImage ? (
+					{resolvedImages.length > 0 ? (
 						<div className="relative w-full h-full min-h-[350px] md:min-h-[450px] rounded-lg overflow-hidden shadow-sm border border-gray-200 bg-white">
-							<Image
-								src={resolvedImage}
-								alt={title}
-								fill
-								className="object-contain p-2"
-								sizes="(max-width: 768px) 100vw, 50vw"
-								priority={graphicRef === 'MKT-WEB-G01'}
-							/>
+							<ImageCarousel images={resolvedImages} altText={title} />
 						</div>
 					) : (
-						<div className="w-full min-h-[350px] md:min-h-[450px] bg-[var(--background)] flex flex-col justify-center items-center rounded-lg text-[var(--text-muted)] font-mono text-sm border-2 border-dashed border-gray-300">
-							<span>{graphicRef}</span>
+						<div className="w-full min-h-[350px] md:min-h-[450px] bg-[var(--background)] flex flex-col justify-center items-center rounded-lg text-[var(--text-muted)] font-mono text-sm border-2 border-dashed border-gray-300 p-4 text-center">
+							<span>{missingRefLabel}</span>
 							<span className="text-xs mt-2 opacity-70">Asset Pending</span>
 						</div>
 					)}

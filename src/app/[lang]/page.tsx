@@ -87,20 +87,9 @@ export default async function HomePage({
 			{/* 06 — Evidence, Governance & Shared Value */}
 			<ContentBlock
 				title="Better Information. Better Evidence. Better Continuity."
-				graphicRef="MKT-WEB-G10 / MKT-WEB-G11"
+				graphicRef={['MKT-WEB-G10', 'MKT-WEB-G11']} // <-- Passed securely as an array
 				reverseLayout
-			>
-				<h3>Better Information</h3>
-				<p>Support more structured asset and project information.</p>
-
-				<h3>Better Evidence</h3>
-				<p>Build evidence requirements into the workflow rather than reconstructing them afterwards.</p>
-
-				<h3>Better Continuity</h3>
-				<p>Preserve project outcomes and lifecycle visibility beyond the initial transition.</p>
-
-				<p className="mt-6">Together, these elements can support practical commercial, environmental and social value across the ecosystem.</p>
-			</ContentBlock>
+			></ContentBlock>
 
 			{/* 07 — Development Direction */}
 			<ContentBlock
@@ -127,20 +116,16 @@ export default async function HomePage({
 			</section>
 
 			{/* 08 — Management & Insights (Insights Wrapper) */}
-			<ContentBlock
+			{/* <ContentBlock
 				title="Insights & Ecosystem Updates"
-				graphicRef="MKT-WEB-G16 / G17 / G19 / G20"
+				graphicRef={['MKT-WEB-G16', 'MKT-WEB-G17', 'MKT-WEB-G19', 'MKT-WEB-G20']} // <-- Passed securely as an array
 				ctas={[
 					{ href: `/${lang}/insights`, text: 'View All Insights', variant: 'primary' },
 					{ href: 'https://www.youtube.com/@ValoraEX_Ecosystem', text: 'Visit the ValoraEX YouTube Channel', variant: 'secondary' }
 				]}
 			>
-				<h3>Latest Insights</h3>
-				<p>Ideas, practical perspectives and developments across asset transition, circular economy, ESG governance and the ValoraEX ecosystem.</p>
 
-				<h3>Watch & Explore</h3>
-				<p>Videos, practical perspectives and updates from the ValoraEX ecosystem.</p>
-			</ContentBlock>
+			</ContentBlock> */}
 
 			{/* 09 — Ecosystem Appreciation */}
 			<section className="py-20 bg-gray-50 border-t border-gray-200">
