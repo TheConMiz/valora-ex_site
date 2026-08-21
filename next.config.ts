@@ -1,10 +1,20 @@
+// Check if the build is running inside GitHub Actions
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
+
+// Define your GitHub repository name
+const repoName = 'valora-ex_site';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		unoptimized: true, // Required because GitHub Pages won't support Next.js built-in image optimization API
+		// GitHub Pages requires unoptimized images. 
+		// Google Cloud will use Next.js's built-in optimization.
+		unoptimized: isGithubActions, 
 	},
-	// If your repository is not a custom domain (e.g., username.github.io/repo-name)
-	// basePath: '/repo-name', 
+	
+	// Only apply the basePath if deploying to GitHub Pages.
+	// Google Cloud will use the standard root path ('').
+	basePath: isGithubActions ? `/${repoName}` : '',
 };
 
 export default nextConfig;
