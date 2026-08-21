@@ -43,7 +43,7 @@ export default function LeadershipCarousel() {
             : 'opacity-100 scale-100 translate-y-0' // Normal resting state
         }`}
       >
-        {/* <LeadershipCard leader={managementData[currentIndex]} /> */}
+        <LeadershipCard leader={managementData[currentIndex]} />
       </div>
 
       {/* Navigation Buttons */}

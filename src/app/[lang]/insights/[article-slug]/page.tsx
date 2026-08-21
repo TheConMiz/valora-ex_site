@@ -1,7 +1,11 @@
 import ContentBlock from '@/components/ContentBlock';
 
 export function generateStaticParams() {
-    return [];
+    // Providing a placeholder so the static export builds successfully
+    // You can replace this with actual article data later
+    return [
+        { 'article-slug': 'coming-soon' }
+    ];
 }
 
 export default async function ArticleTemplatePage({
