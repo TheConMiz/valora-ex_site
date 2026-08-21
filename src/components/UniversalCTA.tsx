@@ -20,9 +20,16 @@ export default function UniversalCTA({
 	const secondaryStyles = "bg-transparent text-[var(--foreground)] border border-[var(--foreground)] hover:bg-black/5";
 
 	const appliedStyles = variant === 'primary' ? primaryStyles : secondaryStyles;
+    
+	// Check if the link is an external URL
+	const isExternal = href.startsWith('http');
 
 	return (
-		<Link href={href} className={`${baseStyles} ${appliedStyles} ${className}`}>
+		<Link 
+			href={href} 
+			className={`${baseStyles} ${appliedStyles} ${className}`}
+			{...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+		>
 			{text}
 		</Link>
 	);

@@ -22,7 +22,7 @@ export default async function HomePage({
 				subtitle="A Practical 5R Intelligence Ecosystem for Asset Transition"
 				graphicRef="MKT-WEB-G01"
 				ctas={[
-					{ href: `/${lang}/solutions/valoraex-one`, text: 'Explore ValoraEX', variant: 'primary' },
+					{ href: `/${lang}/valoraex-one`, text: 'Explore ValoraEX', variant: 'primary' },
 					{ href: `/${lang}/contact`, text: 'Talk to Us', variant: 'secondary' }
 				]}
 			>
@@ -60,17 +60,17 @@ export default async function HomePage({
 				<h3>ValoraEX ONE — V-ONE</h3>
 				<p><strong>Project-Entry & Workflow</strong></p>
 				<p>Structure a defined asset-transition project from visibility through close-out.</p>
-				<p><a href={`/${lang}/solutions/valoraex-one`} className="text-[var(--accent-teal)] font-medium hover:underline">Explore V-ONE →</a></p>
+				<p><a href={`/${lang}/valoraex-one`} className="text-[var(--accent-teal)] font-medium hover:underline">Explore V-ONE →</a></p>
 
 				<h3 className="mt-8">ValoraEX Governance — V-Governance</h3>
 				<p><strong>Ongoing Readiness & Governance</strong></p>
 				<p>Maintain evidence quality, lifecycle visibility and readiness beyond individual projects.</p>
-				<p><a href={`/${lang}/solutions/valoraex-governance`} className="text-[var(--accent-teal)] font-medium hover:underline">Explore V-Governance →</a></p>
+				<p><a href={`/${lang}/valoraex-governance`} className="text-[var(--accent-teal)] font-medium hover:underline">Explore V-Governance →</a></p>
 
 				<h3 className="mt-8">Execution & Coordination Services</h3>
 				<p><strong>Project-Based Support</strong></p>
 				<p>On-site support, project coordination and access to suitable independent specialist capabilities.</p>
-				<p><a href={`/${lang}/solutions/execution-coordination`} className="text-[var(--accent-teal)] font-medium hover:underline">Explore Execution & Coordination Services →</a></p>
+				<p><a href={`/${lang}/execution-coordination`} className="text-[var(--accent-teal)] font-medium hover:underline">Explore Execution & Coordination Services →</a></p>
 			</ContentBlock>
 
 			{/* 05 — 5R Framework */}

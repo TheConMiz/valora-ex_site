@@ -5,9 +5,9 @@ export default function Footer({ lang }: { lang: string }) {
 	const footerLinks = [
 		{ href: `/${lang}/why-valoraex`, label: 'Why ValoraEX' },
 		{ href: `/${lang}/what-we-do`, label: 'What We Do' },
-		{ href: `/${lang}/solutions/valoraex-one`, label: 'V-ONE' },
-		{ href: `/${lang}/solutions/valoraex-governance`, label: 'V-Governance' },
-		{ href: `/${lang}/solutions/execution-coordination`, label: 'Execution & Coordination Services' },
+		{ href: `/${lang}/valoraex-one`, label: 'V-ONE' },
+		{ href: `/${lang}/valoraex-governance`, label: 'V-Governance' },
+		{ href: `/${lang}/execution-coordination`, label: 'Execution & Coordination Services' },
 		{ href: `/${lang}/insights`, label: 'Insights' },
 		{ href: `/${lang}/about`, label: 'About' },
 		{ href: `/${lang}/faq`, label: 'FAQ' },

@@ -39,11 +39,12 @@ export default function Header({ lang }: { lang: string }) {
               Solutions ▾
             </span>
             <div className="absolute top-[70px] left-0 w-64 bg-white border border-gray-200 shadow-lg rounded-md p-2 hidden group-hover:flex flex-col gap-1">
-              <Link href={`/${lang}/solutions/valoraex-one`} className="text-sm text-gray-700 hover:text-black p-3 hover:bg-gray-50 rounded-md transition-colors">ValoraEX ONE</Link>
-              <Link href={`/${lang}/solutions/valoraex-governance`} className="text-sm text-gray-700 hover:text-black p-3 hover:bg-gray-50 rounded-md transition-colors">ValoraEX Governance</Link>
-              <Link href={`/${lang}/solutions/execution-coordination`} className="text-sm text-gray-700 hover:text-black p-3 hover:bg-gray-50 rounded-md transition-colors">Execution & Coordination</Link>
+              <Link href={`/${lang}/valoraex-one`} className="text-sm text-gray-700 hover:text-black p-3 hover:bg-gray-50 rounded-md transition-colors">ValoraEX ONE</Link>
+              <Link href={`/${lang}/valoraex-governance`} className="text-sm text-gray-700 hover:text-black p-3 hover:bg-gray-50 rounded-md transition-colors">ValoraEX Governance</Link>
+              <Link href={`/${lang}/execution-coordination`} className="text-sm text-gray-700 hover:text-black p-3 hover:bg-gray-50 rounded-md transition-colors">Execution & Coordination</Link>
             </div>
           </div>
+
 
           {navLinks.slice(2).map((link) => (
             <Link key={link.href} href={link.href} className="text-sm font-medium text-gray-700 hover:text-black transition-colors">
