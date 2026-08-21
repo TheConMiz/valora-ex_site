@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'; // <-- Import Next Image
 
 const partners = [
   { name: 'Spider Logistics', slug: 'spider-logistics' },
@@ -17,20 +18,13 @@ export default function PartnerCarousel() {
       <ul className="partner-track">
         {partners.map((partner) => (
           <li key={partner.slug} className="partner-item">
-            {/* The div below acts as a structural placeholder for a future <a> tag */}
-            <div className="partner-link-placeholder">
-              <picture>
-                <source 
-                  srcSet={`/assets/logos/partner-${partner.slug}-standard.webp`} 
-                  type="image/webp" 
-                />
-                <img 
-                  src={`/assets/logos/partner-${partner.slug}-standard.png`} 
-                  alt={`${partner.name} Partner Logo`} 
-                  className="partner-logo" 
-                  loading="lazy" 
-                />
-              </picture>
+            <div className="partner-link-placeholder relative h-20 w-48">
+              <Image 
+                src={`/assets/logos/partner-${partner.slug}-standard.png`} 
+                alt={`${partner.name} Partner Logo`} 
+                fill
+                className="object-contain" 
+              />
             </div>
           </li>
         ))}
