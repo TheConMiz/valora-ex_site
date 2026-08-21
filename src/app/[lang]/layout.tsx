@@ -2,6 +2,11 @@ import '../globals.css';
 import Header from './Header';
 import Footer from './Footer';
 
+// Add this function to generate static paths for all pages under [lang]
+export function generateStaticParams() {
+	return [{ lang: 'en' }, { lang: 'zh-hk' }, { lang: 'zh-cn' }];
+}
+
 export default async function RootLayout({
   children,
   params,
