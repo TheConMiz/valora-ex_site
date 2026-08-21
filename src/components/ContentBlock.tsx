@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import UniversalCTA from './UniversalCTA';
-import ImageCarousel from './ImageCarousel'; 
+import ImageCarousel from './ImageCarousel';
 
 interface CTAConfig {
 	href: string;
@@ -12,7 +12,7 @@ interface ContentBlockProps {
 	title: string;
 	subtitle?: string;
 	children?: React.ReactNode; // <-- Add the question mark right here
-	graphicRef?: string | string[]; 
+	graphicRef?: string | string[];
 	ctas?: CTAConfig[];
 	reverseLayout?: boolean;
 }
@@ -33,9 +33,8 @@ const imageMap: Record<string, string> = {
 	'MKT-WEB-G12': '/images/MKT-WEB-G12_Ecosystem Network.png',
 	'MKT-WEB-G14': '/images/MKT-WEB-G14_ValoraEX Strategic Roadmap.png',
 	'MKT-WEB-G15': '/images/MKT-WEB-G15_PARTS Values.png',
-	'MKT-WEB-G16': '/images/MKT-WEB-G16_Brian.png', 
-	'MKT-WEB-G17': '/images/MKT-WEB-G16_Dennis.png', 
-	'MKT-WEB-G19': '/images/MKT-WEB-G16_Keith.png',  
+	'MKT-WEB-G16': '/images/MKT-WEB-G16_Brian.png',
+	// Removed G17 and G19 mappings to Dennis and Keith 
 	'MKT-WEB-G21': '/images/MKT-WEB-G21_Ecosystem Services.png',
 };
 
@@ -47,10 +46,10 @@ export default function ContentBlock({
 	ctas,
 	reverseLayout = false
 }: ContentBlockProps) {
-	
+
 	// Normalize the input into an array safely, without any string splitting
 	const refsArray = Array.isArray(graphicRef) ? graphicRef : (graphicRef ? [graphicRef] : []);
-	
+
 	// Map to the dictionary to get actual URLs and filter out undefined matches
 	const resolvedImages = refsArray.map(ref => imageMap[ref]).filter(Boolean) as string[];
 

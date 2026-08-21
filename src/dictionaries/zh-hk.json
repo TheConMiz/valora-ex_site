@@ -1,0 +1,476 @@
+{
+    "nav": {
+        "why_valoraex": "為何選擇 ValoraEX",
+        "what_we_do": "我們的服務",
+        "solutions": "解決方案",
+        "v_one": "ValoraEX ONE",
+        "v_governance": "ValoraEX Governance",
+        "execution_coordination": "執行及協調服務",
+        "insights": "Insights",
+        "about": "關於我們",
+        "faq": "常見問題",
+        "contact": "聯絡我們"
+    },
+    "footer": {
+        "company_name": "延昇智能生態有限公司",
+        "tagline": "智慧分流，延展價值",
+        "location": "香港",
+        "connect_title": "與我們聯繫",
+        "links": {
+            "why_valoraex": "為何選擇 ValoraEX",
+            "what_we_do": "我們的服務",
+            "v_one": "V-ONE",
+            "v_governance": "V-Governance",
+            "execution_coordination": "執行及協調服務",
+            "insights": "Insights",
+            "about": "關於我們",
+            "faq": "FAQ",
+            "contact": "聯絡我們",
+            "privacy": "私隱聲明",
+            "terms": "使用條款"
+        },
+        "copyright": "© 2026 ValoraEX Intelligence Ecosystem Limited. All rights reserved."
+    },
+    "common": {
+        "talk_to_us": "聯絡我們",
+        "explore_v_one": "了解 V-ONE",
+        "explore_v_governance": "了解 V-Governance",
+        "explore_execution": "了解執行及協調服務",
+        "view_profile": "查看個人簡介",
+        "learn_more": "了解更多",
+        "submit": "提交查詢"
+    },
+    "home": {
+        "hero": {
+            "subtitle": "為資產轉型而建立的實踐型 5R 智能生態系統",
+            "title": "智慧分流，延展價值",
+            "description": "ValoraEX 透過結構化的 5R 資產轉型方式，連結資產可視性、路徑決策、生態協調、證據及治理。",
+            "tagline": "可視性．流程．證據．治理",
+            "cta_primary": "了解 ValoraEX",
+            "cta_secondary": "聯絡我們"
+        },
+        "why_valoraex": {
+            "title": "更好的成果，由更早開始",
+            "p1": "更好的循環經濟成果，並不只取決於能否找到下游服務供應商。",
+            "p2": "時間、資訊、準備及協調，往往決定哪些資產轉型路徑真正可行。",
+            "quote": "越早取得資產可視性，就越有時間讓更好的路徑成為可能。",
+            "cta": "為何選擇 ValoraEX"
+        },
+        "how_it_works": {
+            "title": "一個結構化的資產轉型流程",
+            "description": "ValoraEX 提供一個結構化層，將資訊、決策、執行及證據連接至整個資產轉型流程。",
+            "workflow": "資產可視性 → 路徑準備度 → 路徑分配 → 生態協調 → 證據 → 項目收結 → 治理",
+            "cta": "了解我們的服務"
+        },
+        "ways_to_work": {
+            "title": "配合不同資產轉型階段的方案",
+            "v_one": {
+                "title": "ValoraEX ONE — V-ONE",
+                "subtitle": "項目啟動及工作流程",
+                "description": "由資產可視性開始，為特定資產轉型項目建立結構，直至項目收結。",
+                "cta": "了解 V-ONE"
+            },
+            "v_governance": {
+                "title": "ValoraEX Governance — V-Governance",
+                "subtitle": "持續準備度及治理",
+                "description": "在單一項目完成後，持續維持證據品質、生命週期可視性及準備度。",
+                "cta": "了解 V-Governance"
+            },
+            "execution": {
+                "title": "執行及協調服務",
+                "subtitle": "項目式支援",
+                "description": "提供現場支援、項目協調，並連接合適的獨立專業能力。",
+                "cta": "了解執行及協調服務"
+            }
+        },
+        "framework_5r": {
+            "title": "五種路徑，一套結構化框架",
+            "subtitle": "重用 · 轉售 · 翻新／再用途 · 回收 · 負責任處置",
+            "p1": "不同資產需要不同路徑。",
+            "p2": "ValoraEX 支援有結構的評估及準備，讓潛在路徑能夠更有效地被考慮。",
+            "cta": "了解 5R 方法"
+        },
+        "evidence_governance": {
+            "title": "更好的資訊．更好的證據．更好的延續性",
+            "info_title": "更好的資訊",
+            "info_desc": "支援更有結構的資產及項目資訊。",
+            "evidence_title": "更好的證據",
+            "evidence_desc": "將證據要求納入工作流程，而不是在活動完成後才重新整理。",
+            "continuity_title": "更好的延續性",
+            "continuity_desc": "在首次資產轉型完成後，持續保存項目成果及生命週期可視性。",
+            "summary": "這些元素共同支援整個生態系統中的實際商業、環境及社會價值。"
+        },
+        "roadmap": {
+            "title": "由 FF&E 開始，為更廣闊的未來而設計",
+            "current": "現階段：家具、固定裝置及設備（FF&E）",
+            "direction": "發展方向：精選電子及科技資產",
+            "future": "未來：更廣泛的資產類別及連接式生命週期",
+            "quote": "FF&E 是我們第一階段的驗證類別，而不是平台的最終界限。",
+            "disclaimer": "未來發展方向仍須視乎進一步開發、驗證及相關要求。"
+        },
+        "leadership_section": {
+            "title": "領導團隊",
+            "subtitle": "推動我們平台、策略及生態系統發展的團隊"
+        },
+        "insights_section": {
+            "title": "最新 Insights",
+            "description": "分享資產轉型、循環經濟、ESG 管治及 ValoraEX 生態系統相關的實務觀點、想法與發展。",
+            "cta_all": "查看所有 Insights",
+            "cta_youtube": "瀏覽 ValoraEX YouTube 頻道"
+        },
+        "appreciation_section": {
+            "title": "特別鳴謝我們的生態參與者",
+            "description": "我們感謝支持、合作、參與或協助 ValoraEX 發展，以及共同推動更廣泛實踐型循環經濟生態系統的機構及生態參與者。"
+        },
+        "final_cta": {
+            "title": "希望讓資產轉型更有結構？",
+            "description": "與 ValoraEX 討論如何透過更早的資產可視性、結構化路徑決策、生態協調及更完善的證據，支援你的下一個資產轉型項目。",
+            "cta": "聯絡我們"
+        }
+    },
+    "why_valoraex": {
+        "title": "為何選擇 ValoraEX？",
+        "subtitle": "真正可行的循環經濟成果，需要的不只是良好意願",
+        "p1": "越來越多企業正尋找實際可行的方法加強 ESG 表現，包括更環保的物流、更完善的重用與回收實踐，以及更好的 ESG 與可持續發展報告資訊。",
+        "p2": "真正的挑戰，往往並不是沒有下游方案。",
+        "p3": "而是正確的資訊、人、資產及時間，能否足夠早地配合起來。",
+        "operating_gap": {
+            "title": "實際營運缺口",
+            "intro": "實際項目可能面對：",
+            "bullets": [
+                "資產資訊出現得太遲；",
+                "資產狀況不清晰；",
+                "路徑決策太接近退出日期；",
+                "準備時間不足；",
+                "下游要求不明確；",
+                "處理方法不當；",
+                "證據零散。"
+            ],
+            "conclusion": "即使資產本身仍然具有使用價值，這些因素亦可能減少實際可行的路徑。"
+        },
+        "matching_window": {
+            "title": "配對窗口",
+            "intro": "循環經濟機會只有在以下四個因素能夠配合時，才真正有機會落地：",
+            "formula": "資產供應 + 接收方／市場需求 + 路徑準備度 + 執行時間 → 配對窗口",
+            "example_p1": "企業可能有狀況良好的家具可以提供。",
+            "example_p2": "非政府組織、學校、社區機構或買家亦可能有實際需要。",
+            "example_p3": "但如果資產只在接近最終清場日期時才變得可見，接收方可能沒有足夠時間評估合適性、取得批准、安排儲存或協調運輸。",
+            "quote": "越早取得資產可視性，就越有時間讓更好的路徑成為可能。"
+        },
+        "upstream": {
+            "title": "更好的成果，由上游開始",
+            "p1": "一件資產最終能否重用、轉售、翻新或回收，很大程度取決於它到達下游專業機構之前如何被處理。",
+            "p2": "不當拆卸、搬運、儲存、分類、包裝、裝載、運輸或資訊交接，都可能降低資產狀況或物料品質。",
+            "risk_intro": "這可能造成：",
+            "risks": [
+                "可用資產受損；",
+                "物料混雜或污染；",
+                "額外分類；",
+                "重複搬運；",
+                "下游成本增加；",
+                "轉售或翻新潛力下降；",
+                "回收可行性降低。"
+            ],
+            "quote": "負責任的資源回收，在資產到達回收商、轉售商或接收方之前已經開始。"
+        },
+        "better_decisions": {
+            "title": "更好的決策，需要更好的資訊",
+            "questions_intro": "實際需要回答的問題包括：",
+            "questions": [
+                "有哪些資產？",
+                "資產在哪裏？",
+                "狀況如何？",
+                "甚麼時候必須轉移？",
+                "現有資訊是甚麼？",
+                "哪些路徑可能可行？",
+                "下一方需要甚麼？",
+                "需要哪些證據？"
+            ],
+            "conclusion": "ValoraEX 將這些考慮因素帶入更有結構的工作流程。",
+            "flow": "資產可視性 → 路徑準備度 → 路徑分配 → 生態協調 → 證據 → 項目收結 → 治理",
+            "cta": "了解我們的服務"
+        }
+    },
+    "what_we_do": {
+        "title": "我們的服務",
+        "subtitle": "為資產轉型提供工作流程、治理及實際協調",
+        "intro": "ValoraEX 透過三個互相連接的範疇支援資產轉型。",
+        "areas": {
+            "workflow_title": "結構化工作流程",
+            "workflow_desc": "V-ONE 提供項目啟動及工作流程層。",
+            "governance_title": "持續治理",
+            "governance_desc": "V-Governance 支援持續準備度、證據品質及生命週期連續性。",
+            "execution_title": "實際執行及協調",
+            "execution_desc": "以項目形式連接現場工作、項目協調及合適的獨立生態專業能力。"
+        },
+        "visibility_readiness": {
+            "title": "資產可視性及路徑準備度",
+            "stocktake_title": "資產可視性及盤點",
+            "stocktake_desc": "協助建立更清晰的資產類型、位置、數量、狀況、相片及相關項目資訊。",
+            "readiness_title": "路徑準備度",
+            "readiness_desc": "檢視資產、現有資訊、時間及實際操作條件，是否已具備足夠條件進入某個潛在路徑。",
+            "factors_intro": "相關因素可包括：",
+            "factors": [
+                "資產狀況；",
+                "相片；",
+                "尺寸或其他屬性；",
+                "時間；",
+                "搬運要求；",
+                "買家或接收方準則；",
+                "運輸可行性；",
+                "下游要求；",
+                "證據需要。"
+            ]
+        },
+        "framework_5r": {
+            "title": "5R 路徑規劃",
+            "reuse": "重用 — 透過合適的內部或外部重用方式，延續資產的使用壽命。",
+            "resale": "轉售 — 透過合適的二手商業渠道，延續具市場價值資產的使用。",
+            "refurbishment": "翻新／再用途 — 透過維修、翻新、改造或重新設計，延長資產壽命或創造新的實際用途。",
+            "recycling": "回收 — 當資產已不適合繼續使用時，透過合適的回收路徑進行物料回收。",
+            "disposal": "負責任處置 — 當較高價值的路徑並不合理可行時，採用合適及負責任的處置方式。",
+            "donation_note": "捐贈可以是外部重用的一種形式，但並不是第六個 R。"
+        },
+        "execution_evidence": {
+            "title": "執行、證據及治理",
+            "coordination_title": "執行及生態協調",
+            "coordination_desc": "當項目需要專業服務時，ValoraEX 可按已協定的項目範圍協調合適的獨立生態專業能力。",
+            "closeout_title": "證據及項目收結",
+            "closeout_intro": "支援更有結構的：",
+            "closeout_items": [
+                "資產資訊；",
+                "路徑記錄；",
+                "相關文件；",
+                "交接資訊；",
+                "現有證據；",
+                "項目收結記錄。"
+            ],
+            "governance_title": "治理及報告準備度",
+            "governance_desc": "支援持續準備度、證據品質、生命週期可視性、治理記錄及財政年度準備度。",
+            "disclaimer": "ValoraEX 支援資訊及證據準備度。本身並不提供第三方 ESG 鑑證或可持續發展表現認證；如有需要，相關服務應由具備適當資格的獨立機構或專業人士另行提供。",
+            "cta": "聯絡我們"
+        }
+    },
+    "valoraex_one": {
+        "title": "ValoraEX ONE",
+        "subtitle": "V-ONE: 項目啟動及工作流程層",
+        "intro": "V-ONE 為企業管理特定資產轉型項目提供一個結構化起點。",
+        "flow": "看清楚 → 建立結構 → 路徑分配 → 協調 → 證據 → 項目收結",
+        "stages": {
+            "see": "看清楚: 建立更清晰的相關資產及項目資訊可視性。",
+            "structure": "建立結構: 整理資產資訊、準備度考慮、責任及證據要求。",
+            "route": "路徑分配: 根據現有資訊、時間及項目要求，考慮潛在 5R 路徑。",
+            "coordinate": "協調: 支援相關參與者之間的溝通、責任及已協定項目活動。",
+            "evidence": "證據: 在執行過程中收集及整理相關項目記錄及現有證據。",
+            "closeout": "項目收結: 將路徑、活動及相關記錄整理成更清晰的項目收結資料。"
+        },
+        "plans": {
+            "foundation": "Foundation — 適用於需要結構化起點及工作流程的集中型資產轉型項目。",
+            "standard": "Standard — 適用於需要更深入工作流程、檢視及協調的較廣泛項目。",
+            "enhanced": "Enhanced — 適用於規模較大或更複雜、需要擴展工作流程及支援的項目。"
+        },
+        "disclaimer": "V-ONE 不保證任何特定下游成果。",
+        "cta": "與我們討論 V-ONE"
+    },
+    "valoraex_governance": {
+        "title": "ValoraEX Governance",
+        "subtitle": "V-Governance: 讓準備度延續至單一項目之外",
+        "intro": "資產轉型資訊不應在項目完成後消失。V-Governance 提供持續的準備度、證據品質及生命週期可視性治理層。",
+        "pillars": {
+            "readiness": "保持準備度: 持續整理及準備相關資產資訊及路徑考慮。",
+            "evidence": "強化證據: 支援更一致的記錄及證據管理。",
+            "history": "保存歷史: 保留原有項目成果及其後資產轉型的可視性。"
+        },
+        "flow": "原有成果 → 後續轉型 → 當前狀態 → 治理記錄",
+        "fy_readiness": {
+            "title": "財政年度準備度",
+            "p1": "更好的 ESG 及可持續發展報告準備，不應只在年結時才開始。資產轉型資訊是在全年不同項目中持續產生。",
+            "records_intro": "相關記錄可以包括：",
+            "records": [
+                "資產資訊；",
+                "路徑決策；",
+                "活動記錄；",
+                "交接資訊；",
+                "現有證據；",
+                "項目成果；",
+                "後續資產轉型。"
+            ],
+            "conclusion": "V-Governance 可以協助企業在內部檢視、ESG 報告或可持續發展報告準備開始之前，維持更有組織的來源資訊。",
+            "quote": "全年建立準備度，而不是到年結時才重新拼湊整個故事。"
+        },
+        "evidence_readiness": {
+            "title": "證據準備度",
+            "intro": "活動完成後才重新整理證據，往往十分困難。因此，ValoraEX 鼓勵在執行前及執行期間便考慮相關證據要求。",
+            "quote": "更好的報告，源自更好的來源資訊及證據管理。"
+        },
+        "plans": {
+            "basic": "Basic — 適用於希望建立實際、持續治理及準備度基礎的機構。",
+            "advanced": "Advanced — 適用於需要更深入檢視、證據管理及生命週期可視性的機構。",
+            "premium": "Premium — 適用於較廣泛或較複雜需要，並希望獲得更全面治理支援的機構。",
+            "enterprise": "Enterprise / Custom Solutions — 適用於大型企業、跨地點環境或較複雜的項目及治理需要，ValoraEX 可按機構實際要求設計定制方案。"
+        },
+        "summary": "V-ONE 啟動工作流程；V-Governance 延續準備度、證據品質及治理連續性。",
+        "cta": "與我們討論 V-Governance"
+    },
+    "execution_coordination": {
+        "title": "執行及協調服務",
+        "subtitle": "由結構化工作流程，連接至實際執行",
+        "p1": "資產轉型並不止於路徑規劃。在實際項目中，往往需要現場準備、資訊收集、持份者協調及不同專業執行能力，才能有效完成已選定的資產轉型路徑。",
+        "p2": "ValoraEX 以項目形式提供支援，將結構化工作流程與實際執行連接起來。",
+        "p3": "視乎雙方協定的項目範圍，ValoraEX 可直接支援資產盤點、資訊收集、路徑準備度檢視、項目協調、證據管理及項目收結等工作。",
+        "p4": "如項目需要其他專業能力，ValoraEX 可按實際項目要求協調合適的獨立生態服務供應商。",
+        "quote": "一套結構化工作流程，在適當階段連接合適的專業能力。",
+        "onsite_support": {
+            "title": "現場及項目支援",
+            "items": [
+                "資產盤點及資料建立 — 協助識別相關資產，並有結構地記錄數量、位置及相關項目資訊。",
+                "資產狀況及資訊收集 — 收集現有資產狀況、相片、尺寸、屬性及其他相關資料。",
+                "路徑準備度檢視 — 檢視資產、現有資訊、時間及實際操作條件，是否已具備足夠條件進入潛在 5R 路徑。",
+                "項目協調 — 協調相關持份者、項目活動、責任、時間及資訊流程。",
+                "證據及交接記錄 — 在執行過程中支援有結構的證據收集、交接資訊及相關項目記錄。",
+                "例外及問題跟進 — 記錄及跟進可能影響既定資產轉型流程的相關例外、變更或問題。",
+                "項目收結支援 — 支援項目有結構地完成收結，並整理現有的路徑、活動及證據記錄。"
+            ]
+        },
+        "specialist_coordination": {
+            "title": "專業生態服務協調",
+            "intro": "視乎已協定的項目範圍，ValoraEX 可協助協調獨立服務供應商提供相關活動，例如：",
+            "services": [
+                "拆卸及拆解；",
+                "包裝及搬運；",
+                "運輸及物流；",
+                "臨時儲存及倉儲；",
+                "轉售支援；",
+                "翻新；",
+                "再用途及升級再造；",
+                "回收；",
+                "社區或非政府組織重用；",
+                "負責任處置；",
+                "其他按項目需要而安排的專業服務。"
+            ]
+        },
+        "neutrality": {
+            "title": "平台中立協調",
+            "p1": "ValoraEX 並不限定客戶必須使用指定的物流公司、回收商、翻新服務供應商或下游渠道。",
+            "factors_intro": "可按以下因素考慮合適的獨立服務供應商：",
+            "factors": [
+                "項目要求；",
+                "專業能力；",
+                "路徑合適性；",
+                "時間；",
+                "地點；",
+                "實際操作可行性；",
+                "證據要求；",
+                "其他相關項目或商業因素。"
+            ],
+            "quote": "ValoraEX 負責協調工作流程及相關生態能力；所需的專業服務會按項目需要，由合適的獨立服務供應商提供。",
+            "flow": "資產盤點 → 準備度 → 路徑 → 合作伙伴協調 → 執行證據 → 項目收結"
+        },
+        "cta_primary": "與我們討論項目支援",
+        "cta_secondary": "了解 V-ONE"
+    },
+    "insights": {
+        "title": "ValoraEX Insights",
+        "subtitle": "分享資產轉型、循環經濟、ESG 管治及 ValoraEX 生態系統的實務觀點與發展",
+        "intro": "ValoraEX Insights 匯集文章、實務觀察、公司觀點及多媒體內容。",
+        "categories_title": "內容分類",
+        "categories": [
+            "實踐 ESG",
+            "循環經濟",
+            "資產轉型",
+            "5R 與路徑準備度",
+            "治理與證據",
+            "綠色物流與執行",
+            "共享價值",
+            "科技與數據",
+            "生態系統與社群"
+        ],
+        "categories_note": "* 備註：分類頁面將自動過濾並僅顯示包含已發布內容的類別。",
+        "coming_soon_title": "Insights 即將推出",
+        "coming_soon_desc": "來自 ValoraEX 生態系統的文章、觀點及影片將於近期發布於此。",
+        "youtube_cta": "瀏覽 ValoraEX YouTube 頻道"
+    },
+    "about": {
+        "title": "關於 ValoraEX",
+        "subtitle": "由資產轉型開始，建立真正可落地的循環經濟生態系統",
+        "who_we_are": {
+            "title": "我們是誰",
+            "p1": "延昇智能生態有限公司是一家以香港為基地的企業，專注發展資產轉型相關的工作流程、治理、證據及生態協調能力。",
+            "p2": "我們以家具、固定裝置及設備（FF&E）作為第一階段的驗證類別，同時建立一套可逐步支援更廣泛資產類別的模式。"
+        },
+        "how_started": {
+            "title": "ValoraEX 如何開始",
+            "p1": "ValoraEX 源於實際商業經驗，以及市場對以下範疇日益增加的需求：",
+            "points": [
+                "實際 ESG 方案；",
+                "更環保的物流；",
+                "更完善的重用及回收實踐；",
+                "更好的 ESG 及可持續發展報告資訊。"
+            ],
+            "p2": "實際項目不斷顯示，更好的成果並不只取決於是否存在一個下游服務供應商。",
+            "p3": "時間、資產可視性、準備、處理、協調及證據，都可能決定一條潛在路徑是否真正可行。",
+            "p4": "因此，一群來自不同專業領域的人士共同發展 ValoraEX，希望建立一個更有結構、保持平台中立，並連接工作流程、科技、生態能力及治理的方式。"
+        },
+        "mission_vision": {
+            "mission_title": "我們的使命",
+            "mission_quote": "建立一個真正可落地的循環經濟生態系統，連結更完善的資訊、更智慧的資產轉型決策、負責任的執行及具可信度的證據，在推動實際 ESG 管治的同時，創造商業、環境及社會共享價值。",
+            "vision_title": "我們的願景",
+            "vision_quote": "建立一個值得信賴的循環資產轉型智能及治理生態系統，連結企業、專業人士及生態合作夥伴，延展價值、創造實際影響，並共同建立更強大的 ESG 社群。"
+        },
+        "identity": {
+            "title": "我們的品牌與價值觀",
+            "name_title": "我們的名稱",
+            "val": "Val — Value",
+            "ora": "ora — Aura",
+            "ex": "EX — Exit · Extension · Ecosystem Exchange",
+            "name_quote": "透過智能生態協調，讓資產價值延續至退出之後。",
+            "logo_title": "我們的標誌",
+            "logo_desc": "ValoraEX 標誌採用以無限概念為靈感的設計，代表持續性、價值延展、路徑流動及生態連接。",
+            "values_title": "我們的價值觀 — PARTS",
+            "values_quote": "不同部分，共同方向，創造更大價值。",
+            "p": "P — Practical Impact / 實際影響: 我們重視能夠在真實商業環境中落地的方案，並以創造具意義的實際成果為目標。",
+            "a": "A — Awareness & Action / 認知與行動: 更好的成果，往往源於更早的可視性、更清晰的認知，以及及時的行動。",
+            "r": "R — Responsibility / 責任: 負責任的成果由上游開始，包括更好的決策、準備、處理及協調。",
+            "t": "T — Transparency / 透明度: 我們支持在整個資產轉型過程中建立更清晰的資訊、證據、決策及責任界定。",
+            "s": "S — Shared Value / 共享價值: 我們致力在整個生態系統中創造商業、環境及社會共享價值。"
+        },
+        "roadmap": {
+            "title": "發展方向",
+            "current": "現階段：FF&E",
+            "direction": "發展方向：精選電子及科技資產",
+            "future": "未來：更廣泛的資產類別及連接式生命週期",
+            "disclaimer": "未來發展方向並不構成現有服務承諾。"
+        }
+    },
+    "contact": {
+        "title": "聯絡 ValoraEX",
+        "subtitle": "歡迎告訴我們你希望討論的資產轉型、治理需要或生態能力。",
+        "form": {
+            "name_placeholder": "姓名",
+            "company_placeholder": "公司／機構",
+            "email_placeholder": "電郵",
+            "phone_placeholder": "電話 (選填)",
+            "type_placeholder": "請選擇查詢類別...",
+            "types": {
+                "corporate": "企業／項目查詢",
+                "v_one": "V-ONE",
+                "v_governance": "V-Governance",
+                "execution": "執行及協調服務",
+                "partnership": "生態合作",
+                "general": "一般查詢"
+            },
+            "message_placeholder": "訊息",
+            "submit_btn": "提交查詢"
+        },
+        "info": {
+            "company_name": "延昇智能生態有限公司",
+            "email_label": "電郵:",
+            "address_label": "地址:",
+            "address": "香港新界元朗\n宏業西街 11 號\n元朗科技中心 17 樓 B 室"
+        },
+        "pics": {
+            "title": "個人資料收集聲明",
+            "text": "透過此表格提交的資料將由延昇智能生態有限公司用於回覆你的查詢、與你溝通及處理相關業務討論。提供資料屬自願性質；如未能提供所需資料，我們可能無法完整處理你的查詢。相關資料可能由獲授權的 ValoraEX 人員，以及支援網站運作、通訊或查詢處理的服務供應商接觸。如欲查閱或更正個人資料，請電郵 hello@valoraex.com。詳情請參閱我們的私隱聲明。"
+        }
+    }
+}

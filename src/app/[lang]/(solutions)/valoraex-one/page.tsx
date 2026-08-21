@@ -1,42 +1,63 @@
 import ContentBlock from '@/components/ContentBlock';
+import { getDictionary, Locale } from '@/lib/dictionaries';
 
 export default async function VOnePage({
-    params
+	params
 }: {
-    params: Promise<{ lang: string }>
+	params: Promise<{ lang: string }>
 }) {
-    const { lang } = await params;
+	const { lang } = await params;
+	const dict = await getDictionary(lang as Locale);
+	const content = dict.valoraex_one;
 
-    return (
-        <main>
-            <ContentBlock
-                title="ValoraEX ONE"
-                subtitle="V-ONE: The Project-Entry & Workflow Layer"
-                graphicRef="MKT-WEB-G08"
-                ctas={[{ href: `/${lang}/contact`, text: 'Talk to Us About V-ONE', variant: 'primary' }]}
-            >
-                <p>V-ONE provides a structured starting point for organisations managing a defined asset-transition project.</p>
-                <blockquote>See → Structure → Route → Coordinate → Evidence → Close-Out</blockquote>
+	// Helper to safely preserve the bold formatting for stages
+	const renderStage = (text: string) => {
+		const parts = text.split(': ');
+		if (parts.length === 2) {
+			return <><strong className="font-bold">{parts[0]}:</strong> {parts[1]}</>;
+		}
+		return text;
+	};
 
-                <h3 className="mt-8">Workflow Stages</h3>
-                <ul>
-                    <li><strong>See:</strong> Build clearer visibility of relevant assets and project information.</li>
-                    <li><strong>Structure:</strong> Organise asset information, readiness considerations, responsibilities and evidence requirements.</li>
-                    <li><strong>Route:</strong> Consider potential 5R pathways based on available information, timing and project requirements.</li>
-                    <li><strong>Coordinate:</strong> Support communication, responsibilities and agreed project activity across relevant parties.</li>
-                    <li><strong>Evidence:</strong> Capture and organise relevant project records and available evidence throughout execution.</li>
-                    <li><strong>Close-Out:</strong> Bring route, activity and supporting records together into a clearer project close-out.</li>
-                </ul>
+	// Helper to safely preserve the bold formatting for plans
+	const renderPlan = (text: string) => {
+		const parts = text.split(' — ');
+		if (parts.length === 2) {
+			return <><strong className="font-bold">{parts[0]}</strong> — {parts[1]}</>;
+		}
+		return text;
+	};
 
-                <h3 className="mt-8">V-ONE Plans</h3>
-                <p><strong>Foundation</strong> — For focused asset-transition projects requiring a structured starting workflow.</p>
-                <p><strong>Standard</strong> — For broader projects requiring greater workflow depth, review and coordination.</p>
-                <p><strong>Enhanced</strong> — For larger or more complex projects requiring expanded workflow and support.</p>
+	return (
+		<main>
+			<ContentBlock
+				title={content.title}
+				subtitle={content.subtitle}
+				graphicRef="MKT-WEB-G08"
+				ctas={[{ href: `/${lang}/contact`, text: content.cta, variant: 'primary' }]}
+			>
+				<p>{content.intro}</p>
+				<blockquote>{content.flow}</blockquote>
 
-                <small className="block mt-8 border-l-2 border-gray-300 pl-4 text-[var(--text-disclaimer)]">
-                    V-ONE does not guarantee a particular downstream outcome.
-                </small>
-            </ContentBlock>
-        </main>
-    );
+				<ul className="mt-8">
+					<li>{renderStage(content.stages.see)}</li>
+					<li>{renderStage(content.stages.structure)}</li>
+					<li>{renderStage(content.stages.route)}</li>
+					<li>{renderStage(content.stages.coordinate)}</li>
+					<li>{renderStage(content.stages.evidence)}</li>
+					<li>{renderStage(content.stages.closeout)}</li>
+				</ul>
+
+				<div className="mt-8 space-y-4">
+					<p>{renderPlan(content.plans.foundation)}</p>
+					<p>{renderPlan(content.plans.standard)}</p>
+					<p>{renderPlan(content.plans.enhanced)}</p>
+				</div>
+
+				<small className="block mt-8 border-l-2 border-gray-300 pl-4 text-[var(--text-disclaimer)]">
+					{content.disclaimer}
+				</small>
+			</ContentBlock>
+		</main>
+	);
 }

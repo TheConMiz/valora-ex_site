@@ -1,99 +1,105 @@
 import ContentBlock from '@/components/ContentBlock';
+import { getDictionary, Locale } from '@/lib/dictionaries';
 
 export default async function WhatWeDoPage({
-    params
+	params
 }: {
-    params: Promise<{ lang: string }>
+	params: Promise<{ lang: string }>
 }) {
-    // Unwrap the Promise for Next.js 15 compatibility
-    const { lang } = await params;
+	const { lang } = await params;
+	const dict = await getDictionary(lang as Locale);
+	const content = dict.what_we_do;
 
-    return (
-        <main>
-            {/* Intro & Core Areas */}
-            <ContentBlock
-                title="What We Do"
-                subtitle="Workflow, Governance and Practical Coordination for Asset Transition"
-            >
-                <p>ValoraEX supports asset transition through three connected areas.</p>
+	// Helper to safely preserve the bold formatting for the 5R list
+	const render5R = (text: string) => {
+		const parts = text.split(' — ');
+		if (parts.length === 2) {
+			return <><strong className="font-bold">{parts[0]}</strong> — {parts[1]}</>;
+		}
+		return text;
+	};
 
-                <h3 className="mt-8">Structured Workflow</h3>
-                <p>V-ONE provides the project-entry and workflow layer.</p>
+	return (
+		<main>
+			{/* Intro & Core Areas */}
+			<ContentBlock
+				title={content.title}
+				subtitle={content.subtitle}
+			>
+				<p>{content.intro}</p>
 
-                <h3 className="mt-6">Ongoing Governance</h3>
-                <p>V-Governance supports recurring readiness, evidence quality and lifecycle continuity.</p>
+				<h3 className="mt-8">{content.areas.workflow_title}</h3>
+				<p>{content.areas.workflow_desc}</p>
 
-                <h3 className="mt-6">Practical Execution & Coordination</h3>
-                <p>Project-based support connects on-site activity, project coordination and suitable independent ecosystem capabilities.</p>
-            </ContentBlock>
+				<h3 className="mt-6">{content.areas.governance_title}</h3>
+				<p>{content.areas.governance_desc}</p>
 
-            {/* Visibility & Route Readiness */}
-            <ContentBlock
-                title="Asset Visibility & Route Readiness"
-                graphicRef="MKT-WEB-G07"
-                reverseLayout
-            >
-                <h3>Asset Visibility & Stocktake</h3>
-                <p>Support clearer visibility of asset type, location, quantity, condition, photographs and relevant project information.</p>
+				<h3 className="mt-6">{content.areas.execution_title}</h3>
+				<p>{content.areas.execution_desc}</p>
+			</ContentBlock>
 
-                <h3 className="mt-8">Route Readiness</h3>
-                <p>Consider whether the asset, available information, timing and operating conditions are sufficiently prepared for a potential route.</p>
-                <p>Relevant factors may include:</p>
-                <ul>
-                    <li>condition;</li>
-                    <li>photographs;</li>
-                    <li>dimensions or attributes;</li>
-                    <li>timing;</li>
-                    <li>handling requirements;</li>
-                    <li>buyer or recipient criteria;</li>
-                    <li>transport feasibility;</li>
-                    <li>downstream requirements;</li>
-                    <li>evidence needs.</li>
-                </ul>
-            </ContentBlock>
+			{/* Visibility & Route Readiness */}
+			<ContentBlock
+				title={content.visibility_readiness.title}
+				graphicRef="MKT-WEB-G07"
+				reverseLayout
+			>
+				<h3>{content.visibility_readiness.stocktake_title}</h3>
+				<p>{content.visibility_readiness.stocktake_desc}</p>
 
-            {/* 5R Route Planning */}
-            <ContentBlock
-                title="5R Route Planning"
-                graphicRef="MKT-WEB-G06"
-            >
-                <p><strong>Reuse</strong> — Continue useful asset life through appropriate internal or external reuse.</p>
-                <p><strong>Resale</strong> — Transition suitable assets through appropriate commercial second-hand channels.</p>
-                <p><strong>Refurbishment / Repurposing</strong> — Repair, refresh, adapt or transform suitable assets to extend useful life or create another practical use.</p>
-                <p><strong>Recycling</strong> — Recover materials through appropriate recycling pathways where continued asset use is no longer practical.</p>
-                <p><strong>Responsible Disposal</strong> — Use an appropriate responsible-disposal route where higher-value pathways are not reasonably feasible.</p>
+				<h3 className="mt-8">{content.visibility_readiness.readiness_title}</h3>
+				<p>{content.visibility_readiness.readiness_desc}</p>
+				<p>{content.visibility_readiness.factors_intro}</p>
+				<ul>
+					{content.visibility_readiness.factors.map((factor, index) => (
+						<li key={index}>{factor}</li>
+					))}
+				</ul>
+			</ContentBlock>
 
-                <p className="mt-6 italic text-[var(--text-muted)]">Donation may form part of an external <strong>Reuse</strong> route. It is not a sixth R.</p>
-            </ContentBlock>
+			{/* 5R Route Planning */}
+			<ContentBlock
+				title={content.framework_5r.title}
+				graphicRef="MKT-WEB-G06"
+			>
+				<p>{render5R(content.framework_5r.reuse)}</p>
+				<p>{render5R(content.framework_5r.resale)}</p>
+				<p>{render5R(content.framework_5r.refurbishment)}</p>
+				<p>{render5R(content.framework_5r.recycling)}</p>
+				<p>{render5R(content.framework_5r.disposal)}</p>
 
-            {/* Execution, Evidence & Governance */}
-            <ContentBlock
-                title="Execution, Evidence & Governance"
-                graphicRef="MKT-WEB-G05"
-                reverseLayout
-                ctas={[{ href: `/${lang}/contact`, text: 'Talk to Us', variant: 'primary' }]}
-            >
-                <h3>Execution & Ecosystem Coordination</h3>
-                <p>Where specialist activities are required, ValoraEX may coordinate suitable independent ecosystem capabilities according to the agreed project scope.</p>
+				<p className="mt-6 italic text-[var(--text-muted)]">
+					{/* Utilizing dangerouslySetInnerHTML or simple replacement if internal bolding is needed, 
+                        but in this case, the dictionary defines it plainly. */}
+					{content.framework_5r.donation_note}
+				</p>
+			</ContentBlock>
 
-                <h3 className="mt-8">Evidence & Close-Out</h3>
-                <p>Support more structured:</p>
-                <ul>
-                    <li>asset information;</li>
-                    <li>route records;</li>
-                    <li>supporting documents;</li>
-                    <li>handover information;</li>
-                    <li>available evidence;</li>
-                    <li>project close-out records.</li>
-                </ul>
+			{/* Execution, Evidence & Governance */}
+			<ContentBlock
+				title={content.execution_evidence.title}
+				graphicRef="MKT-WEB-G05"
+				reverseLayout
+				ctas={[{ href: `/${lang}/contact`, text: content.execution_evidence.cta, variant: 'primary' }]}
+			>
+				<h3>{content.execution_evidence.coordination_title}</h3>
+				<p>{content.execution_evidence.coordination_desc}</p>
 
-                <h3 className="mt-8">Governance & Reporting Readiness</h3>
-                <p>Support recurring readiness, evidence quality, lifecycle visibility, governance history and Financial-Year Readiness.</p>
+				<h3 className="mt-8">{content.execution_evidence.closeout_title}</h3>
+				<p>{content.execution_evidence.closeout_intro}</p>
+				<ul>
+					{content.execution_evidence.closeout_items.map((item, index) => (
+						<li key={index}>{item}</li>
+					))}
+				</ul>
 
-                <small className="block mt-8 border-l-2 border-gray-300 pl-4 text-[var(--text-disclaimer)]">
-                    ValoraEX supports information and evidence readiness. It does not provide third-party ESG assurance or certify sustainability performance unless such services are separately provided by an appropriately qualified independent party.
-                </small>
-            </ContentBlock>
-        </main>
-    );
+				<h3 className="mt-8">{content.execution_evidence.governance_title}</h3>
+				<p>{content.execution_evidence.governance_desc}</p>
+
+				<small className="block mt-8 border-l-2 border-gray-300 pl-4 text-[var(--text-disclaimer)]">
+					{content.execution_evidence.disclaimer}
+				</small>
+			</ContentBlock>
+		</main>
+	);
 }

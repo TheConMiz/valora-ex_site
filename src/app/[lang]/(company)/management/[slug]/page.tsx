@@ -1,9 +1,13 @@
 import { notFound } from 'next/navigation';
-import { managementData } from '@/lib/data';
+import { getManagementData } from '@/lib/data';
+import { Locale } from '@/lib/dictionaries';
 import ContentBlock from '@/components/ContentBlock';
 
 export function generateStaticParams() {
-	return managementData.map((profile) => ({
+	// The slugs are universal across languages, so we can generate 
+	// the static paths using the default English array.
+	const profiles = getManagementData('en');
+	return profiles.map((profile) => ({
 		slug: profile.slug,
 	}));
 }
@@ -14,7 +18,10 @@ export default async function ManagementProfilePage({
 	params: Promise<{ lang: string, slug: string }>
 }) {
 	const { lang, slug } = await params;
-	const profile = managementData.find((p) => p.slug === slug);
+
+	// Fetch the localized profile list for the current language
+	const profiles = getManagementData(lang as Locale);
+	const profile = profiles.find((p) => p.slug === slug);
 
 	if (!profile) {
 		notFound();

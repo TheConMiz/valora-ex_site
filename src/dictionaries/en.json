@@ -1,0 +1,476 @@
+{
+    "nav": {
+        "why_valoraex": "Why ValoraEX",
+        "what_we_do": "What We Do",
+        "solutions": "Solutions",
+        "v_one": "ValoraEX ONE",
+        "v_governance": "ValoraEX Governance",
+        "execution_coordination": "Execution & Coordination",
+        "insights": "Insights",
+        "about": "About",
+        "faq": "FAQ",
+        "contact": "Contact"
+    },
+    "footer": {
+        "company_name": "ValoraEX Intelligence Ecosystem Limited",
+        "tagline": "Extend Value Beyond Exit",
+        "location": "Hong Kong",
+        "connect_title": "Connect With Us",
+        "links": {
+            "why_valoraex": "Why ValoraEX",
+            "what_we_do": "What We Do",
+            "v_one": "V-ONE",
+            "v_governance": "V-Governance",
+            "execution_coordination": "Execution & Coordination Services",
+            "insights": "Insights",
+            "about": "About",
+            "faq": "FAQ",
+            "contact": "Contact",
+            "privacy": "Privacy Notice",
+            "terms": "Terms of Use"
+        },
+        "copyright": "© 2026 ValoraEX Intelligence Ecosystem Limited. All rights reserved."
+    },
+    "common": {
+        "talk_to_us": "Talk to Us",
+        "explore_v_one": "Explore V-ONE",
+        "explore_v_governance": "Explore V-Governance",
+        "explore_execution": "Explore Execution & Coordination Services",
+        "view_profile": "View Profile",
+        "learn_more": "Learn More",
+        "submit": "Submit Enquiry"
+    },
+    "home": {
+        "hero": {
+            "subtitle": "A Practical 5R Intelligence Ecosystem for Asset Transition",
+            "title": "Extend Value Beyond Exit",
+            "description": "ValoraEX connects asset visibility, route decisions, ecosystem coordination, evidence and governance through a structured 5R approach to asset transition.",
+            "tagline": "Visibility. Workflow. Evidence. Governance.",
+            "cta_primary": "Explore ValoraEX",
+            "cta_secondary": "Talk to Us"
+        },
+        "why_valoraex": {
+            "title": "Better Outcomes Start Earlier",
+            "p1": "Better circular-economy outcomes depend on more than finding a downstream provider.",
+            "p2": "Timing, information, preparation and coordination can determine which asset-transition routes are actually possible.",
+            "quote": "Earlier visibility creates more time for better routes to become possible.",
+            "cta": "Why ValoraEX"
+        },
+        "how_it_works": {
+            "title": "One Structured Asset-Transition Journey",
+            "description": "ValoraEX provides a structured layer connecting information, decisions, execution and evidence throughout the asset-transition journey.",
+            "workflow": "Asset Visibility → Route Readiness → Route Assignment → Ecosystem Coordination → Evidence → Close-Out → Governance",
+            "cta": "What We Do"
+        },
+        "ways_to_work": {
+            "title": "Solutions for Different Stages of Asset Transition",
+            "v_one": {
+                "title": "ValoraEX ONE — V-ONE",
+                "subtitle": "Project-Entry & Workflow",
+                "description": "Structure a defined asset-transition project from visibility through close-out.",
+                "cta": "Explore V-ONE"
+            },
+            "v_governance": {
+                "title": "ValoraEX Governance — V-Governance",
+                "subtitle": "Ongoing Readiness & Governance",
+                "description": "Maintain evidence quality, lifecycle visibility and readiness beyond individual projects.",
+                "cta": "Explore V-Governance"
+            },
+            "execution": {
+                "title": "Execution & Coordination Services",
+                "subtitle": "Project-Based Support",
+                "description": "On-site support, project coordination and access to suitable independent specialist capabilities.",
+                "cta": "Explore Execution & Coordination Services"
+            }
+        },
+        "framework_5r": {
+            "title": "Five Routes. One Structured Framework.",
+            "subtitle": "Reuse · Resale · Refurbishment / Repurposing · Recycling · Responsible Disposal",
+            "p1": "Different assets require different routes.",
+            "p2": "ValoraEX supports structured assessment and preparation so potential routes can be considered more effectively.",
+            "cta": "Explore the 5R Approach"
+        },
+        "evidence_governance": {
+            "title": "Better Information. Better Evidence. Better Continuity.",
+            "info_title": "Better Information",
+            "info_desc": "Support more structured asset and project information.",
+            "evidence_title": "Better Evidence",
+            "evidence_desc": "Build evidence requirements into the workflow rather than reconstructing them afterwards.",
+            "continuity_title": "Better Continuity",
+            "continuity_desc": "Preserve project outcomes and lifecycle visibility beyond the initial transition.",
+            "summary": "Together, these elements can support practical commercial, environmental and social value across the ecosystem."
+        },
+        "roadmap": {
+            "title": "Starting with FF&E. Designed to Go Further.",
+            "current": "Today: Furniture, Fixtures & Equipment (FF&E)",
+            "direction": "Development Direction: Selected Electronics & Technology Assets",
+            "future": "Future: Broader Asset Categories & Connected Lifecycle",
+            "quote": "FF&E is our Phase 1 proof category — not the platform ceiling.",
+            "disclaimer": "Future directions remain subject to development, validation and applicable requirements."
+        },
+        "leadership_section": {
+            "title": "Leadership",
+            "subtitle": "Meet the team driving our platform, strategy, and ecosystem."
+        },
+        "insights_section": {
+            "title": "Latest Insights",
+            "description": "Ideas, practical perspectives and developments across asset transition, circular economy, ESG governance and the ValoraEX ecosystem.",
+            "cta_all": "View All Insights",
+            "cta_youtube": "Visit the ValoraEX YouTube Channel"
+        },
+        "appreciation_section": {
+            "title": "Special Appreciation to Our Ecosystem Players",
+            "description": "We appreciate the organisations and ecosystem players who support, collaborate with, contribute to or engage with the development of ValoraEX and the wider practical circular-economy ecosystem."
+        },
+        "final_cta": {
+            "title": "Ready to Make Asset Transition More Structured?",
+            "description": "Talk to ValoraEX about how earlier visibility, structured route decisions, ecosystem coordination and stronger evidence can support your next asset-transition project.",
+            "cta": "Talk to Us"
+        }
+    },
+    "why_valoraex": {
+        "title": "Why ValoraEX?",
+        "subtitle": "Practical Circular-Economy Outcomes Need More Than Good Intentions",
+        "p1": "More organisations are looking for practical ways to strengthen ESG performance — from greener logistics and better reuse and recycling practices to stronger information for ESG and sustainability reporting.",
+        "p2": "The challenge is often not the lack of a downstream solution.",
+        "p3": "The challenge is whether the right information, people, assets and time can come together early enough.",
+        "operating_gap": {
+            "title": "The Real Operating Gap",
+            "intro": "Real projects may face:",
+            "bullets": [
+                "late asset information;",
+                "unclear condition;",
+                "route decisions made too close to exit;",
+                "insufficient preparation time;",
+                "unknown downstream requirements;",
+                "poor handling;",
+                "fragmented evidence."
+            ],
+            "conclusion": "These issues can reduce the number of practical routes available even when potentially useful assets still exist."
+        },
+        "matching_window": {
+            "title": "The Matching Window",
+            "intro": "Circular-economy opportunities become practical only when four factors can align:",
+            "formula": "Asset Availability + Recipient / Market Demand + Route Readiness + Execution Time → Matching Window",
+            "example_p1": "A company may have usable furniture becoming available.",
+            "example_p2": "An NGO, school, community organisation or buyer may also have a genuine need.",
+            "example_p3": "But if the asset only becomes visible shortly before the final clearance date, the receiving party may not have enough time to assess suitability, obtain approval, organise storage or coordinate transport.",
+            "quote": "Earlier visibility creates more time for better routes to become possible."
+        },
+        "upstream": {
+            "title": "Better Outcomes Start Upstream",
+            "p1": "Whether an asset can ultimately be reused, resold, refurbished or recycled can depend heavily on what happens before it reaches the downstream specialist.",
+            "p2": "Poor dismantling, handling, storage, sorting, packaging, loading, transport or information transfer may reduce asset condition or material quality.",
+            "risk_intro": "This can result in:",
+            "risks": [
+                "damaged usable assets;",
+                "mixed or contaminated materials;",
+                "additional sorting;",
+                "double handling;",
+                "increased downstream cost;",
+                "reduced resale or refurbishment potential;",
+                "weaker recycling feasibility."
+            ],
+            "quote": "Responsible recovery begins before the recycler, reseller or recipient receives the asset."
+        },
+        "better_decisions": {
+            "title": "Better Decisions Need Better Information",
+            "questions_intro": "Practical questions include:",
+            "questions": [
+                "What assets exist?",
+                "Where are they?",
+                "What condition are they in?",
+                "When must they move?",
+                "What information is available?",
+                "Which routes may be feasible?",
+                "What does the next party need?",
+                "What evidence may be required?"
+            ],
+            "conclusion": "ValoraEX brings these considerations into a more structured workflow.",
+            "flow": "Asset Visibility → Route Readiness → Route Assignment → Ecosystem Coordination → Evidence → Close-Out → Governance",
+            "cta": "Discover What We Do"
+        }
+    },
+    "what_we_do": {
+        "title": "What We Do",
+        "subtitle": "Workflow, Governance and Practical Coordination for Asset Transition",
+        "intro": "ValoraEX supports asset transition through three connected areas.",
+        "areas": {
+            "workflow_title": "Structured Workflow",
+            "workflow_desc": "V-ONE provides the project-entry and workflow layer.",
+            "governance_title": "Ongoing Governance",
+            "governance_desc": "V-Governance supports recurring readiness, evidence quality and lifecycle continuity.",
+            "execution_title": "Practical Execution & Coordination",
+            "execution_desc": "Project-based support connects on-site activity, project coordination and suitable independent ecosystem capabilities."
+        },
+        "visibility_readiness": {
+            "title": "Asset Visibility & Route Readiness",
+            "stocktake_title": "Asset Visibility & Stocktake",
+            "stocktake_desc": "Support clearer visibility of asset type, location, quantity, condition, photographs and relevant project information.",
+            "readiness_title": "Route Readiness",
+            "readiness_desc": "Consider whether the asset, available information, timing and operating conditions are sufficiently prepared for a potential route.",
+            "factors_intro": "Relevant factors may include:",
+            "factors": [
+                "condition;",
+                "photographs;",
+                "dimensions or attributes;",
+                "timing;",
+                "handling requirements;",
+                "buyer or recipient criteria;",
+                "transport feasibility;",
+                "downstream requirements;",
+                "evidence needs."
+            ]
+        },
+        "framework_5r": {
+            "title": "5R Route Planning",
+            "reuse": "Reuse — Continue useful asset life through appropriate internal or external reuse.",
+            "resale": "Resale — Transition suitable assets through appropriate commercial second-hand channels.",
+            "refurbishment": "Refurbishment / Repurposing — Repair, refresh, adapt or transform suitable assets to extend useful life or create another practical use.",
+            "recycling": "Recycling — Recover materials through appropriate recycling pathways where continued asset use is no longer practical.",
+            "disposal": "Responsible Disposal — Use an appropriate responsible-disposal route where higher-value pathways are not reasonably feasible.",
+            "donation_note": "Donation may form part of an external Reuse route. It is not a sixth R."
+        },
+        "execution_evidence": {
+            "title": "Execution, Evidence & Governance",
+            "coordination_title": "Execution & Ecosystem Coordination",
+            "coordination_desc": "Where specialist activities are required, ValoraEX may coordinate suitable independent ecosystem capabilities according to the agreed project scope.",
+            "closeout_title": "Evidence & Close-Out",
+            "closeout_intro": "Support more structured:",
+            "closeout_items": [
+                "asset information;",
+                "route records;",
+                "supporting documents;",
+                "handover information;",
+                "available evidence;",
+                "project close-out records."
+            ],
+            "governance_title": "Governance & Reporting Readiness",
+            "governance_desc": "Support recurring readiness, evidence quality, lifecycle visibility, governance history and Financial-Year Readiness.",
+            "disclaimer": "ValoraEX supports information and evidence readiness. It does not provide third-party ESG assurance or certify sustainability performance unless such services are separately provided by an appropriately qualified independent party.",
+            "cta": "Talk to Us"
+        }
+    },
+    "valoraex_one": {
+        "title": "ValoraEX ONE",
+        "subtitle": "V-ONE: The Project-Entry & Workflow Layer",
+        "intro": "V-ONE provides a structured starting point for organisations managing a defined asset-transition project.",
+        "flow": "See → Structure → Route → Coordinate → Evidence → Close-Out",
+        "stages": {
+            "see": "See: Build clearer visibility of relevant assets and project information.",
+            "structure": "Structure: Organise asset information, readiness considerations, responsibilities and evidence requirements.",
+            "route": "Route: Consider potential 5R pathways based on available information, timing and project requirements.",
+            "coordinate": "Coordinate: Support communication, responsibilities and agreed project activity across relevant parties.",
+            "evidence": "Evidence: Capture and organise relevant project records and available evidence throughout execution.",
+            "closeout": "Close-Out: Bring route, activity and supporting records together into a clearer project close-out."
+        },
+        "plans": {
+            "foundation": "Foundation — For focused asset-transition projects requiring a structured starting workflow.",
+            "standard": "Standard — For broader projects requiring greater workflow depth, review and coordination.",
+            "enhanced": "Enhanced — For larger or more complex projects requiring expanded workflow and support."
+        },
+        "disclaimer": "V-ONE does not guarantee a particular downstream outcome.",
+        "cta": "Talk to Us About V-ONE"
+    },
+    "valoraex_governance": {
+        "title": "ValoraEX Governance",
+        "subtitle": "V-Governance: Readiness Beyond a Single Project",
+        "intro": "Asset-transition information should not have to disappear when a project closes. V-Governance provides a recurring readiness, evidence-quality and lifecycle-visibility layer.",
+        "pillars": {
+            "readiness": "Maintain Readiness: Keep relevant asset information and route considerations better organised and prepared.",
+            "evidence": "Strengthen Evidence: Support more consistent records and evidence discipline over time.",
+            "history": "Preserve History: Maintain visibility of original outcomes and subsequent asset transitions."
+        },
+        "flow": "Original Outcome → Subsequent Transition → Current Status → Governance History",
+        "fy_readiness": {
+            "title": "Financial-Year Readiness",
+            "p1": "Better ESG and sustainability-report preparation should not have to begin at year-end. Asset-transition information is created throughout the year.",
+            "records_intro": "Relevant records may include:",
+            "records": [
+                "asset information;",
+                "route decisions;",
+                "activity records;",
+                "handover information;",
+                "available evidence;",
+                "project outcomes;",
+                "subsequent transitions."
+            ],
+            "conclusion": "V-Governance can help maintain more organised source information before internal review, ESG reporting or sustainability-report preparation begins.",
+            "quote": "Build readiness throughout the year, rather than reconstructing the story at the end."
+        },
+        "evidence_readiness": {
+            "title": "Evidence Readiness",
+            "intro": "Evidence can be difficult to reconstruct after activity has been completed. ValoraEX therefore encourages relevant evidence requirements to be considered before and during execution.",
+            "quote": "Better reporting starts with better source information and evidence discipline."
+        },
+        "plans": {
+            "basic": "Basic — For organisations establishing a practical recurring governance and readiness foundation.",
+            "advanced": "Advanced — For organisations requiring greater review depth, evidence discipline and lifecycle visibility.",
+            "premium": "Premium — For organisations requiring more comprehensive governance support across broader or more complex requirements.",
+            "enterprise": "Enterprise / Custom Solutions — For larger organisations, multi-site environments or more complex project and governance requirements, ValoraEX can develop a customised scope based on organisational needs."
+        },
+        "summary": "V-ONE activates the workflow. V-Governance sustains readiness, evidence quality and continuity.",
+        "cta": "Talk to Us About V-Governance"
+    },
+    "execution_coordination": {
+        "title": "Execution & Coordination Services",
+        "subtitle": "From Structured Workflow to Practical Execution",
+        "p1": "Asset transition does not end with route planning. Projects often require on-site preparation, information capture, stakeholder coordination and specialist execution capabilities before an agreed route can be completed effectively.",
+        "p2": "ValoraEX provides project-based support that connects structured workflow with practical execution.",
+        "p3": "Depending on the agreed scope, ValoraEX may directly support activities such as asset stocktake, information capture, Route Readiness review, project coordination, evidence management and close-out.",
+        "p4": "Where specialist capabilities are required, ValoraEX can coordinate suitable independent ecosystem providers according to project requirements.",
+        "quote": "One structured workflow. The right capabilities at the right stage.",
+        "onsite_support": {
+            "title": "On-Site & Project Support",
+            "items": [
+                "Asset Stocktake & Inventory Capture — Support identification and structured capture of relevant assets, quantities, locations and project information.",
+                "Condition & Information Capture — Capture available condition information, photographs, dimensions, attributes and other relevant asset details.",
+                "Route Readiness Review — Review whether assets, available information, timing and operational conditions are sufficiently prepared for potential 5R routes.",
+                "Project Coordination — Coordinate relevant project stakeholders, activities, responsibilities, timing and information flows.",
+                "Evidence & Handover Records — Support structured evidence capture, handover information and relevant project records throughout execution.",
+                "Exception & Issue Tracking — Record and follow up relevant exceptions, changes or issues that may affect the agreed transition workflow.",
+                "Close-Out Support — Support structured project close-out and consolidation of available route, activity and evidence records."
+            ]
+        },
+        "specialist_coordination": {
+            "title": "Specialist Ecosystem Coordination",
+            "intro": "Where relevant to the agreed scope, ValoraEX can help coordinate independent providers for activities such as:",
+            "services": [
+                "dismantling and disassembly;",
+                "packing and handling;",
+                "transportation and logistics;",
+                "temporary storage and warehousing;",
+                "resale support;",
+                "refurbishment;",
+                "repurposing and upcycling;",
+                "recycling;",
+                "community or NGO reuse;",
+                "responsible disposal;",
+                "other project-specific specialist services."
+            ]
+        },
+        "neutrality": {
+            "title": "Platform-Neutral Coordination",
+            "p1": "ValoraEX is not restricted to one designated logistics company, recycler, refurbishment provider or downstream channel.",
+            "factors_intro": "Suitable independent providers may be considered according to:",
+            "factors": [
+                "project requirements;",
+                "capability;",
+                "route suitability;",
+                "timing;",
+                "location;",
+                "operational feasibility;",
+                "evidence requirements;",
+                "other relevant project or commercial considerations."
+            ],
+            "quote": "ValoraEX coordinates the workflow and relevant ecosystem capabilities. Specialist activities are delivered by suitable independent providers according to project requirements.",
+            "flow": "Stocktake → Readiness → Route → Partner Coordination → Execution Evidence → Close-Out"
+        },
+        "cta_primary": "Talk to Us About Project Support",
+        "cta_secondary": "Explore V-ONE"
+    },
+    "insights": {
+        "title": "ValoraEX Insights",
+        "subtitle": "Ideas, Practical Perspectives and Developments Across Asset Transition, Circular Economy, ESG Governance and the ValoraEX Ecosystem",
+        "intro": "ValoraEX Insights brings together our articles, practical observations, selected company perspectives and multimedia content.",
+        "categories_title": "Content Categories",
+        "categories": [
+            "Practical ESG",
+            "Circular Economy",
+            "Asset Transition",
+            "5R & Route Readiness",
+            "Governance & Evidence",
+            "Green Logistics & Execution",
+            "Shared Value",
+            "Technology & Data",
+            "Ecosystem & Community"
+        ],
+        "categories_note": "* Note: Categories will automatically filter to display only those containing published content.",
+        "coming_soon_title": "Insights Coming Soon",
+        "coming_soon_desc": "Articles, perspectives, and videos from the ValoraEX ecosystem will be published here shortly.",
+        "youtube_cta": "Visit the ValoraEX YouTube Channel"
+    },
+    "about": {
+        "title": "About ValoraEX",
+        "subtitle": "Building a Practical Circular-Economy Ecosystem, Starting with Asset Transition",
+        "who_we_are": {
+            "title": "Who We Are",
+            "p1": "ValoraEX Intelligence Ecosystem Limited is a Hong Kong-based company developing workflow, governance, evidence and ecosystem-coordination capabilities for asset transition.",
+            "p2": "We begin with FF&E as our Phase 1 proof category while developing a model designed to support broader asset categories over time."
+        },
+        "how_started": {
+            "title": "How ValoraEX Started",
+            "p1": "ValoraEX grew from practical experience with increasing demand for:",
+            "points": [
+                "practical ESG solutions;",
+                "greener logistics;",
+                "stronger reuse and recycling practices;",
+                "better information for ESG and sustainability reporting."
+            ],
+            "p2": "Real projects repeatedly showed that better outcomes depend on more than having a downstream provider.",
+            "p3": "Timing, asset visibility, preparation, handling, coordination and evidence can determine whether a potential route is actually achievable.",
+            "p4": "A group of professionals therefore came together to develop a more structured, platform-neutral approach linking workflow, technology, ecosystem capability and governance."
+        },
+        "mission_vision": {
+            "mission_title": "Our Mission",
+            "mission_quote": "To build a practical circular-economy ecosystem that connects better information, smarter asset-transition decisions, responsible execution and credible evidence — creating shared commercial, environmental and social value while advancing practical ESG governance.",
+            "vision_title": "Our Vision",
+            "vision_quote": "To build a trusted intelligence and governance ecosystem for circular asset transition — connecting organisations, professionals and ecosystem partners to extend value, create practical impact and strengthen the wider ESG community."
+        },
+        "identity": {
+            "title": "Our Identity & Values",
+            "name_title": "Our Name",
+            "val": "Val — Value",
+            "ora": "ora — Aura",
+            "ex": "EX — Exit · Extension · Ecosystem Exchange",
+            "name_quote": "Extending asset value beyond exit through intelligent ecosystem coordination.",
+            "logo_title": "Our Logo",
+            "logo_desc": "The ValoraEX logo uses an infinity-inspired form to represent continuity, value extension, route flow and ecosystem connection.",
+            "values_title": "Our Values — PARTS",
+            "values_quote": "Different parts. Shared direction. Greater value.",
+            "p": "P — Practical Impact: We focus on solutions that can operate in real business environments and create meaningful practical outcomes.",
+            "a": "A — Awareness & Action: Better outcomes often begin with earlier visibility, awareness and timely action.",
+            "r": "R — Responsibility: Responsible outcomes begin upstream through better decisions, preparation, handling and coordination.",
+            "t": "T — Transparency: We support clearer information, evidence, decisions and accountability throughout the asset-transition process.",
+            "s": "S — Shared Value: We seek opportunities to create commercial, environmental and social value across the ecosystem."
+        },
+        "roadmap": {
+            "title": "Development Direction",
+            "current": "Current: FF&E",
+            "direction": "Development Direction: Selected Electronics & Technology Assets",
+            "future": "Future: Broader Asset Categories & Connected Lifecycle",
+            "disclaimer": "Future directions do not constitute current service commitments."
+        }
+    },
+    "contact": {
+        "title": "Contact ValoraEX",
+        "subtitle": "Tell us about the asset transition, governance requirement or ecosystem capability you would like to discuss.",
+        "form": {
+            "name_placeholder": "Name",
+            "company_placeholder": "Company / Organisation",
+            "email_placeholder": "Email",
+            "phone_placeholder": "Telephone (optional)",
+            "type_placeholder": "Select Enquiry Type...",
+            "types": {
+                "corporate": "Corporate / Project Enquiry",
+                "v_one": "V-ONE",
+                "v_governance": "V-Governance",
+                "execution": "Execution & Coordination Services",
+                "partnership": "Ecosystem Partnership",
+                "general": "General Enquiry"
+            },
+            "message_placeholder": "Message",
+            "submit_btn": "Submit Enquiry"
+        },
+        "info": {
+            "company_name": "ValoraEX Intelligence Ecosystem Limited",
+            "email_label": "Email:",
+            "address_label": "Address:",
+            "address": "Flat B, 17/F, Yuen Long Hi Tech Centre\n11 Wang Yip Street West\nYuen Long, New Territories\nHong Kong"
+        },
+        "pics": {
+            "title": "Personal Information Collection Statement",
+            "text": "Information submitted through this form will be used by ValoraEX Intelligence Ecosystem Limited for responding to your enquiry, communicating with you and administering any related business discussion. Provision of the information is voluntary; however, we may be unable to respond fully if necessary information is not provided. Relevant information may be accessed by authorised ValoraEX personnel and service providers supporting website operation, communications or the handling of your enquiry. You may request access to or correction of your personal data by contacting hello@valoraex.com. Please refer to our Privacy Notice for further information."
+        }
+    }
+}

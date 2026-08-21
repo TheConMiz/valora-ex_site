@@ -1,19 +1,21 @@
 import Link from 'next/link';
+import { getDictionary, Locale } from '@/lib/dictionaries';
 
-export default function Footer({ lang }: { lang: string }) {
-	// DRY approach to rendering the comprehensive footer links
+export default async function Footer({ lang }: { lang: string }) {
+	const dict = await getDictionary(lang as Locale);
+
 	const footerLinks = [
-		{ href: `/${lang}/why-valoraex`, label: 'Why ValoraEX' },
-		{ href: `/${lang}/what-we-do`, label: 'What We Do' },
-		{ href: `/${lang}/valoraex-one`, label: 'V-ONE' },
-		{ href: `/${lang}/valoraex-governance`, label: 'V-Governance' },
-		{ href: `/${lang}/execution-coordination`, label: 'Execution & Coordination Services' },
-		{ href: `/${lang}/insights`, label: 'Insights' },
-		{ href: `/${lang}/about`, label: 'About' },
-		{ href: `/${lang}/faq`, label: 'FAQ' },
-		{ href: `/${lang}/contact`, label: 'Contact' },
-		{ href: `/${lang}/privacy`, label: 'Privacy Notice' },
-		{ href: `/${lang}/terms`, label: 'Terms of Use' }
+		{ href: `/${lang}/why-valoraex`, label: dict.footer.links.why_valoraex },
+		{ href: `/${lang}/what-we-do`, label: dict.footer.links.what_we_do },
+		{ href: `/${lang}/valoraex-one`, label: dict.footer.links.v_one },
+		{ href: `/${lang}/valoraex-governance`, label: dict.footer.links.v_governance },
+		{ href: `/${lang}/execution-coordination`, label: dict.footer.links.execution_coordination },
+		{ href: `/${lang}/insights`, label: dict.footer.links.insights },
+		{ href: `/${lang}/about`, label: dict.footer.links.about },
+		{ href: `/${lang}/faq`, label: dict.footer.links.faq },
+		{ href: `/${lang}/contact`, label: dict.footer.links.contact },
+		{ href: `/${lang}/privacy`, label: dict.footer.links.privacy },
+		{ href: `/${lang}/terms`, label: dict.footer.links.terms }
 	];
 
 	return (
@@ -22,10 +24,9 @@ export default function Footer({ lang }: { lang: string }) {
 
 				{/* Company Info */}
 				<div className="flex flex-col gap-2">
-					<h3 className="font-bold text-gray-900 text-lg">ValoraEX Intelligence Ecosystem Limited</h3>
-					<p className="text-gray-700">延昇智能生態有限公司</p>
-					<p className="font-semibold text-gray-900 mt-4">Extend Value Beyond Exit</p>
-					<p className="text-gray-600 mt-2">Hong Kong</p>
+					<h3 className="font-bold text-gray-900 text-lg">{dict.footer.company_name}</h3>
+					<p className="font-semibold text-gray-900 mt-4">{dict.footer.tagline}</p>
+					<p className="text-gray-600 mt-2">{dict.footer.location}</p>
 				</div>
 
 				{/* Navigation Links */}
@@ -43,7 +44,7 @@ export default function Footer({ lang }: { lang: string }) {
 
 				{/* Social & Contact */}
 				<div className="flex flex-col gap-3">
-					<h4 className="font-bold text-gray-900 mb-1">Connect With Us</h4>
+					<h4 className="font-bold text-gray-900 mb-1">{dict.footer.connect_title}</h4>
 					<a href="https://www.linkedin.com/company/valoraex" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-black transition-colors">LinkedIn</a>
 					<a href="https://www.youtube.com/@ValoraEX_Ecosystem" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-black transition-colors">YouTube</a>
 					<a href="mailto:hello@valoraex.com" className="text-sm text-gray-600 hover:text-black transition-colors">hello@valoraex.com</a>
@@ -51,7 +52,7 @@ export default function Footer({ lang }: { lang: string }) {
 
 			</div>
 			<div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-200 text-sm text-gray-500">
-				© 2026 ValoraEX Intelligence Ecosystem Limited. All rights reserved.
+				{dict.footer.copyright}
 			</div>
 		</footer>
 	);
