@@ -16,6 +16,7 @@ export default async function WhyValoraEXPage({
 			<ContentBlock
 				title={content.title}
 				subtitle={content.subtitle}
+				isPageHeader={true}
 			>
 				<p>{content.p1}</p>
 				<p>{content.p2}</p>

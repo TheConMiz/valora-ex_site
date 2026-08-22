@@ -11,10 +11,11 @@ interface CTAConfig {
 interface ContentBlockProps {
 	title: string;
 	subtitle?: string;
-	children?: React.ReactNode; // <-- Add the question mark right here
+	children?: React.ReactNode;
 	graphicRef?: string | string[];
 	ctas?: CTAConfig[];
 	reverseLayout?: boolean;
+	isPageHeader?: boolean; // <-- Add this new optional prop
 }
 
 // Complete mapping of all MKT-WEB-Gxx graphic references
@@ -34,7 +35,6 @@ const imageMap: Record<string, string> = {
 	'MKT-WEB-G14': '/images/MKT-WEB-G14_ValoraEX Strategic Roadmap.png',
 	'MKT-WEB-G15': '/images/MKT-WEB-G15_PARTS Values.png',
 	'MKT-WEB-G16': '/images/MKT-WEB-G16_Brian.png',
-	// Removed G17 and G19 mappings to Dennis and Keith 
 	'MKT-WEB-G21': '/images/MKT-WEB-G21_Ecosystem Services.png',
 };
 
@@ -44,23 +44,26 @@ export default function ContentBlock({
 	children,
 	graphicRef,
 	ctas,
-	reverseLayout = false
+	reverseLayout = false,
+	isPageHeader = false // <-- Defaults to false so existing components don't break
 }: ContentBlockProps) {
 
-	// Normalize the input into an array safely, without any string splitting
 	const refsArray = Array.isArray(graphicRef) ? graphicRef : (graphicRef ? [graphicRef] : []);
-
-	// Map to the dictionary to get actual URLs and filter out undefined matches
 	const resolvedImages = refsArray.map(ref => imageMap[ref]).filter(Boolean) as string[];
-
-	// If we are passing an array but no images resolve, we want to show the array contents as text for debugging
 	const missingRefLabel = Array.isArray(graphicRef) ? graphicRef.join(', ') : graphicRef;
 
+    // Conditionally render H1 or H2 based on the prop
+	const TitleTag = isPageHeader ? 'h1' : 'h2';
+
 	return (
-		<section className={`animate-fade-in-up opacity-0 flex flex-col md:flex-row gap-12 py-16 px-8 max-w-7xl mx-auto items-center ${reverseLayout ? 'md:flex-row-reverse' : ''}`}>
+		<section className={`animate-fade-in-up flex flex-col md:flex-row gap-12 py-16 px-8 max-w-7xl mx-auto items-center w-full ${reverseLayout ? 'md:flex-row-reverse' : ''}`}>
 			<div className="flex-1 w-full">
-				<h2 className="text-4xl font-bold mb-2 leading-tight text-[var(--foreground)]">{title}</h2>
-				{subtitle && <h3 className="text-xl text-[var(--text-muted)] mb-6 font-medium">{subtitle}</h3>}
+                {/* Dynamically render the title tag */}
+				<TitleTag className="text-4xl font-bold mb-2 leading-tight text-[var(--foreground)]">
+                    {title}
+                </TitleTag>
+				
+                {subtitle && <h3 className="text-xl text-[var(--text-muted)] mb-6 font-medium">{subtitle}</h3>}
 
 				<div className="mb-8 text-lg text-[var(--foreground)] opacity-90 space-y-5 [&>blockquote]:text-xl [&>blockquote]:italic [&>blockquote]:border-l-4 [&>blockquote]:border-[var(--accent-teal)] [&>blockquote]:pl-4 [&>blockquote]:my-8 [&>ul]:list-disc [&>ul]:pl-6 [&>ul>li]:mb-2">
 					{children}

@@ -12,33 +12,43 @@ export function generateStaticParams() {
 	}));
 }
 
+// Localized headings and buttons for the dynamic profile page
+const profileLabels: Record<Locale, { role: string; recognition: string; linkedin: string }> = {
+	'en': { role: 'Role at ValoraEX', recognition: 'Selected Recognition', linkedin: 'View LinkedIn Profile' },
+	'zh-hk': { role: '在 ValoraEX 的主要角色', recognition: '主要專業肯定', linkedin: '瀏覽 LinkedIn 檔案' },
+	'zh-cn': { role: '在 ValoraEX 的主要角色', recognition: '主要专业肯定', linkedin: '访问 LinkedIn 主页' }
+};
+
 export default async function ManagementProfilePage({
 	params
 }: {
 	params: Promise<{ lang: string, slug: string }>
 }) {
 	const { lang, slug } = await params;
+	const locale = lang as Locale;
 
 	// Fetch the localized profile list for the current language
-	const profiles = getManagementData(lang as Locale);
+	const profiles = getManagementData(locale);
 	const profile = profiles.find((p) => p.slug === slug);
 
 	if (!profile) {
 		notFound();
 	}
 
+	const labels = profileLabels[locale] || profileLabels['en'];
+
 	return (
 		<main>
 			<ContentBlock
 				title={profile.name}
 				subtitle={profile.title}
-				ctas={[{ href: profile.linkedin, text: 'View LinkedIn Profile', variant: 'secondary' }]}
+				ctas={[{ href: profile.linkedin, text: labels.linkedin, variant: 'secondary' }]}
 			>
 				{profile.bio.map((paragraph, index) => (
 					<p key={index}>{paragraph}</p>
 				))}
 
-				<h3>Role at ValoraEX</h3>
+				<h3 className="mt-8">{labels.role}</h3>
 				<ul>
 					{profile.role.map((item, index) => (
 						<li key={index}>{item}</li>
@@ -47,7 +57,7 @@ export default async function ManagementProfilePage({
 
 				{profile.recognition && profile.recognition.length > 0 && (
 					<>
-						<h3>Selected Recognition</h3>
+						<h3 className="mt-8">{labels.recognition}</h3>
 						<ul>
 							{profile.recognition.map((item, index) => (
 								<li key={index}>{item}</li>

@@ -30,6 +30,7 @@ export default async function AboutPage({
 			<ContentBlock
 				title={content.title}
 				subtitle={content.subtitle}
+				isPageHeader={true}
 			>
 				<h3 className="mt-8">{content.who_we_are.title}</h3>
 				<p>{content.who_we_are.p1}</p>

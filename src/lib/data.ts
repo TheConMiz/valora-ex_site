@@ -157,7 +157,8 @@ const faqDictionary: Record<Locale, FaqItem[]> = {
 			answer: [
 				'No.',
 				'FF&E is the Phase 1 starting category because it provides a practical environment for developing and validating the ValoraEX workflow.',
-				'Future development may extend to selected electronics and technology assets and, over time, other suitable asset categories.'
+				'Future development may extend to selected electronics and technology assets and, over time, other suitable asset categories.',
+				'These remain development directions rather than current service commitments.'
 			]
 		},
 		{
@@ -169,10 +170,147 @@ const faqDictionary: Record<Locale, FaqItem[]> = {
 				'• Resale',
 				'• Refurbishment / Repurposing',
 				'• Recycling',
-				'• Responsible Disposal'
+				'• Responsible Disposal',
+				'The appropriate route depends on factors including asset condition, available information, timing, operational feasibility and downstream readiness.'
+			]
+		},
+		{
+			id: 'is-donation-an-r',
+			question: '4. Is donation one of the 5Rs?',
+			answer: [
+				'No.',
+				'Donation is treated as one possible form of external Reuse.',
+				'For example, an appropriate asset may potentially be reused by a community organisation, educational institution or NGO where requirements, condition, timing and operational arrangements align.'
+			]
+		},
+		{
+			id: 'what-is-v-one',
+			question: '5. What is V-ONE?',
+			answer: [
+				'ValoraEX ONE (V-ONE) is the project-entry and workflow layer.',
+				'It supports a structured asset-transition workflow:',
+				'See → Structure → Route → Coordinate → Evidence → Close-Out'
+			]
+		},
+		{
+			id: 'what-is-v-governance',
+			question: '6. What is V-Governance?',
+			answer: [
+				'ValoraEX Governance (V-Governance) is the recurring readiness, evidence-quality and lifecycle-visibility layer.',
+				'It is designed to help organisations maintain more organised asset-transition information, strengthen evidence discipline and preserve relevant transition history beyond a single project.'
+			]
+		},
+		{
+			id: 'difference-v-one-v-governance',
+			question: '7. What is the difference between V-ONE and V-Governance?',
+			answer: [
+				'V-ONE focuses on the workflow for a defined asset-transition project.',
+				'V-Governance focuses on maintaining readiness, evidence quality and lifecycle continuity beyond individual projects.',
+				'V-ONE activates the workflow. V-Governance sustains readiness, evidence quality and continuity.'
+			]
+		},
+		{
+			id: 'provide-execution-services',
+			question: '8. Does ValoraEX provide logistics, recycling, refurbishment or other execution services?',
+			answer: [
+				'ValoraEX provides project-based workflow, on-site support and coordination services, while specialist activities such as transportation, warehousing, recycling, refurbishment or other downstream services are generally delivered by suitable independent providers.',
+				'Depending on the agreed scope, ValoraEX may directly support activities such as stocktake, asset information capture, Route Readiness review, project coordination, evidence management and close-out.',
+				'Where specialist execution is required, ValoraEX can coordinate appropriate ecosystem providers according to project requirements.'
+			]
+		},
+		{
+			id: 'is-waste-management-company',
+			question: '9. Is ValoraEX a waste-management company?',
+			answer: [
+				'No.',
+				'ValoraEX is not positioned as a waste collector, disposal contractor or traditional waste-management provider.',
+				'Its role is to support earlier asset visibility, better Route Readiness, structured 5R decision-making, ecosystem coordination, evidence and governance.'
+			]
+		},
+		{
+			id: 'what-is-route-readiness',
+			question: '10. What is Route Readiness?',
+			answer: [
+				'Route Readiness considers whether an asset and the available project information are sufficiently prepared for a potential transition route.',
+				'Factors can include asset condition, photographs, dimensions or attributes, timing, handling requirements, available information, buyer or recipient requirements, transport feasibility, downstream requirements and evidence needs.'
+			]
+		},
+		{
+			id: 'what-is-matching-window',
+			question: '11. What is the Matching Window?',
+			answer: [
+				'The Matching Window describes the period in which four factors can align:',
+				'Asset Availability + Recipient / Market Demand + Route Readiness + Execution Time',
+				'Even when a usable asset and a willing recipient both exist, an opportunity may be lost if there is insufficient time to assess, approve, prepare and coordinate the transition.',
+				'Earlier visibility creates more time for better routes to become possible.'
+			]
+		},
+		{
+			id: 'what-is-financial-year-readiness',
+			question: '12. What is Financial-Year Readiness?',
+			answer: [
+				'Financial-Year Readiness is the principle that ESG and sustainability-report preparation should not have to begin only at year-end.',
+				'Asset information, route decisions and supporting records can be organised progressively during the year so that relevant source information is easier to review later.'
+			]
+		},
+		{
+			id: 'guarantee-outcomes',
+			question: '13. Does ValoraEX guarantee reuse, resale, recycling or ESG outcomes?',
+			answer: [
+				'No.',
+				'Actual outcomes depend on multiple factors including asset condition, timing, downstream demand, project constraints, operational feasibility and the requirements of independent providers or recipients.',
+				'ValoraEX supports structured assessment, workflow, coordination and evidence readiness, but does not guarantee a particular route or ESG outcome.'
+			]
+		},
+		{
+			id: 'provide-esg-certification',
+			question: '14. Does ValoraEX certify ESG performance?',
+			answer: [
+				'No.',
+				'ValoraEX is not positioned as an ESG certification or independent assurance provider.',
+				'Where third-party certification, assurance or another regulated or professional service is required, this would need to be provided by an appropriately qualified independent party.'
+			]
+		},
+		{
+			id: 'support-esg-reporting',
+			question: '15. Can ValoraEX support ESG or sustainability reporting?',
+			answer: [
+				'ValoraEX can support the organisation of relevant asset-transition information and available evidence that may contribute to internal ESG or sustainability-report preparation.',
+				'The quality and usefulness of that information depends on the underlying records and data available.',
+				'ValoraEX does not provide independent assurance of ESG performance unless such services are separately delivered by an appropriately qualified independent provider.'
+			]
+		},
+		{
+			id: 'when-to-engage',
+			question: '16. When should an organisation engage ValoraEX?',
+			answer: [
+				'ValoraEX is most useful when organisations engage early enough to create asset visibility, assess Route Readiness and prepare possible transition pathways before the final exit or clearance date.',
+				'Earlier engagement generally provides more time to organise information, consider suitable 5R routes, coordinate internal and external parties and prepare relevant evidence.',
+				'ValoraEX can also support projects already underway, although available options may be affected by timing, asset condition, information quality and other project constraints.'
+			]
+		},
+		{
+			id: 'who-do-you-work-with',
+			question: '17. Who does ValoraEX work with?',
+			answer: [
+				'Depending on the project, ValoraEX may engage with organisations and ecosystem participants including corporate clients, logistics and execution providers, resale channels, refurbishment specialists, recyclers, community organisations, educational institutions and other relevant professional or industry participants.',
+				'ValoraEX maintains a platform-neutral approach and does not treat any single ecosystem provider as exclusive.'
+			]
+		},
+		{
+			id: 'how-to-work-with-valoraex',
+			question: '18. How can I work with ValoraEX?',
+			answer: [
+				'Organisations can contact ValoraEX regarding:',
+				'• asset-transition projects;',
+				'• V-ONE;',
+				'• V-Governance;',
+				'• Execution & Coordination Services;',
+				'• ecosystem collaboration;',
+				'• strategic partnership discussions;',
+				'• general enquiries.'
 			]
 		}
-        // * Continue porting the remaining 15 English FAQs here *
 	],
 	'zh-hk': [
 		{
@@ -189,7 +327,8 @@ const faqDictionary: Record<Locale, FaqItem[]> = {
 			answer: [
 				'不是。',
 				'FF&E 是第一階段的起點，讓我們在實際項目環境中建立及驗證 ValoraEX 工作流程。',
-				'未來發展方向可包括精選電子及科技資產，並在合適情況下逐步延伸至其他資產類別。'
+				'未來發展方向可包括精選電子及科技資產，並在合適情況下逐步延伸至其他資產類別。',
+				'這些屬於發展方向，並不代表目前已經提供相關完整服務。'
 			]
 		},
 		{
@@ -201,10 +340,147 @@ const faqDictionary: Record<Locale, FaqItem[]> = {
 				'• 轉售；',
 				'• 翻新／再用途；',
 				'• 回收；',
-				'• 負責任處置。'
+				'• 負責任處置。',
+				'合適的路徑取決於資產狀況、現有資訊、時間、實際操作可行性及下游準備度等因素。'
+			]
+		},
+		{
+			id: 'is-donation-an-r',
+			question: '4. 捐贈是否屬於其中一個 R？',
+			answer: [
+				'不是。',
+				'捐贈是外部重用的一種可能形式，而不是第六個 R。',
+				'例如，當資產狀況、時間、需求及實際操作安排合適時，相關資產可考慮由社區機構、教育機構或非政府組織繼續使用。'
+			]
+		},
+		{
+			id: 'what-is-v-one',
+			question: '5. 甚麼是 V-ONE？',
+			answer: [
+				'ValoraEX ONE（V-ONE）是項目啟動及工作流程層。',
+				'其結構化資產轉型流程為：',
+				'看清楚 → 建立結構 → 路徑分配 → 協調 → 證據 → 項目收結'
+			]
+		},
+		{
+			id: 'what-is-v-governance',
+			question: '6. 甚麼是 V-Governance？',
+			answer: [
+				'ValoraEX Governance（V-Governance）是持續準備度、證據品質及生命週期可視性治理層。',
+				'它協助企業在單一項目完成後，繼續維持更有組織的資產轉型資訊、證據管理及相關生命週期記錄。'
+			]
+		},
+		{
+			id: 'difference-v-one-v-governance',
+			question: '7. V-ONE 與 V-Governance 有甚麼分別？',
+			answer: [
+				'V-ONE 主要處理特定資產轉型項目的工作流程。',
+				'V-Governance 則著重於單一項目以外的持續準備度、證據品質及生命週期連續性。',
+				'V-ONE 啟動工作流程；V-Governance 延續準備度、證據品質及治理連續性。'
+			]
+		},
+		{
+			id: 'provide-execution-services',
+			question: '8. ValoraEX 是否提供物流、回收、翻新或其他執行服務？',
+			answer: [
+				'ValoraEX 以項目形式提供工作流程、現場支援及協調服務，而運輸、倉儲、回收、翻新或其他下游專業活動，一般由合適的獨立服務供應商提供。',
+				'視乎協定的項目範圍，ValoraEX 可直接支援資產盤點、資產資訊收集、路徑準備度檢視、項目協調、證據管理及項目收結等工作。',
+				'當項目需要專業執行服務時，ValoraEX 可按項目要求協調合適的生態服務供應商。'
+			]
+		},
+		{
+			id: 'is-waste-management-company',
+			question: '9. ValoraEX 是廢物管理公司嗎？',
+			answer: [
+				'不是。',
+				'ValoraEX 並不是廢物收集商、處置承辦商或傳統廢物管理服務供應商。',
+				'我們的角色是支援更早的資產可視性、更好的路徑準備度、更有結構的 5R 決策、生態協調、證據及治理。'
+			]
+		},
+		{
+			id: 'what-is-route-readiness',
+			question: '10. 甚麼是路徑準備度？',
+			answer: [
+				'路徑準備度是指評估一件資產及相關項目資訊，是否已具備足夠條件進入某一個潛在轉型路徑。',
+				'相關因素可以包括資產狀況、相片、尺寸或其他屬性、時間、搬運要求、現有資訊、買家或接收方要求、運輸可行性、下游要求及證據需要。'
+			]
+		},
+		{
+			id: 'what-is-matching-window',
+			question: '11. 甚麼是配對窗口？',
+			answer: [
+				'配對窗口是指以下四個因素能夠同時配合的時間窗口：',
+				'資產供應 + 接收方／市場需求 + 路徑準備度 + 執行時間',
+				'即使有可使用的資產，同時亦有願意接收的一方，如果沒有足夠時間進行評估、批准、準備及協調，實際機會仍然可能消失。',
+				'越早取得資產可視性，就越有時間讓更好的路徑成為可能。'
+			]
+		},
+		{
+			id: 'what-is-financial-year-readiness',
+			question: '12. 甚麼是財政年度準備度？',
+			answer: [
+				'財政年度準備度的核心概念是：ESG 及可持續發展報告準備，不應只在年結時才開始。',
+				'資產資訊、路徑決策及相關記錄可以在全年不同項目中逐步整理，令日後進行內部檢視、ESG 報告或可持續發展報告準備時，更容易取得及理解相關來源資訊。'
+			]
+		},
+		{
+			id: 'guarantee-outcomes',
+			question: '13. ValoraEX 是否保證重用、轉售、回收或 ESG 成果？',
+			answer: [
+				'不會。',
+				'實際成果受到多項因素影響，包括資產狀況、時間、下游需求、項目限制、實際操作可行性，以及獨立服務供應商或接收方的要求。',
+				'ValoraEX 支援結構化評估、工作流程、協調及證據準備度，但不保證任何特定路徑或 ESG 成果。'
+			]
+		},
+		{
+			id: 'provide-esg-certification',
+			question: '14. ValoraEX 是否提供 ESG 認證？',
+			answer: [
+				'不提供。',
+				'ValoraEX 並不是 ESG 認證機構或獨立鑑證服務供應商。',
+				'如項目需要第三方認證、鑑證或其他受規管／專業服務，應由具備相關資格的獨立機構或專業人士提供。'
+			]
+		},
+		{
+			id: 'support-esg-reporting',
+			question: '15. ValoraEX 可以支援 ESG 或可持續發展報告嗎？',
+			answer: [
+				'ValoraEX 可以協助企業整理相關資產轉型資訊及現有證據，為內部 ESG 或可持續發展報告準備提供更有結構的來源資料。',
+				'相關資訊的質素及用途取決於實際可取得的原始資料及記錄。',
+				'ValoraEX 本身不提供 ESG 表現的獨立鑑證；如有需要，相關服務應由具備適當資格的獨立服務供應商另行提供。'
+			]
+		},
+		{
+			id: 'when-to-engage',
+			question: '16. 企業應在甚麼時候與 ValoraEX 開始合作？',
+			answer: [
+				'當企業能夠在最終退出、搬遷或清場日期之前，及早建立資產可視性、檢視路徑準備度及考慮可能的資產轉型路徑時，ValoraEX 能夠發揮更大的作用。',
+				'越早開始，通常越有時間整理資訊、考慮合適的 5R 路徑、協調內外部相關單位，以及準備所需證據。',
+				'ValoraEX 亦可支援已經開始的項目，但實際可行的選項可能會受到時間、資產狀況、資訊質素及其他項目限制影響。'
+			]
+		},
+		{
+			id: 'who-do-you-work-with',
+			question: '17. ValoraEX 與哪些機構合作？',
+			answer: [
+				'視乎項目需要，ValoraEX 可與不同企業及生態參與者合作，包括企業客戶、物流及執行服務供應商、轉售渠道、翻新專業機構、回收服務供應商、社區機構、教育機構及其他相關專業或業界參與者。',
+				'ValoraEX 保持平台中立，並不將任何單一生態服務供應商設定為獨家合作方。'
+			]
+		},
+		{
+			id: 'how-to-work-with-valoraex',
+			question: '18. 如何與 ValoraEX 合作？',
+			answer: [
+				'企業及機構可以就以下範疇與 ValoraEX 聯絡：',
+				'• 資產轉型項目；',
+				'• V-ONE；',
+				'• V-Governance；',
+				'• 執行及協調服務；',
+				'• 生態合作；',
+				'• 策略合作；',
+				'• 一般查詢。'
 			]
 		}
-        // * Continue porting the remaining 15 Traditional Chinese FAQs here *
 	],
 	'zh-cn': [
 		{
@@ -221,7 +497,8 @@ const faqDictionary: Record<Locale, FaqItem[]> = {
 			answer: [
 				'不是。',
 				'FF&E 是第一阶段的起点，让我们在实际项目环境中建立及验证 ValoraEX 工作流程。',
-				'未来发展方向可包括精选电子及科技资产，并在合适情况下逐步延伸至其他资产类别。'
+				'未来发展方向可包括精选电子及科技资产，并在合适情况下逐步延伸至其他资产类别。',
+				'这些属于发展方向，并不代表目前已经提供相关完整服务。'
 			]
 		},
 		{
@@ -233,10 +510,147 @@ const faqDictionary: Record<Locale, FaqItem[]> = {
 				'• 转售；',
 				'• 翻新／再用途；',
 				'• 回收；',
-				'• 负责任处置。'
+				'• 负责任处置。',
+				'合适的路径取决于资产状况、现有信息、时间、实际操作可行性及下游准备度等因素。'
+			]
+		},
+		{
+			id: 'is-donation-an-r',
+			question: '4. 捐赠是否属于其中一个 R？',
+			answer: [
+				'不是。',
+				'捐赠是外部重用的一种可能形式，而不是第六个 R。',
+				'例如，当资产状况、时间、需求及实际操作安排合适时，相关资产可考虑由社区机构、教育机构或非政府组织继续使用。'
+			]
+		},
+		{
+			id: 'what-is-v-one',
+			question: '5. 什么是 V-ONE？',
+			answer: [
+				'ValoraEX ONE（V-ONE）是项目启动及工作流程层。',
+				'其结构化资产转型流程为：',
+				'看清楚 → 建立结构 → 路径分配 → 协调 → 证据 → 项目收结'
+			]
+		},
+		{
+			id: 'what-is-v-governance',
+			question: '6. 什么是 V-Governance？',
+			answer: [
+				'ValoraEX Governance（V-Governance）是持续准备度、证据质量及生命周期可视性治理层。',
+				'它帮助企业在单一项目完成后，继续维持更有组织的资产转型信息、证据管理及相关生命周期记录。'
+			]
+		},
+		{
+			id: 'difference-v-one-v-governance',
+			question: '7. V-ONE 与 V-Governance 有什么区别？',
+			answer: [
+				'V-ONE 主要处理特定资产转型项目的工作流程。',
+				'V-Governance 则着重于单一项目以外的持续准备度、证据质量及生命周期连续性。',
+				'V-ONE 启动工作流程；V-Governance 延续准备度、证据质量及治理连续性。'
+			]
+		},
+		{
+			id: 'provide-execution-services',
+			question: '8. ValoraEX 是否提供物流、回收、翻新或其他执行服务？',
+			answer: [
+				'ValoraEX 以项目形式提供工作流程、现场支持及协调服务，而运输、仓储、回收、翻新或其他下游专业活动，一般由合适的独立服务供应商提供。',
+				'根据协定的项目范围，ValoraEX 可直接支持资产盘点、资产信息收集、路径准备度检视、项目协调、证据管理及项目收结等工作。',
+				'当项目需要专业执行服务时，ValoraEX 可按项目要求协调合适的生态服务供应商。'
+			]
+		},
+		{
+			id: 'is-waste-management-company',
+			question: '9. ValoraEX 是废物管理公司吗？',
+			answer: [
+				'不是。',
+				'ValoraEX 并不是废物收集商、处置承包商或传统废物管理服务供应商。',
+				'我们的角色是支持更早的资产可视性、更好的路径准备度、更有结构的 5R 决策、生态协调、证据及治理。'
+			]
+		},
+		{
+			id: 'what-is-route-readiness',
+			question: '10. 什么是路径准备度？',
+			answer: [
+				'路径准备度是指评估一件资产及相关项目信息，是否已经具备足够条件进入某一个潜在转型路径。',
+				'相关因素可以包括资产状况、照片、尺寸或其他属性、时间、搬运要求、现有信息、买家或接收方要求、运输可行性、下游要求及证据需要。'
+			]
+		},
+		{
+			id: 'what-is-matching-window',
+			question: '11. 什么是配对窗口？',
+			answer: [
+				'配对窗口是指以下四个因素能够同时配合的时间窗口：',
+				'资产供应 + 接收方／市场需求 + 路径准备度 + 执行时间',
+				'即使有可使用的资产，同时也有愿意接收的一方，如果没有足够时间进行评估、批准、准备及协调，实际机会仍然可能消失。',
+				'越早取得资产可视性，就越有时间让更好的路径成为可能。'
+			]
+		},
+		{
+			id: 'what-is-financial-year-readiness',
+			question: '12. 什么是财政年度准备度？',
+			answer: [
+				'财政年度准备度的核心概念是：ESG 及可持续发展报告准备，不应只在年结时才开始。',
+				'资产信息、路径决策及相关记录可以在全年不同项目中逐步整理，让日后进行内部检视、ESG 报告或可持续发展报告准备时，更容易取得及理解相关来源信息。'
+			]
+		},
+		{
+			id: 'guarantee-outcomes',
+			question: '13. ValoraEX 是否保证重用、转售、回收或 ESG 成果？',
+			answer: [
+				'不保证。',
+				'实际成果受到多项因素影响，包括资产状况、时间、下游需求、项目限制、实际操作可行性，以及独立服务供应商或接收方的要求。',
+				'ValoraEX 支持结构化评估、工作流程、协调及证据准备度，但不保证任何特定路径或 ESG 成果。'
+			]
+		},
+		{
+			id: 'provide-esg-certification',
+			question: '14. ValoraEX 是否提供 ESG 认证？',
+			answer: [
+				'不提供。',
+				'ValoraEX 并不是 ESG 认证机构或独立鉴证服务供应商。',
+				'如项目需要第三方认证、鉴证或其他受监管／专业服务，应由具备相关资格的独立机构或专业人士提供。'
+			]
+		},
+		{
+			id: 'support-esg-reporting',
+			question: '15. ValoraEX 可以支持 ESG 或可持续发展报告吗？',
+			answer: [
+				'ValoraEX 可以帮助企业整理相关资产转型信息及现有证据，为内部 ESG 或可持续发展报告准备提供更有结构的来源资料。',
+				'相关信息的质量及用途取决于实际可取得的原始资料及记录。',
+				'ValoraEX 本身不提供 ESG 表现的独立鉴证；如有需要，相关服务应由具备适当资格的独立服务供应商另行提供。'
+			]
+		},
+		{
+			id: 'when-to-engage',
+			question: '16. 企业应在什么时候与 ValoraEX 开始合作？',
+			answer: [
+				'当企业能够在最终退出、搬迁或清场日期之前，及早建立资产可视性、检视路径准备度及考虑可能的资产转型路径时，ValoraEX 能够发挥更大的作用。',
+				'越早开始，通常越有时间整理信息、考虑合适的 5R 路径、协调内外部相关单位，以及准备所需证据。',
+				'ValoraEX 也可以支持已经开始的项目，但实际可行的选项可能会受到时间、资产状况、信息质量及其他项目限制影响。'
+			]
+		},
+		{
+			id: 'who-do-you-work-with',
+			question: '17. ValoraEX 与哪些机构合作？',
+			answer: [
+				'根据项目需要，ValoraEX 可与不同企业及生态参与者合作，包括企业客户、物流及执行服务供应商、转售渠道、翻新专业机构、回收服务供应商、社区机构、教育机构及其他相关专业或行业参与者。',
+				'ValoraEX 保持平台中立，并不将任何单一生态服务供应商设定为独家合作方。'
+			]
+		},
+		{
+			id: 'how-to-work-with-valoraex',
+			question: '18. 如何与 ValoraEX 合作？',
+			answer: [
+				'企业及机构可以就以下领域与 ValoraEX 联系：',
+				'• 资产转型项目；',
+				'• V-ONE；',
+				'• V-Governance；',
+				'• 执行及协调服务；',
+				'• 生态合作；',
+				'• 战略合作；',
+				'• 一般查询。'
 			]
 		}
-        // * Continue porting the remaining 15 Simplified Chinese FAQs here *
 	]
 };
 
@@ -246,8 +660,8 @@ export const getFaqData = (lang: Locale): FaqItem[] => faqDictionary[lang] || fa
 // 3. Ecosystem Partners
 // ---------------------------------------------------------
 export const getEcosystemPartners = (lang: Locale): string[] => {
-    // Localize "The Hong Kong Polytechnic University" based on language
-    if (lang === 'zh-hk') return ['Deartree', 'SERA', 'InvestHK', 'AML', 'Spider Logistics', 'HKMU', '香港理工大學'];
-    if (lang === 'zh-cn') return ['Deartree', 'SERA', 'InvestHK', 'AML', 'Spider Logistics', 'HKMU', '香港理工大学'];
-    return ['Deartree', 'SERA', 'InvestHK', 'AML', 'Spider Logistics', 'HKMU', 'The Hong Kong Polytechnic University'];
+	// Localize "The Hong Kong Polytechnic University" based on language
+	if (lang === 'zh-hk') return ['Deartree', 'SERA', 'InvestHK', 'AML', 'Spider Logistics', 'HKMU', '香港理工大學'];
+	if (lang === 'zh-cn') return ['Deartree', 'SERA', 'InvestHK', 'AML', 'Spider Logistics', 'HKMU', '香港理工大学'];
+	return ['Deartree', 'SERA', 'InvestHK', 'AML', 'Spider Logistics', 'HKMU', 'The Hong Kong Polytechnic University'];
 };

@@ -12,7 +12,10 @@ export default async function ContactPage({
 
 	return (
 		<main>
-			<ContentBlock title={content.title}>
+			<ContentBlock 
+				title={content.title}
+				isPageHeader={true}
+				>
 				<p className="text-xl mb-8">{content.subtitle}</p>
 
 				<div className="flex flex-col md:flex-row gap-16">
