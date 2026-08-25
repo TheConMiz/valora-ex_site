@@ -1,5 +1,19 @@
 import ContentBlock from '@/components/ContentBlock';
 import { getDictionary, Locale } from '@/lib/dictionaries';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+	params
+}: {
+	params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+	const { lang } = await params;
+	const dict = await getDictionary(lang as Locale);
+
+	return {
+		title: dict.nav.v_governance, // <-- 3. Change this key for each page
+	};
+}
 
 export default async function VGovernancePage({
 	params
@@ -11,12 +25,20 @@ export default async function VGovernancePage({
 	const content = dict.valoraex_governance;
 
 	// Helper to safely preserve the bold formatting for pillars
-	const renderPillar = (text: string) => {
-		const parts = text.split(': ');
-		if (parts.length === 2) {
-			return <><strong className="font-bold">{parts[0]}:</strong> {parts[1]}</>;
+	const renderPillarAsHeading = (text: string) => {
+		const separator = text.includes('：') ? '：' : ': ';
+		const parts = text.split(separator);
+		if (parts.length >= 2) {
+			const heading = parts.shift();
+			const desc = parts.join(separator);
+			return (
+				<div className="mt-8">
+					<h3 className="mb-2">{heading}</h3>
+					<p>{desc.trim()}</p>
+				</div>
+			);
 		}
-		return text;
+		return <p className="mt-8">{text}</p>;
 	};
 
 	// Helper to safely preserve the bold formatting for plans
@@ -40,11 +62,11 @@ export default async function VGovernancePage({
 				<p>{content.intro}</p>
 
 				<h3 className="mt-8">{/* Re-using the dictionary key structure logically, we can hardcode the section title or pull from a common key if we had one. Let's just render the list. */}Core Pillars</h3>
-				<ul>
-					<li>{renderPillar(content.pillars.readiness)}</li>
-					<li>{renderPillar(content.pillars.evidence)}</li>
-					<li>{renderPillar(content.pillars.history)}</li>
-				</ul>
+				<div className="mt-12">
+					{renderPillarAsHeading(content.pillars.readiness)}
+					{renderPillarAsHeading(content.pillars.evidence)}
+					{renderPillarAsHeading(content.pillars.history)}
+				</div>
 				<blockquote>{content.flow}</blockquote>
 			</ContentBlock>
 

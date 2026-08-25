@@ -4,6 +4,7 @@ import LeadershipCarousel from '@/components/LeadershipCarousel';
 import PartnerCarousel from '@/components/PartnerCarousel';
 import { getDictionary, Locale } from '@/lib/dictionaries';
 
+
 export function generateStaticParams() {
 	return [{ lang: 'en' }, { lang: 'zh-hk' }, { lang: 'zh-cn' }];
 }

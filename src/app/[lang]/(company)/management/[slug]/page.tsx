@@ -2,6 +2,9 @@ import { notFound } from 'next/navigation';
 import { getManagementData } from '@/lib/data';
 import { Locale } from '@/lib/dictionaries';
 import ContentBlock from '@/components/ContentBlock';
+import { Metadata } from 'next';
+
+
 
 export function generateStaticParams() {
 	// The slugs are universal across languages, so we can generate 
@@ -10,6 +13,20 @@ export function generateStaticParams() {
 	return profiles.map((profile) => ({
 		slug: profile.slug,
 	}));
+}
+
+export async function generateMetadata({
+	params
+}: {
+	params: Promise<{ lang: string, slug: string }>
+}): Promise<Metadata> {
+	const { lang, slug } = await params;
+	const profiles = getManagementData(lang as Locale);
+	const profile = profiles.find((p) => p.slug === slug);
+
+	return {
+		title: profile ? profile.name : 'Profile',
+	};
 }
 
 // Localized headings and buttons for the dynamic profile page
@@ -48,23 +65,18 @@ export default async function ManagementProfilePage({
 				{profile.bio.map((paragraph, index) => (
 					<p key={index}>{paragraph}</p>
 				))}
-
 				<h3 className="mt-8">{labels.role}</h3>
-				<ul>
-					{profile.role.map((item, index) => (
-						<li key={index}>{item}</li>
-					))}
-				</ul>
 
-				{profile.recognition && profile.recognition.length > 0 && (
-					<>
-						<h3 className="mt-8">{labels.recognition}</h3>
-						<ul>
-							{profile.recognition.map((item, index) => (
-								<li key={index}>{item}</li>
-							))}
-						</ul>
-					</>
+				{/* Render intro paragraph if it exists */}
+				{profile.roleIntro && <p>{profile.roleIntro}</p>}
+
+				{/* Render the list only if there are role items */}
+				{profile.role && profile.role.length > 0 && (
+					<ul className={profile.roleIntro ? "mt-2" : ""}>
+						{profile.role.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
 				)}
 			</ContentBlock>
 		</main>

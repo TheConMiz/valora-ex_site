@@ -1,5 +1,19 @@
 import ContentBlock from '@/components/ContentBlock';
 import { getDictionary, Locale } from '@/lib/dictionaries';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+	params
+}: {
+	params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+	const { lang } = await params;
+	const dict = await getDictionary(lang as Locale);
+
+	return {
+		title: dict.nav.v_one, // <-- 3. Change this key for each page
+	};
+}
 
 export default async function VOnePage({
 	params
@@ -10,13 +24,21 @@ export default async function VOnePage({
 	const dict = await getDictionary(lang as Locale);
 	const content = dict.valoraex_one;
 
-	// Helper to safely preserve the bold formatting for stages
-	const renderStage = (text: string) => {
-		const parts = text.split(': ');
-		if (parts.length === 2) {
-			return <><strong className="font-bold">{parts[0]}:</strong> {parts[1]}</>;
+	// Helper to split the combined string into an H3 heading and a paragraph
+	const renderStageAsHeading = (text: string) => {
+		const separator = text.includes('：') ? '：' : ': ';
+		const parts = text.split(separator);
+		if (parts.length >= 2) {
+			const heading = parts.shift();
+			const desc = parts.join(separator);
+			return (
+				<div className="mt-8">
+					<h3 className="mb-2">{heading}</h3>
+					<p>{desc.trim()}</p>
+				</div>
+			);
 		}
-		return text;
+		return <p className="mt-8">{text}</p>;
 	};
 
 	// Helper to safely preserve the bold formatting for plans
@@ -40,14 +62,14 @@ export default async function VOnePage({
 				<p>{content.intro}</p>
 				<blockquote>{content.flow}</blockquote>
 
-				<ul className="mt-8">
-					<li>{renderStage(content.stages.see)}</li>
-					<li>{renderStage(content.stages.structure)}</li>
-					<li>{renderStage(content.stages.route)}</li>
-					<li>{renderStage(content.stages.coordinate)}</li>
-					<li>{renderStage(content.stages.evidence)}</li>
-					<li>{renderStage(content.stages.closeout)}</li>
-				</ul>
+				<div className="mt-12">
+					{renderStageAsHeading(content.stages.see)}
+					{renderStageAsHeading(content.stages.structure)}
+					{renderStageAsHeading(content.stages.route)}
+					{renderStageAsHeading(content.stages.coordinate)}
+					{renderStageAsHeading(content.stages.evidence)}
+					{renderStageAsHeading(content.stages.closeout)}
+				</div>
 
 				<div className="mt-8 space-y-4">
 					<p>{renderPlan(content.plans.foundation)}</p>

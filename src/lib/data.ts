@@ -3,17 +3,13 @@ import type { Locale } from './dictionaries';
 // ---------------------------------------------------------
 // 1. Management / Leadership Data
 // ---------------------------------------------------------
-import type { Locale } from './dictionaries';
-
-// ---------------------------------------------------------
-// 1. Management / Leadership Data
-// ---------------------------------------------------------
 export interface ManagementProfile {
 	slug: string;
 	name: string;
 	title: string;
 	summary: string;
 	bio: string[];
+	roleIntro?: string;
 	role: string[];
 	recognition?: string[];
 	linkedin: string;
@@ -36,9 +32,8 @@ const managementDictionary: Record<Locale, ManagementProfile[]> = {
 				'A core principle behind his work is Creating Shared Value — developing practical ways to connect commercial value with wider environmental and social outcomes.',
 				'Through ValoraEX, Dennis brings together his experience in logistics, technology, asset transition, circular economy, ESG, governance and ecosystem development to build a platform-neutral 5R intelligence ecosystem designed to support practical action, stronger information and cross-industry collaboration.'
 			],
-			role: [
-				'Dennis leads ValoraEX’s overall strategy, platform and product direction, commercial development, ecosystem growth, strategic partnerships and international development.'
-			],
+			roleIntro: 'Dennis leads ValoraEX’s overall strategy, platform and product direction, commercial development, ecosystem growth, strategic partnerships and international development.',
+			role: [],
 			recognition: [
 				'Outstanding Alumni Award 2024 — Professional Achievement, Department of Industrial and Systems Engineering, The Hong Kong Polytechnic University',
 				'Fellow, Social Enterprise Research Academy — 2024',
@@ -64,6 +59,7 @@ const managementDictionary: Record<Locale, ManagementProfile[]> = {
 				'At ValoraEX, he helps connect long-term corporate strategy with commercial development, strategic partnerships, investor engagement and international market development.',
 				'Through his role, Keith supports ValoraEX in building a commercially credible, internationally relevant and scalable circular-economy ecosystem designed to create long-term value for organisations, communities and wider stakeholders.'
 			],
+			roleIntro: 'Keith supports:',
 			role: [
 				'corporate strategy;',
 				'international positioning;',
@@ -121,9 +117,8 @@ const managementDictionary: Record<Locale, ManagementProfile[]> = {
 				'Dennis 的核心理念之一是創造共享價值（Creating Shared Value），希望以實際方式將商業價值與更廣泛的環境及社會成果連結起來。',
 				'透過 ValoraEX，Dennis 將物流、科技、資產轉型、循環經濟、ESG、治理及生態系統發展經驗結合，建立一個平台中立的 5R 智能生態系統，以支援實際行動、更完善的資訊及跨行業協作。'
 			],
-			role: [
-				'Dennis 負責 ValoraEX 的整體策略、平台及產品方向、商業發展、生態系統成長、策略合作及國際發展。'
-			],
+			roleIntro: 'Dennis 負責 ValoraEX 的整體策略、平台及產品方向、商業發展、生態系統成長、策略合作及國際發展。',
+			role: [],
 			recognition: [
 				'理大工業及系統工程學系傑出校友專業成就獎 — 2024',
 				'社會企業研究院院士 — 2024',
@@ -149,6 +144,7 @@ const managementDictionary: Record<Locale, ManagementProfile[]> = {
 				'在 ValoraEX，Keith 協助將長期企業策略與商業發展、策略合作、投資者交流及國際市場發展連結起來。',
 				'透過其角色，Keith 支援 ValoraEX 建立一個具商業可信度、國際視野及擴展能力的循環經濟生態系統，為企業、社區及更廣泛持份者創造長期價值。'
 			],
+			roleIntro: 'Keith 支援：',
 			role: [
 				'企業策略；',
 				'國際定位；',
@@ -206,9 +202,8 @@ const managementDictionary: Record<Locale, ManagementProfile[]> = {
 				'Dennis 的核心理念之一是创造共享价值（Creating Shared Value），希望以实际方式将商业价值与更广泛的环境及社会成果连接起来。',
 				'通过 ValoraEX，Dennis 将物流、科技、资产转型、循环经济、ESG、治理及生态系统发展经验结合，建立一个平台中立的 5R 智能生态系统，以支持实际行动、更完善的信息及跨行业协作。'
 			],
-			role: [
-				'Dennis 负责 ValoraEX 的整体战略、平台及产品方向、商业发展、生态系统增长、战略合作及国际发展。'
-			],
+			roleIntro: 'Dennis 负责 ValoraEX 的整体战略、平台及产品方向、商业发展、生态系统增长、战略合作及国际发展。',
+			role: [],
 			recognition: [
 				'理大工业及系统工程学系杰出校友专业成就奖 — 2024',
 				'社会企业研究院院士 — 2024',
@@ -234,6 +229,7 @@ const managementDictionary: Record<Locale, ManagementProfile[]> = {
 				'在 ValoraEX，Keith 协助将长期企业战略与商业发展、战略合作、投资者交流及国际市场发展连接起来。',
 				'通过其角色，Keith 支持 ValoraEX 建立一个具有商业可信度、国际视野及扩展能力的循环经济生态系统，为企业、社区及更广泛利益相关方创造长期价值。'
 			],
+			roleIntro: 'Keith 支持：',
 			role: [
 				'企业战略；',
 				'国际定位；',

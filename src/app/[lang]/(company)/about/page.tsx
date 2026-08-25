@@ -3,6 +3,20 @@ import { getManagementData, ManagementProfile } from '@/lib/data';
 import { getDictionary, Locale } from '@/lib/dictionaries';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+	params
+}: {
+	params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+	const { lang } = await params;
+	const dict = await getDictionary(lang as Locale);
+
+	return {
+		title: dict.nav.about, // <-- 3. Change this key for each page
+	};
+}
 
 export default async function AboutPage({
 	params
@@ -89,9 +103,29 @@ export default async function AboutPage({
 				title={content.roadmap.title}
 				reverseLayout
 			>
-				<p><strong>{content.roadmap.current.split('：')[0] || content.roadmap.current.split(': ')[0]}</strong> {content.roadmap.current}</p>
-				<p><strong>{content.roadmap.direction.split('：')[0] || content.roadmap.direction.split(': ')[0]}</strong> {content.roadmap.direction}</p>
-				<p><strong>{content.roadmap.future.split('：')[0] || content.roadmap.future.split(': ')[0]}</strong> {content.roadmap.future}</p>
+				{(() => {
+					// Helper to cleanly bold the prefix before the colon without duplicating the text
+					const renderRoadmapLine = (text: string) => {
+						const separator = text.includes('：') ? '：' : ': ';
+						const parts = text.split(separator);
+
+						if (parts.length >= 2) {
+							const prefix = parts.shift();
+							const rest = parts.join(separator);
+							// Reconstruct with the bold prefix and the appropriate colon spacing
+							return <p><strong>{prefix}{separator === '：' ? '：' : ':'}</strong> {rest.trim()}</p>;
+						}
+						return <p>{text}</p>;
+					};
+
+					return (
+						<>
+							{renderRoadmapLine(content.roadmap.current)}
+							{renderRoadmapLine(content.roadmap.direction)}
+							{renderRoadmapLine(content.roadmap.future)}
+						</>
+					);
+				})()}
 
 				<small className="block mt-6 border-l-2 border-gray-300 pl-4 text-[var(--text-disclaimer)]">
 					{content.roadmap.disclaimer}
@@ -127,7 +161,7 @@ export default async function AboutPage({
 										href={`/${lang}/management/${leader.slug}`}
 										className="mt-auto py-2 px-4 bg-gray-50 hover:bg-gray-100 text-sm font-semibold text-gray-800 rounded-lg transition-colors border border-gray-200 w-full"
 									>
-										View Profile
+										{dict.common.view_profile} {/* <-- Replaced hardcoded English */}
 									</Link>
 								</div>
 							);

@@ -1,5 +1,19 @@
 import ContentBlock from '@/components/ContentBlock';
 import { getDictionary, Locale } from '@/lib/dictionaries';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+	params
+}: {
+	params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+	const { lang } = await params;
+	const dict = await getDictionary(lang as Locale);
+
+	return {
+		title: dict.nav.execution_coordination, // <-- 3. Change this key for each page
+	};
+}
 
 export default async function ExecutionCoordinationPage({
 	params

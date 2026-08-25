@@ -2,6 +2,20 @@ import ContentBlock from '@/components/ContentBlock';
 import FaqAccordion from '@/components/FaqAccordion';
 import { getFaqData } from '@/lib/data';
 import { getDictionary, Locale } from '@/lib/dictionaries';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+	params
+}: {
+	params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+	const { lang } = await params;
+	const dict = await getDictionary(lang as Locale);
+
+	return {
+		title: dict.nav.faq, // <-- 3. Change this key for each page
+	};
+}
 
 export default async function FaqPage({
 	params
