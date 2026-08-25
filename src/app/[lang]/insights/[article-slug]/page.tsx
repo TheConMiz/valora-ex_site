@@ -1,4 +1,5 @@
 import ContentBlock from '@/components/ContentBlock';
+import { getDictionary, Locale } from '@/lib/dictionaries';
 
 export function generateStaticParams() {
     // Providing a placeholder so the static export builds successfully
@@ -14,6 +15,7 @@ export default async function ArticleTemplatePage({
     params: Promise<{ lang: string, 'article-slug': string }>
 }) {
     const { lang } = await params;
+    const dict = await getDictionary(lang as Locale); // Fetch the dictionary
 
     return (
         <main>
@@ -22,20 +24,10 @@ export default async function ArticleTemplatePage({
                 subtitle="Category: [Published Category] | Publication Date: [Date]"
                 graphicRef="MKT-WEB-G18"
                 ctas={[
-                    { href: `/${lang}/insights`, text: 'Explore More Insights', variant: 'secondary' },
-                    { href: `/${lang}/contact`, text: 'Talk to ValoraEX', variant: 'primary' }
+                    { href: `/${lang}/insights`, text: dict.insights.article.explore_more, variant: 'secondary' },
+                    { href: `/${lang}/contact`, text: dict.insights.article.talk_to_us, variant: 'primary' }
                 ]}
-            >
-                <h3>Introduction</h3>
-                <p>A short opening paragraph explaining the issue, observation or practical question covered by the article.</p>
-
-                <h3>Main Content</h3>
-                <p>Use clear subheadings and practical paragraphs. Where relevant, articles may include operational observations, circular-economy perspectives, and asset-transition considerations.</p>
-
-                <blockquote>
-                    Articles should distinguish clearly between factual information, ValoraEX observations or perspectives, future-development ideas, and third-party information or sources.
-                </blockquote>
-            </ContentBlock>
+            ></ContentBlock>
         </main>
     );
 }

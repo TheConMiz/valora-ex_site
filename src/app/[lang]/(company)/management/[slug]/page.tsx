@@ -42,6 +42,7 @@ export default async function ManagementProfilePage({
 			<ContentBlock
 				title={profile.name}
 				subtitle={profile.title}
+				isPageHeader={true}
 				ctas={[{ href: profile.linkedin, text: labels.linkedin, variant: 'secondary' }]}
 			>
 				{profile.bio.map((paragraph, index) => (

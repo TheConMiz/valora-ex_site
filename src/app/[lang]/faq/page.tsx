@@ -18,6 +18,7 @@ export default async function FaqPage({
 		<main>
 			<ContentBlock
 				title={dict.nav.faq}
+				isPageHeader={true}
 				ctas={[{ href: `/${lang}/contact`, text: dict.common.talk_to_us, variant: 'primary' }]}
 			>
 				<FaqAccordion faqs={localizedFaqs} />

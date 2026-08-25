@@ -25,6 +25,7 @@ export default async function WhatWeDoPage({
 			<ContentBlock
 				title={content.title}
 				subtitle={content.subtitle}
+				isPageHeader={true}
 			>
 				<p>{content.intro}</p>
 

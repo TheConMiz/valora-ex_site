@@ -3,10 +3,16 @@ import type { Locale } from './dictionaries';
 // ---------------------------------------------------------
 // 1. Management / Leadership Data
 // ---------------------------------------------------------
+import type { Locale } from './dictionaries';
+
+// ---------------------------------------------------------
+// 1. Management / Leadership Data
+// ---------------------------------------------------------
 export interface ManagementProfile {
 	slug: string;
 	name: string;
 	title: string;
+	summary: string;
 	bio: string[];
 	role: string[];
 	recognition?: string[];
@@ -19,36 +25,83 @@ const managementDictionary: Record<Locale, ManagementProfile[]> = {
 			slug: 'dennis-mak',
 			name: 'Dennis Mak',
 			title: 'Founder & Chief Executive Officer',
+			summary: 'Dennis brings more than 20 years of leadership experience across logistics, supply chain, automation, technology and international business development. A former senior leader with Rhenus Logistics, he previously served as an Industry Advisor to HKSTP for the Mobility & Logistics sector and has received professional recognition from PolyU and industry organisations.',
 			bio: [
 				'Dennis Mak is the Founder and Chief Executive Officer of ValoraEX.',
 				'He brings more than 20 years of leadership and management experience across logistics, supply chain, technology, automation and international business development, with professional experience spanning Hong Kong, Greater China and wider international markets.',
+				'His career has included senior leadership roles with Rhenus Logistics, together with earlier experience in logistics, warehousing and distribution management. Across his career, Dennis has worked at the intersection of operational execution, commercial development, technology adoption and organisational transformation, giving him a practical understanding of how better information, preparation and coordination can influence business outcomes.',
+				'Dennis previously served as an Industry Advisor to Hong Kong Science and Technology Parks Corporation (HKSTP) for the Mobility & Logistics sector, supporting start-ups and the wider logistics-technology innovation ecosystem.',
+				'His cross-disciplinary academic and professional background spans knowledge and technology management, operations and supply chain, global business, public administration and management. This combination has shaped his approach to connecting business execution with technology, governance, sustainability and ecosystem development.',
+				'Dennis has also received recognition for his professional leadership, innovation and industry contribution, including being named an Outstanding Alumni of The Hong Kong Polytechnic University, becoming a Fellow of the Social Enterprise Research Academy in 2024, and receiving a number of industry awards relating to logistics, automation, innovation and management excellence.',
+				'A core principle behind his work is Creating Shared Value — developing practical ways to connect commercial value with wider environmental and social outcomes.',
 				'Through ValoraEX, Dennis brings together his experience in logistics, technology, asset transition, circular economy, ESG, governance and ecosystem development to build a platform-neutral 5R intelligence ecosystem designed to support practical action, stronger information and cross-industry collaboration.'
 			],
-			role: ['Dennis leads ValoraEX’s overall strategy, platform and product direction, commercial development, ecosystem growth, strategic partnerships and international development.'],
-			recognition: ['Outstanding Alumni Award 2024 — Professional Achievement, Department of Industrial and Systems Engineering, The Hong Kong Polytechnic University', 'Fellow, Social Enterprise Research Academy — 2024'],
+			role: [
+				'Dennis leads ValoraEX’s overall strategy, platform and product direction, commercial development, ecosystem growth, strategic partnerships and international development.'
+			],
+			recognition: [
+				'Outstanding Alumni Award 2024 — Professional Achievement, Department of Industrial and Systems Engineering, The Hong Kong Polytechnic University',
+				'Fellow, Social Enterprise Research Academy — 2024',
+				'The Best International Logistics Service Provider of the Year — 2024',
+				'Hong Kong Business High Flyers Awards — Logistics Automation — 2024',
+				'International Innovation Awards — Service & Solutions — 2023',
+				'Hong Kong Business Technology Excellence Awards — Logistics Automation — 2023',
+				'Hong Kong Business Management Excellence Awards — Innovator of the Year, Logistics — 2022'
+			],
 			linkedin: 'https://www.linkedin.com/in/denniswhmak/'
 		},
 		{
 			slug: 'keith-lowcock',
 			name: 'Keith Lowcock',
 			title: 'Chief Strategy Officer',
+			summary: 'Keith brings more than 30 years of international leadership experience across banking, financial services, technology, digital transformation and business strategy, with professional experience spanning Europe and Asia. At ValoraEX, he supports strategic growth, international positioning, commercial partnerships, investor engagement and long-term development.',
 			bio: [
 				'Keith Lowcock is Chief Strategy Officer of ValoraEX, supporting the company’s strategic growth, international positioning, commercial partnerships, investor engagement and long-term development.',
-				'He brings more than 30 years of international leadership experience across banking, financial services, corporate strategy, technology, digital transformation and strategic advisory.'
+				'He brings more than 30 years of international leadership experience across banking, financial services, corporate strategy, technology, digital transformation and strategic advisory. Throughout his career, Keith has worked with global financial institutions, multinational organisations, executive teams and boards, helping organisations navigate complex change, strengthen governance and develop sustainable growth strategies.',
+				'His professional experience includes senior roles with Galaxy Entertainment Group and DBS Bank, together with subsequent investment, board and advisory responsibilities. His career has given him broad exposure to corporate strategy, finance, governance, transformation, investment, stakeholder engagement and cross-border business development across Europe and Asia.',
+				'Keith also brings board-level experience through non-executive and advisory roles, contributing to strategy, governance, risk, digital transformation and organisational development. This combination of corporate, financial and board experience provides ValoraEX with an important external perspective as the company develops its business model, partnerships and international positioning.',
+				'Keith believes that meaningful circular-economy and ESG outcomes require more than reporting alone. Practical workflows, trusted information, effective governance, technology and collaboration across different parts of the ecosystem are essential to creating durable commercial, environmental and social value.',
+				'At ValoraEX, he helps connect long-term corporate strategy with commercial development, strategic partnerships, investor engagement and international market development.',
+				'Through his role, Keith supports ValoraEX in building a commercially credible, internationally relevant and scalable circular-economy ecosystem designed to create long-term value for organisations, communities and wider stakeholders.'
 			],
-			role: ['corporate strategy;', 'international positioning;', 'strategic partnerships;', 'commercial development;'],
+			role: [
+				'corporate strategy;',
+				'international positioning;',
+				'strategic partnerships;',
+				'commercial development;',
+				'investor engagement;',
+				'market development;',
+				'governance and strategic challenge;',
+				'long-term growth planning.'
+			],
 			linkedin: 'https://www.linkedin.com/in/keithlowcock/'
 		},
 		{
 			slug: 'brian-chan',
 			name: 'Brian Chan',
 			title: 'Chief Information Officer',
+			summary: 'Brian leads ValoraEX’s information and technology strategy, helping shape a secure, future-ready intelligence ecosystem for asset transition. He brings more than 30 years of technology and management leadership experience across Asia.',
 			bio: [
 				'Brian Chan serves as Chief Information Officer of ValoraEX, leading the company’s information and technology strategy and helping shape a secure, future-ready intelligence ecosystem for asset transition.',
-				'He brings more than 30 years of technology and management leadership experience across Asia.'
+				'He brings more than 30 years of technology and management leadership experience across Asia, with senior roles at adidas Asia, Carlsberg Asia, PVH Asia, Jebsen & Co. and the Jardine Group. His experience spans technology strategy, innovation, digital transformation and the delivery of enterprise technology initiatives across diverse Asian markets. In recognition of his industry leadership, Brian received the CIO100 ASEAN Award in 2022.',
+				'At ValoraEX, Brian focuses on building the information architecture and technology foundations that support the company’s 5R intelligence ecosystem. His role includes strengthening data integrity, information security and business-technology alignment while helping develop intelligent workflows that support asset visibility, monitoring and decision-making from onboarding through transition and close-out.',
+				'He also brings a practical perspective on the role of artificial intelligence, using AI-enabled capabilities where appropriate to help transform complex asset information into clearer, more actionable intelligence.',
+				'Through this work, Brian supports the continued development of ValoraEX as a scalable, technology-enabled and platform-neutral ecosystem, while maintaining the enterprise discipline required for responsible data use, governance and future growth.'
 			],
-			role: ['information and technology strategy;', 'data architecture and information governance;', 'business-technology alignment;'],
-			recognition: ['CIO100 ASEAN Award — 2022'],
+			role: [
+				'information and technology strategy;',
+				'data architecture and information governance;',
+				'data integrity and security;',
+				'business-technology alignment;',
+				'digital transformation;',
+				'intelligent workflow development;',
+				'information flows across V-ONE and V-Governance;',
+				'coordination with technical delivery;',
+				'future technology and AI-enabled capability development.'
+			],
+			recognition: [
+				'CIO100 ASEAN Award — 2022'
+			],
 			linkedin: 'https://www.linkedin.com/in/brian-chan-09799412/'
 		}
 	],
@@ -57,36 +110,83 @@ const managementDictionary: Record<Locale, ManagementProfile[]> = {
 			slug: 'dennis-mak',
 			name: 'Dennis Mak',
 			title: '創辦人兼行政總裁',
+			summary: 'Dennis 擁有超過 20 年物流、供應鏈、自動化、科技及國際商業發展的領導經驗，曾於 Rhenus Logistics 擔任高級管理職務，亦曾擔任香港科技園公司（HKSTP）物流及移動領域業界顧問，並曾獲香港理工大學及多個業界機構肯定。',
 			bio: [
 				'Dennis Mak 是 ValoraEX 的創辦人兼行政總裁。',
 				'他擁有超過 20 年領導及管理經驗，涵蓋物流、供應鏈、科技、自動化及國際商業發展，專業經驗橫跨香港、大中華區及更廣泛的國際市場。',
+				'Dennis 的職業生涯包括於 Rhenus Logistics 擔任高級管理職務，以及早期於物流、倉儲及配送管理方面累積的實務經驗。他長期工作於營運執行、商業發展、科技應用及企業轉型的交匯點，對資訊質素、項目準備及協調如何影響實際商業成果具備深入而務實的理解。',
+				'Dennis 曾擔任香港科技園公司（HKSTP）物流及移動領域業界顧問，支援初創企業及更廣泛的物流科技創新生態系統發展。',
+				'他的跨學科學術及專業背景涵蓋知識及科技管理、營運與供應鏈、環球商業、公共行政及管理。這種跨領域經驗，塑造了他將商業執行與科技、治理、可持續發展及生態系統發展連結起來的思維。',
+				'Dennis 的專業領導、創新及業界貢獻亦獲得不同方面的肯定，包括獲選為香港理工大學傑出校友、於 2024 年成為社會企業研究院院士，以及獲得多項與物流、自動化、創新及管理卓越相關的業界獎項。',
+				'Dennis 的核心理念之一是創造共享價值（Creating Shared Value），希望以實際方式將商業價值與更廣泛的環境及社會成果連結起來。',
 				'透過 ValoraEX，Dennis 將物流、科技、資產轉型、循環經濟、ESG、治理及生態系統發展經驗結合，建立一個平台中立的 5R 智能生態系統，以支援實際行動、更完善的資訊及跨行業協作。'
 			],
-			role: ['Dennis 負責 ValoraEX 的整體策略、平台及產品方向、商業發展、生態系統成長、策略合作及國際發展。'],
-			recognition: ['理大工業及系統工程學系傑出校友專業成就獎 — 2024', '社會企業研究院院士 — 2024'],
+			role: [
+				'Dennis 負責 ValoraEX 的整體策略、平台及產品方向、商業發展、生態系統成長、策略合作及國際發展。'
+			],
+			recognition: [
+				'理大工業及系統工程學系傑出校友專業成就獎 — 2024',
+				'社會企業研究院院士 — 2024',
+				'The Best International Logistics Service Provider of the Year — 2024',
+				'Hong Kong Business High Flyers Awards — Logistics Automation — 2024',
+				'International Innovation Awards — Service & Solutions — 2023',
+				'Hong Kong Business Technology Excellence Awards — Logistics Automation — 2023',
+				'Hong Kong Business Management Excellence Awards — Innovator of the Year, Logistics — 2022'
+			],
 			linkedin: 'https://www.linkedin.com/in/denniswhmak/'
 		},
 		{
 			slug: 'keith-lowcock',
 			name: 'Keith Lowcock',
 			title: '首席策略官',
+			summary: 'Keith 擁有超過 30 年國際領導經驗，涵蓋銀行、金融服務、科技、數碼轉型及商業策略，專業經驗橫跨歐洲及亞洲。在 ValoraEX，他支援策略發展、國際定位、商業合作、投資者交流及長期發展。',
 			bio: [
 				'Keith Lowcock 擔任 ValoraEX 首席策略官，支援公司的策略增長、國際定位、商業合作、投資者交流及長期發展。',
-				'他擁有超過 30 年國際領導經驗，專業領域涵蓋銀行、金融服務、企業策略、科技、數碼轉型及策略顧問。'
+				'他擁有超過 30 年國際領導經驗，專業領域涵蓋銀行、金融服務、企業策略、科技、數碼轉型及策略顧問。Keith 在其職業生涯中曾與全球金融機構、跨國企業、高級管理團隊及董事會合作，協助企業應對複雜轉型、加強治理，並建立可持續的長期發展策略。',
+				'他的專業經驗包括於 Galaxy Entertainment Group 及 DBS Bank 擔任高級職務，其後亦參與投資、董事會及策略顧問工作。這些經驗讓 Keith 在企業策略、金融、治理、企業轉型、投資、持份者協作及跨境商業發展方面累積了廣泛經驗，並橫跨歐洲及亞洲市場。',
+				'Keith 亦擁有非執行董事及顧問經驗，參與企業策略、治理、風險、數碼轉型及組織發展。這種結合企業、金融及董事會層面的經驗，為 ValoraEX 在商業模式、合作夥伴關係及國際定位方面的發展提供重要的外部視角。',
+				'Keith 認為，真正具意義的循環經濟及 ESG 成果，不能單靠報告產生。實際工作流程、可信資訊、有效治理、科技及整個生態系統內不同參與者之間的協作，都是建立持久商業、環境及社會價值的重要基礎。',
+				'在 ValoraEX，Keith 協助將長期企業策略與商業發展、策略合作、投資者交流及國際市場發展連結起來。',
+				'透過其角色，Keith 支援 ValoraEX 建立一個具商業可信度、國際視野及擴展能力的循環經濟生態系統，為企業、社區及更廣泛持份者創造長期價值。'
 			],
-			role: ['企業策略；', '國際定位；', '策略合作；', '商業發展；'],
+			role: [
+				'企業策略；',
+				'國際定位；',
+				'策略合作；',
+				'商業發展；',
+				'投資者交流；',
+				'市場發展；',
+				'治理及策略挑戰；',
+				'長期增長規劃。'
+			],
 			linkedin: 'https://www.linkedin.com/in/keithlowcock/'
 		},
 		{
 			slug: 'brian-chan',
 			name: 'Brian Chan',
 			title: '首席資訊官',
+			summary: 'Brian 負責 ValoraEX 的資訊及科技策略，協助建立一個安全、具前瞻性並支援資產轉型的智能生態系統。他擁有超過 30 年亞洲區科技及管理領導經驗。',
 			bio: [
 				'Brian Chan 擔任 ValoraEX 首席資訊官，負責公司的資訊及科技策略，並協助建立一個安全、具前瞻性、支援資產轉型的智能生態系統。',
-				'Brian 擁有超過 30 年亞洲區科技及管理領導經驗。'
+				'Brian 擁有超過 30 年亞洲區科技及管理領導經驗，曾於 adidas Asia、Carlsberg Asia、PVH Asia、Jebsen & Co. 及 Jardine Group 擔任高級管理職務。他的專業經驗涵蓋科技策略、創新、數碼轉型，以及在亞洲不同市場推動企業級科技項目。Brian 並於 2022 年獲得 CIO100 ASEAN Award，肯定其在科技領導及業界發展方面的貢獻。',
+				'在 ValoraEX，Brian 專注建立支援公司 5R 智能生態系統的資訊架構及科技基礎。他負責加強數據完整性、資訊安全及商業與科技之間的協調，並推動智能工作流程發展，支援由資產導入、轉型至項目收結各階段的資產可視性、監察及決策。',
+				'他亦以務實角度看待人工智能的應用，在合適情況下運用 AI 能力，協助將複雜的資產資訊轉化為更清晰、更具行動價值的情報。',
+				'透過這些工作，Brian 支援 ValoraEX 持續發展成為一個具擴展能力、科技驅動並保持平台中立的生態系統，同時維持企業級的數據管理、資訊安全、治理及負責任科技應用標準。'
 			],
-			role: ['資訊及科技策略；', '數據架構及資訊治理；', '商業與科技協調；'],
-			recognition: ['CIO100 ASEAN Award — 2022'],
+			role: [
+				'資訊及科技策略；',
+				'數據架構及資訊治理；',
+				'數據完整性及資訊安全；',
+				'商業與科技協調；',
+				'數碼轉型；',
+				'智能工作流程發展；',
+				'V-ONE 及 V-Governance 的資訊流程；',
+				'與技術交付團隊協調；',
+				'未來科技及 AI 能力發展。'
+			],
+			recognition: [
+				'CIO100 ASEAN Award — 2022'
+			],
 			linkedin: 'https://www.linkedin.com/in/brian-chan-09799412/'
 		}
 	],
@@ -95,43 +195,89 @@ const managementDictionary: Record<Locale, ManagementProfile[]> = {
 			slug: 'dennis-mak',
 			name: 'Dennis Mak',
 			title: '创办人兼行政总裁',
+			summary: 'Dennis 拥有超过 20 年物流、供应链、自动化、科技及国际商业发展的领导经验，曾于 Rhenus Logistics 担任高级管理职务，也曾担任香港科技园公司（HKSTP）物流及移动领域行业顾问，并曾获得香港理工大学及多个行业机构肯定。',
 			bio: [
 				'Dennis Mak 是 ValoraEX 的创办人兼行政总裁。',
 				'他拥有超过 20 年领导及管理经验，涵盖物流、供应链、科技、自动化及国际商业发展，专业经验横跨香港、大中华区及更广泛的国际市场。',
+				'Dennis 的职业生涯包括于 Rhenus Logistics 担任高级管理职务，以及早期在物流、仓储及配送管理方面积累的实务经验。他长期工作于运营执行、商业发展、科技应用及企业转型的交汇点，对信息质量、项目准备及协调如何影响实际商业成果具备深入而务实的理解。',
+				'Dennis 曾担任香港科技园公司（HKSTP）物流及移动领域行业顾问，支持初创企业及更广泛的物流科技创新生态系统发展。',
+				'他的跨学科学术及专业背景涵盖知识及科技管理、运营与供应链、全球商业、公共行政及管理。这种跨领域经验，塑造了他将商业执行与科技、治理、可持续发展及生态系统发展连接起来的思维。',
+				'Dennis 的专业领导、创新及行业贡献也获得不同方面的肯定，包括获选为香港理工大学杰出校友、于 2024 年成为社会企业研究院院士，以及获得多项与物流、自动化、创新及管理卓越相关的行业奖项。',
+				'Dennis 的核心理念之一是创造共享价值（Creating Shared Value），希望以实际方式将商业价值与更广泛的环境及社会成果连接起来。',
 				'通过 ValoraEX，Dennis 将物流、科技、资产转型、循环经济、ESG、治理及生态系统发展经验结合，建立一个平台中立的 5R 智能生态系统，以支持实际行动、更完善的信息及跨行业协作。'
 			],
-			role: ['Dennis 负责 ValoraEX 的整体战略、平台及产品方向、商业发展、生态系统增长、战略合作及国际发展。'],
-			recognition: ['理大工业及系统工程学系杰出校友专业成就奖 — 2024', '社会企业研究院院士 — 2024'],
+			role: [
+				'Dennis 负责 ValoraEX 的整体战略、平台及产品方向、商业发展、生态系统增长、战略合作及国际发展。'
+			],
+			recognition: [
+				'理大工业及系统工程学系杰出校友专业成就奖 — 2024',
+				'社会企业研究院院士 — 2024',
+				'The Best International Logistics Service Provider of the Year — 2024',
+				'Hong Kong Business High Flyers Awards — Logistics Automation — 2024',
+				'International Innovation Awards — Service & Solutions — 2023',
+				'Hong Kong Business Technology Excellence Awards — Logistics Automation — 2023',
+				'Hong Kong Business Management Excellence Awards — Innovator of the Year, Logistics — 2022'
+			],
 			linkedin: 'https://www.linkedin.com/in/denniswhmak/'
 		},
 		{
 			slug: 'keith-lowcock',
 			name: 'Keith Lowcock',
 			title: '首席战略官',
+			summary: 'Keith 拥有超过 30 年国际领导经验，涵盖银行、金融服务、科技、数字化转型及商业战略，专业经验横跨欧洲及亚洲。在 ValoraEX，他支持战略发展、国际定位、商业合作、投资者交流及长期发展。',
 			bio: [
 				'Keith Lowcock 担任 ValoraEX 首席战略官，支持公司的战略增长、国际定位、商业合作、投资者交流及长期发展。',
-				'他拥有超过 30 年国际领导经验，专业领域涵盖银行、金融服务、企业战略、科技、数字化转型及战略顾问。'
+				'他拥有超过 30 年国际领导经验，专业领域涵盖银行、金融服务、企业战略、科技、数字化转型及战略顾问。Keith 在其职业生涯中曾与全球金融机构、跨国企业、高级管理团队及董事会合作，帮助企业应对复杂转型、加强治理，并建立可持续的长期发展战略。',
+				'他的专业经验包括于 Galaxy Entertainment Group 及 DBS Bank 担任高级职务，其后也参与投资、董事会及战略顾问工作。这些经验让 Keith 在企业战略、金融、治理、企业转型、投资、利益相关方协作及跨境商业发展方面积累了广泛经验，并横跨欧洲及亚洲市场。',
+				'Keith 也拥有非执行董事及顾问经验，参与企业战略、治理、风险、数字化转型及组织发展。这种结合企业、金融及董事会层面的经验，为 ValoraEX 在商业模式、合作伙伴关系及国际定位方面的发展提供重要的外部视角。',
+				'Keith 认为，真正具有意义的循环经济及 ESG 成果，不能单靠报告产生。实际工作流程、可信信息、有效治理、科技及整个生态系统内不同参与方之间的协作，都是建立持久商业、环境及社会价值的重要基础。',
+				'在 ValoraEX，Keith 协助将长期企业战略与商业发展、战略合作、投资者交流及国际市场发展连接起来。',
+				'通过其角色，Keith 支持 ValoraEX 建立一个具有商业可信度、国际视野及扩展能力的循环经济生态系统，为企业、社区及更广泛利益相关方创造长期价值。'
 			],
-			role: ['企业战略；', '国际定位；', '战略合作；', '商业发展；'],
+			role: [
+				'企业战略；',
+				'国际定位；',
+				'战略合作；',
+				'商业发展；',
+				'投资者交流；',
+				'市场发展；',
+				'治理及战略挑战；',
+				'长期增长规划。'
+			],
 			linkedin: 'https://www.linkedin.com/in/keithlowcock/'
 		},
 		{
 			slug: 'brian-chan',
 			name: 'Brian Chan',
 			title: '首席信息官',
+			summary: 'Brian 负责 ValoraEX 的信息及科技战略，协助建立一个安全、具前瞻性并支持资产转型的智能生态系统。他拥有超过 30 年亚洲区科技及管理领导经验。',
 			bio: [
 				'Brian Chan 担任 ValoraEX 首席信息官，负责公司的信息及科技战略，并协助建立一个安全、具前瞻性、支持资产转型的智能生态系统。',
-				'Brian 拥有超过 30 年亚洲区科技及管理领导经验。'
+				'Brian 拥有超过 30 年亚洲区科技及管理领导经验，曾于 adidas Asia、Carlsberg Asia、PVH Asia、Jebsen & Co. 及 Jardine Group 担任高级管理职务。他的专业经验涵盖科技战略、创新、数字化转型，以及在亚洲不同市场推动企业级科技项目。Brian 并于 2022 年获得 CIO100 ASEAN Award，肯定其在科技领导及行业发展方面的贡献。',
+				'在 ValoraEX，Brian 专注建立支持公司 5R 智能生态系统的信息架构及科技基础。他负责加强数据完整性、信息安全及商业与科技之间的协调，并推动智能工作流程发展，支持从资产导入、转型至项目收结各阶段的资产可视性、监控及决策。',
+				'他也以务实角度看待人工智能的应用，在合适情况下运用 AI 能力，协助将复杂的资产信息转化为更清晰、更具行动价值的智能信息。',
+				'通过这些工作，Brian 支持 ValoraEX 持续发展成为一个具有扩展能力、科技驱动并保持平台中立的生态系统，同时维持企业级的数据管理、信息安全、治理及负责任科技应用标准。'
 			],
-			role: ['信息及科技战略；', '数据架构及信息治理；', '商业与科技协调；'],
-			recognition: ['CIO100 ASEAN Award — 2022'],
+			role: [
+				'信息及科技战略；',
+				'数据架构及信息治理；',
+				'数据完整性及信息安全；',
+				'商业与科技协调；',
+				'数字化转型；',
+				'智能工作流程发展；',
+				'V-ONE 及 V-Governance 的信息流程；',
+				'与技术交付团队协调；',
+				'未来科技及 AI 能力发展。'
+			],
+			recognition: [
+				'CIO100 ASEAN Award — 2022'
+			],
 			linkedin: 'https://www.linkedin.com/in/brian-chan-09799412/'
 		}
 	]
 };
 
 export const getManagementData = (lang: Locale): ManagementProfile[] => managementDictionary[lang] || managementDictionary['en'];
-
 // ---------------------------------------------------------
 // 2. FAQ Data
 // ---------------------------------------------------------

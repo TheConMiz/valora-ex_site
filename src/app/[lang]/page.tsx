@@ -21,6 +21,7 @@ export default async function HomePage({
 			{/* 01 — Hero */}
 			<Hero
 				title={dict.home.hero.title}
+				subtitle={dict.home.hero.subtitle} // <-- Pass the complete positioning line
 				imageSrc="/images/MKT-WEB-G01_Hero-Connected Asset Governance Journey.png"
 				imageAlt="Connected Asset Governance Journey graphic"
 				ctas={[
@@ -92,13 +93,13 @@ export default async function HomePage({
 				graphicRef={['MKT-WEB-G10', 'MKT-WEB-G11']}
 				reverseLayout
 			>
-                <h3>{dict.home.evidence_governance.info_title}</h3>
-                <p>{dict.home.evidence_governance.info_desc}</p>
-                <h3 className="mt-8">{dict.home.evidence_governance.evidence_title}</h3>
-                <p>{dict.home.evidence_governance.evidence_desc}</p>
-                <h3 className="mt-8">{dict.home.evidence_governance.continuity_title}</h3>
-                <p>{dict.home.evidence_governance.continuity_desc}</p>
-                <p className="mt-8">{dict.home.evidence_governance.summary}</p>
+				<h3>{dict.home.evidence_governance.info_title}</h3>
+				<p>{dict.home.evidence_governance.info_desc}</p>
+				<h3 className="mt-8">{dict.home.evidence_governance.evidence_title}</h3>
+				<p>{dict.home.evidence_governance.evidence_desc}</p>
+				<h3 className="mt-8">{dict.home.evidence_governance.continuity_title}</h3>
+				<p>{dict.home.evidence_governance.continuity_desc}</p>
+				<p className="mt-8">{dict.home.evidence_governance.summary}</p>
 			</ContentBlock>
 
 			{/* 07 — Development Direction */}
@@ -120,7 +121,7 @@ export default async function HomePage({
 						<h2 className="text-4xl font-bold mb-4 text-gray-900">{dict.home.leadership_section.title}</h2>
 						<p className="text-lg text-gray-600 max-w-2xl mx-auto">{dict.home.leadership_section.subtitle}</p>
 					</div>
-					<LeadershipCarousel />
+					<LeadershipCarousel ctaText={dict.common.view_profile} />
 				</div>
 			</section>
 

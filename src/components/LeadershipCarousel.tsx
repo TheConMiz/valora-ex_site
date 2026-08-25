@@ -6,7 +6,7 @@ import { Locale } from '@/lib/dictionaries';
 import LeadershipCard from './LeadershipCard';
 import Carousel from './Carousel';
 
-export default function LeadershipCarousel() {
+export default function LeadershipCarousel({ ctaText }: { ctaText: string }) {
 	// Grab the current language from the URL route
 	const params = useParams();
 	const lang = (params.lang as Locale) || 'en';
@@ -21,7 +21,7 @@ export default function LeadershipCarousel() {
 				itemsPerViewMobile={1}
 				itemsPerViewTablet={2}
 				itemsPerViewDesktop={3}
-				renderItem={(leader) => <LeadershipCard leader={leader} />}
+				renderItem={(leader) => <LeadershipCard leader={leader} ctaText={ctaText} />}
 			/>
 		</div>
 	);

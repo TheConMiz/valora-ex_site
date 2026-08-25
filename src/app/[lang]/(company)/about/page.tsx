@@ -140,7 +140,7 @@ export default async function AboutPage({
 							href={`/${lang}/about`}
 							className="btn-primary"
 						>
-							Meet the Team
+							{dict.about.management_cta}
 						</Link>
 					</div>
 				</div>

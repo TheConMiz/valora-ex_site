@@ -388,7 +388,11 @@
 		"categories_note": "* Note: Categories will automatically filter to display only those containing published content.",
 		"coming_soon_title": "Insights Coming Soon",
 		"coming_soon_desc": "Articles, perspectives, and videos from the ValoraEX ecosystem will be published here shortly.",
-		"youtube_cta": "Visit the ValoraEX YouTube Channel"
+		"youtube_cta": "Visit the ValoraEX YouTube Channel",
+		"article": {
+			"explore_more": "Explore More Insights",
+			"talk_to_us": "Talk to ValoraEX"
+		}
 	},
 	"about": {
 		"title": "About ValoraEX",
@@ -398,6 +402,7 @@
 			"p1": "ValoraEX Intelligence Ecosystem Limited is a Hong Kong-based company developing workflow, governance, evidence and ecosystem-coordination capabilities for asset transition.",
 			"p2": "We begin with FF&E as our Phase 1 proof category while developing a model designed to support broader asset categories over time."
 		},
+		"management_cta": "Meet the Team",
 		"how_started": {
 			"title": "How ValoraEX Started",
 			"p1": "ValoraEX grew from practical experience with increasing demand for:",

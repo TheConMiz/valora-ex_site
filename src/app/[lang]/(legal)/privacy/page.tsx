@@ -12,7 +12,7 @@ export default async function PrivacyPage({
 
 	return (
 		<main>
-			<ContentBlock title={content.title} subtitle={content.subtitle}>
+			<ContentBlock title={content.title} subtitle={content.subtitle} isPageHeader={true}>
 				{content.blocks.map((block: any, index: number) => {
 					if (block.type === 'heading') {
 						return <h3 key={index} className="mt-8">{block.text}</h3>;

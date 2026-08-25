@@ -9,18 +9,24 @@ interface CTAConfig {
 
 interface HeroProps {
     title: string;
+    subtitle?: string; // <-- Add subtitle prop
     children?: React.ReactNode;
     imageSrc: string;
     imageAlt: string;
     ctas?: CTAConfig[];
 }
 
-export default function Hero({ title, children, imageSrc, imageAlt, ctas }: HeroProps) {
+export default function Hero({ title, subtitle, children, imageSrc, imageAlt, ctas }: HeroProps) {
     return (
         <section className="animate-fade-in-up flex flex-col md:flex-row gap-12 py-16 lg:py-24 px-8 max-w-7xl mx-auto items-center w-full">
 
             {/* Text & CTAs Side */}
             <div className="flex-1 w-full">
+                {subtitle && (
+                    <p className="text-lg md:text-xl font-medium text-[var(--accent-teal)] mb-3">
+                        {subtitle}
+                    </p>
+                )}
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-[var(--foreground)]">
                     {title}
                 </h1>
@@ -38,14 +44,14 @@ export default function Hero({ title, children, imageSrc, imageAlt, ctas }: Hero
                 )}
             </div>
 
-            {/* Image Side - No borders, shadows, or white box treatments */}
+            {/* Image Side */}
             <div className="flex-1 w-full relative flex justify-center items-center min-h-[350px] md:min-h-[500px]">
                 <Image
                     src={imageSrc}
                     alt={imageAlt}
                     fill
                     className="object-contain"
-                    priority /* Prioritize loading the hero image */
+                    priority
                     sizes="(max-width: 768px) 100vw, 50vw"
                 />
             </div>

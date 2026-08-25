@@ -24,6 +24,7 @@ export default async function ExecutionCoordinationPage({
 			<ContentBlock
 				title={content.title}
 				subtitle={content.subtitle}
+				isPageHeader={true}
 				graphicRef="MKT-WEB-G21"
 				ctas={[
 					{ href: `/${lang}/contact`, text: content.cta_primary, variant: 'primary' },

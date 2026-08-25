@@ -33,6 +33,7 @@ export default async function VOnePage({
 			<ContentBlock
 				title={content.title}
 				subtitle={content.subtitle}
+				isPageHeader={true}
 				graphicRef="MKT-WEB-G08"
 				ctas={[{ href: `/${lang}/contact`, text: content.cta, variant: 'primary' }]}
 			>

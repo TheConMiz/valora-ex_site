@@ -374,6 +374,10 @@
 		"subtitle": "分享資產轉型、循環經濟、ESG 管治及 ValoraEX 生態系統的實務觀點與發展",
 		"intro": "ValoraEX Insights 匯集文章、實務觀察、公司觀點及多媒體內容。",
 		"categories_title": "內容分類",
+		"article": {
+			"explore_more": "探索更多 Insights",
+			"talk_to_us": "聯絡 ValoraEX"
+		},
 		"categories": [
 			"實踐 ESG",
 			"循環經濟",
@@ -398,6 +402,7 @@
 			"p1": "延昇智能生態有限公司是一家以香港為基地的企業，專注發展資產轉型相關的工作流程、治理、證據及生態協調能力。",
 			"p2": "我們以家具、固定裝置及設備（FF&E）作為第一階段的驗證類別，同時建立一套可逐步支援更廣泛資產類別的模式。"
 		},
+		"management_cta": "認識管理團隊",
 		"how_started": {
 			"title": "ValoraEX 如何開始",
 			"p1": "ValoraEX 源於實際商業經驗，以及市場對以下範疇日益增加的需求：",
